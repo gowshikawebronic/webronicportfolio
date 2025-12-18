@@ -27,17 +27,17 @@ export default function Integrations() {
 
   const items: IntegrationItem[] = [
     {
-      image: "/assets/24sju-se.png",
+      image: "./assets/24sju-se.png",
       rotation: "rotate-[40deg]",
       link: "https://24-sju.se/",
     },
     {
-      image: "/assets/images/tanluxlogo.png",
+      image: "./assets/images/tanluxlogo.png",
       rotation: "rotate-[90deg]",
       link: "https://tanlux.se/",
     },
     {
-      image: "/assets/images/storetech-logo-black.png",
+      image: "./assets/images/storetech-logo-black.png",
       rotation: "rotate-[140deg]",
       link: "https://store-tech.se/",
     },

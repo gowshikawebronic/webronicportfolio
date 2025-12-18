@@ -26,7 +26,7 @@ export default function HowWorks() {
       title: "App Development",
       description:
         "We design and build high-performance mobile applications with world-class UI/UX and cross-platform scalability.",
-      image: "/assets/images/appdevelopment.png",
+      image: "./assets/images/appdevelopment.png",
     },
     {
       id: 2,
@@ -34,7 +34,7 @@ export default function HowWorks() {
       title: "Web Development",
       description:
         "Scalable, SEO-driven websites and platforms engineered for performance and growth.",
-      image: "/assets/images/webdevelopment.png",
+      image: "./assets/images/webdevelopment.png",
     },
     {
       id: 3,
@@ -42,7 +42,7 @@ export default function HowWorks() {
       title: "Domain & Hosting",
       description:
         "Fast, secure, cloud-native hosting solutions powered by AWS and modern infrastructure.",
-      image: "/assets/images/domainhosting.png",
+      image: "./assets/images/domainhosting.png",
     },
     {
       id: 4,
@@ -50,7 +50,7 @@ export default function HowWorks() {
       title: "Digital Marketing",
       description:
         "Performance-driven marketing strategies that convert traffic into revenue.",
-      image: "/assets/images/digitalmarketing.png",
+      image: "./assets/images/digitalmarketing.png",
     },
     {
       id: 5,
@@ -58,7 +58,7 @@ export default function HowWorks() {
       title: "SEO Optimization",
       description:
         "Data-driven SEO strategies that put your business on top of search results.",
-      image: "/assets/images/seo.png",
+      image: "./assets/images/seo.png",
     },
     {
       id: 6,
@@ -66,7 +66,7 @@ export default function HowWorks() {
       title: "IoT Solutions",
       description:
         "Smart IoT ecosystems for real-time monitoring, automation, and predictive insights.",
-      image: "/assets/images/iot.png",
+      image: "./assets/images/iot.png",
     },
   ];
 

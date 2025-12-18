@@ -49,7 +49,7 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/#hero" className="flex items-center">
               <Image
-                src="/assets/storetechlogo2.png"
+                src="./assets/storetechlogo2.png"
                 alt="StoreTech Logo"
                 width={140}
                 height={34}
@@ -103,7 +103,7 @@ export default function Navbar() {
         
         <div className="flex items-center justify-between px-5 py-4 border-b border-gray-800">
           <Image
-            src="/assets/storetechlogo2.png"
+            src="./assets/storetechlogo2.png"
             alt="StoreTech"
             width={120}
             height={28}
