@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { useParallax, useParallaxController } from "react-scroll-parallax";
+import { useParallax } from "react-scroll-parallax";
 
 type IntegrationItem = {
   image: string;
@@ -10,13 +10,20 @@ type IntegrationItem = {
 };
 
 export default function Integrations() {
-  const [eleProgress, setEleProgress] = useState<number>(0);
-  const parallaxController = useParallaxController();
+  const [eleProgress, setEleProgress] = useState(0);
+
+  
   const eleRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  const arc = useParallax({
-    onProgressChange: (progress) => setEleProgress(progress),
-  });
+ 
+ const { ref } = useParallax<HTMLDivElement>({
+  onProgressChange: (progress) => {
+    setEleProgress(progress);
+  },
+});
+
+
+ 
 
   const items: IntegrationItem[] = [
     {
@@ -37,10 +44,6 @@ export default function Integrations() {
   ];
 
   useEffect(() => {
-    parallaxController.update();
-  }, [parallaxController]);
-
-  useEffect(() => {
     const value = eleProgress * 100;
     const translateX = value * -5;
 
@@ -53,9 +56,8 @@ export default function Integrations() {
 
   return (
     <section id="integrations" className="mt-16">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
         <div className="flex flex-col gap-6 py-12">
-          {/* Heading */}
           <h1 className="mx-auto text-center text-2xl font-semibold md:text-4xl">
             PARTNERS
             <br />
@@ -65,11 +67,10 @@ export default function Integrations() {
             </span>
           </h1>
 
-          {/* Arc Section */}
-          <div className="relative z-0 flex h-65 w-full items-start justify-center overflow-hidden md:h-90">
+          <div className="relative flex h-[260px] w-full justify-center overflow-hidden md:h-[360px]">
             <div
-              ref={arc.ref}
-              className="relative -z-10 mt-10 h-125 w-125 rounded-full bg-linear-to-b from-blue-50 via-white to-white md:h-250 md:w-250"
+              ref={ref}
+              className="relative mt-10 h-[500px] w-[500px] rounded-full bg-gradient-to-b from-blue-50 via-white to-white md:h-[1000px] md:w-[1000px]"
             >
               {items.map((item, i) => (
                 <div
@@ -80,13 +81,12 @@ export default function Integrations() {
                     href={item.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block"
                   >
                     <div
                       ref={(el) => {
                         eleRefs.current[i] = el;
                       }}
-                      className="z-50 flex h-24 w-24 translate-x-16 cursor-pointer items-center justify-center rounded-2xl border border-black/10 bg-white shadow-lg transition-transform hover:scale-105 md:h-28 md:w-28"
+                      className="flex h-24 w-24 translate-x-16 items-center justify-center rounded-2xl border border-black/10 bg-white shadow-lg transition-transform hover:scale-105 md:h-28 md:w-28"
                     >
                       <img
                         src={item.image}

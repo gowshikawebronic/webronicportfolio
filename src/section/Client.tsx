@@ -35,13 +35,10 @@ export default function Clients() {
           Trusted Clients
         </h3>
 
-        {/* Marquee wrapper */}
         <div className="relative overflow-hidden">
-          {/* Edge fade */}
           <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-linear-to-r from-white to-transparent" />
           <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-linear-to-l from-white to-transparent" />
 
-          {/* Scroll track */}
           <div className="animate-marquee flex w-max items-center gap-14 mt-10 px-4">
             {[...logos, ...logos].map((src, i) => (
               <div

@@ -16,7 +16,7 @@ export default function Team() {
           </h2>
         </div>
 
-        {/* Scrolling photos */}
+        
         <div className="overflow-hidden">
           <div className="animate-scroll-review-x flex w-max items-center gap-10 py-6">
             {[...teamMembers, ...teamMembers].map((img, i) => (

@@ -1,8 +1,6 @@
 @import "tailwindcss";
 
-/* ============================= */
-/* 🌍 CSS VARIABLES & THEME */
-/* ============================= */
+
 
 :root {
   --background: #ffffff;
@@ -29,9 +27,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* ============================= */
-/* ✨ BASIC ANIMATIONS */
-/* ============================= */
+
 
 @keyframes fade-in {
   from {
@@ -61,11 +57,8 @@ body {
   animation: fade-up 0.9s ease-out forwards;
 }
 
-/* ============================= */
-/* 🚀 HERO / UI ANIMATIONS */
-/* ============================= */
 
-/* Reveal Text */
+
 @keyframes reveal {
   from {
     clip-path: inset(0 100% 0 0);
@@ -79,7 +72,6 @@ body {
   animation: reveal 1s ease forwards;
 }
 
-/* Neon Text */
 @keyframes neonFlow {
   0% {
     background-position: 0% 50%;
@@ -104,7 +96,6 @@ body {
     0 0 52px rgba(113, 222, 226, 0.35);
 }
 
-/* Floating Elements */
 @keyframes float {
   0%,
   100% {
@@ -123,7 +114,6 @@ body {
   animation-delay: 3s;
 }
 
-/* Moving Grid */
 @keyframes gridMove {
   from {
     background-position: 0 0;
@@ -137,7 +127,6 @@ body {
   animation: gridMove 20s linear infinite;
 }
 
-/* Rotating Rings */
 @keyframes spinSlow {
   from {
     transform: translate(-50%, -50%) rotate(0deg);
@@ -155,9 +144,6 @@ body {
   animation: spinSlow 36s linear infinite reverse;
 }
 
-/* ============================= */
-/* 🔘 BUTTONS */
-/* ============================= */
 
 .magnetic-btn {
   position: relative;
@@ -187,9 +173,6 @@ body {
   box-shadow: 0 0 25px rgba(34, 211, 238, 0.5);
 }
 
-/* ============================= */
-/* 🔁 INFINITE MARQUEE */
-/* ============================= */
 
 @keyframes marquee {
   0% {

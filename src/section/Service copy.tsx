@@ -92,7 +92,6 @@ export default function Services() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(55,198,89,0.12),transparent_60%)]" />
 
       <div className="relative max-w-7xl mx-auto px-6">
-        {/* Header */}
         <div className="text-center mb-24">
           <h2 className="text-4xl sm:text-6xl font-extrabold text-white mb-6">
             Our Services
@@ -103,25 +102,21 @@ export default function Services() {
           </p>
         </div>
 
-        {/* Service Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
           {services.map((service) => (
             <div
               key={service.title}
               className="group relative perspective-distant"
             >
-              {/* Card */}
               <div
                 className="relative h-full rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl p-8 transition-all duration-500 ease-out transform group-hover:-translate-y-3 group-hover:rotate-x-6 group-hover:-rotate-y-6 group-hover:shadow-[0_30px_80px_rgba(0,0,0,0.6)]"
 
               >
-                {/* Glow */}
                 <div
 className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.25),transparent_70%)] pointer-events-none"
 
                 />
 
-                {/* Image */}
                 <div className="relative mb-6 flex justify-center">
                   <Image
                     src={service.image}
@@ -132,7 +127,6 @@ className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transi
                   />
                 </div>
 
-                {/* Content */}
                 <h3 className="text-2xl font-bold text-white mb-4">
                   {service.title}
                 </h3>

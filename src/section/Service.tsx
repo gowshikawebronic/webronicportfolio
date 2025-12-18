@@ -92,14 +92,12 @@ export default function HowWorks() {
           </p>
         </div>
 
-        {/* RIGHT – Service cards */}
         <div className="grid gap-20 mt-20">
           {cards.map((card) => (
             <div
               key={card.id}
               className="sticky top-28 relative flex flex-col justify-between rounded-2xl border border-black/5 bg-gradient-to-b from-white to-gray-50 px-10 py-10 shadow-xl shadow-black/10 md:h-[420px]"
             >
-              {/* Header */}
               <div className="flex flex-col gap-6 lg:flex-row lg:gap-10">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-white">
                   {card.icon}
@@ -113,7 +111,6 @@ export default function HowWorks() {
                 </div>
               </div>
 
-              {/* Image */}
               <div className="mt-8 flex items-center justify-center">
                 <img
                   src={card.image}
@@ -122,7 +119,6 @@ export default function HowWorks() {
                 />
               </div>
 
-              {/* Index */}
               <div className="absolute right-5 top-5 flex h-8 w-8 items-center justify-center rounded-full bg-gray-200 text-sm text-gray-500">
                 {card.id < 10 ? `0${card.id}` : card.id}
               </div>

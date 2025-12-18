@@ -31,13 +31,11 @@ export default function Partners() {
       id="partners"
       className="relative py-32 bg-gradient-to-b from-[#0b0f1a] via-black to-[#0b0f1a] overflow-hidden animate-fade-in"
     >
-      {/* Ambient IT Glow */}
       <div aria-hidden className="absolute inset-0">
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-[radial-gradient(circle,rgba(99,102,241,0.18),transparent_70%)] blur-3xl animate-fade-in" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-6">
-        {/* Heading */}
         <div className="text-center mb-20 animate-fade-up">
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-100 mb-4 tracking-tight">
              Partners
@@ -48,7 +46,6 @@ export default function Partners() {
           </p>
         </div>
 
-        {/* Partner Logos */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-16 items-center justify-items-center">
           {partners.map((partner, idx) => (
             <a
@@ -61,14 +58,12 @@ export default function Partners() {
               className="group relative w-full max-w-xs h-44 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 flex items-center justify-center transition-all duration-500 hover:-translate-y-2 hover:border-indigo-400/40 hover:shadow-[0_0_50px_rgba(99,102,241,0.25)] opacity-0 animate-fade-up"
 
             >
-              {/* Hover glow */}
               <span
                 aria-hidden
                className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[radial-gradient(circle_at_top,rgba(34,211,238,0.25),transparent_70%)]"
 
               />
 
-              {/* Logo */}
               <Image
                 src={partner.src}
                 alt={partner.alt}

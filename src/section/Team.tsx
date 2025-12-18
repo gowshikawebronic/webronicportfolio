@@ -3,12 +3,12 @@
 import teamMembers from "@/components/common/TeamData";
 
 export default function Team() {
-  const marqueeItems = [...teamMembers, ...teamMembers]; // duplicate for smooth loop
+  const marqueeItems = [...teamMembers, ...teamMembers]; 
 
   return (
     <section id="team" className="py-20">
       <div className="container mx-auto px-6 mt-10">
-        {/* Header */}
+        
         <div className="mb-14 text-center">
           <h3 className="mx-auto mb-4 font-semibold px-5 py-1 text-4xl text-black">
             Our Team
@@ -18,7 +18,6 @@ export default function Team() {
           </h2>
         </div>
 
-        {/* ROW 1 – Left → Right */}
         <div className="overflow-hidden">
           <div className="animate-scroll-review-x flex w-max items-center gap-10 py-6">
             {marqueeItems.map((img, i) => (
@@ -27,7 +26,6 @@ export default function Team() {
           </div>
         </div>
 
-        {/* ROW 2 – Right → Left */}
         <div className="overflow-hidden">
           <div className="animate-scroll-review-xrev flex w-max items-center gap-10 py-6">
             {marqueeItems.map((img, i) => (
@@ -40,7 +38,6 @@ export default function Team() {
   );
 }
 
-/* ---------- IMAGE CARD ---------- */
 
 function TeamImage({ img }: { img: string }) {
   return (
