@@ -1,80 +1,109 @@
 "use client";
 
 import Image from "next/image";
-import { Parallax } from "react-scroll-parallax";
+import Link from "next/link";
 
-export default function Home() {
+export default function Hero() {
+  const scrollToServices = () => {
+    const el = document.getElementById("services");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      history.replaceState(null, "", "/#services");
+    }
+  };
+
   return (
-    <section id="home" className="mt-20 lg:mt-28 px-20">
-      <div className="container">
-        <div className="flex flex-col items-center justify-between text-black lg:flex-row">
-          <div className="flex flex-col items-center text-[clamp(1.25rem,4vw,3.75rem)] font-medium lg:items-start">
-            <span className="font-bold tracking-wide">WEBRONIC</span>
-            <span className="bg-gradient-to-b from-black via-gray-500 to-gray-300 bg-clip-text text-nowrap text-transparent">
-              DESIGNING THE FUTURE
+    <section id="hero" className="relative overflow-hidden bg-white">
+      <div className="absolute inset-0 bg-linear-to-b from-blue-50/60 to-white pointer-events-none" />
+
+      <div className="relative mx-auto max-w-7xl px-6 py-24 lg:py-28 lg:flex lg:items-center lg:gap-16">
+        
+        <div className="max-w-2xl mx-auto lg:mx-0 text-center lg:text-left">
+          {/* Eyebrow */}
+          <p className="mb-4 inline-block rounded-full bg-blue-50 px-4 py-1 text-sm font-semibold text-blue-500">
+            WEBRONIC • DESIGNING THE WORLD
+          </p>
+
+          <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
+            When You Grow
+            <span className="block text-slate-600">
+              With Our Technical Expertise, We Grow
             </span>
-          </div>
+          </h1>
 
-          <div className="flex flex-col items-center justify-between gap-5 lg:items-end">
-            <p className="text-center text-gray-500 lg:text-end">
-              When you grow, with our technical expertise — we grow together.
-            </p>
+          {/* <p className="mt-6 text-lg leading-relaxed text-slate-600">
+            WEBRONIC delivers reliable web, mobile, cloud, and AI-powered solutions
+            designed to scale with your business and drive real-world results.
+          </p> */}
 
-            <a
+          <p className="mt-6 text-lg leading-relaxed text-slate-600">
+            We are the One Stop Solution for all your Requirements...
+          </p>
+
+          <div className="mt-8 flex flex-wrap justify-center lg:justify-start gap-4">
+            
+            <Link
               href="https://vasanthwebronic-oss.github.io/storetech-portfolio/"
               target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-4 rounded-3xl border border-black/10 bg-white px-6 py-3 shadow-sm shadow-black/10 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/20"
+              className="flex items-center gap-4 rounded-xl border border-slate-300 px-6 py-3 shadow-md bg-slate-900 hover:scale-105 transition-all ease-in duration-150"
             >
-              <img
-                src="./assets/images/storetech-logo-black.png"
-                alt="StoreTech"
-                className="h-10 w-auto object-contain"
+              <Image
+                src="/assets/images/storetech-logo-white.png"
+                alt="StoreTech Logo"
+                width={50}
+                height={50}
+                className="object-contain"
               />
-              <span className="text-sm font-medium text-gray-700 transition-colors duration-300 group-hover:text-black">
-                Featured Project
-              </span>
-            </a>
+              <div>
+                <p className="text-sm font-semibold text-slate-100">
+                  Featured Project
+                </p>
+              </div>
+            </Link>
+
+            <button
+              onClick={scrollToServices}
+              className="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-7 py-3 text-base font-semibold text-slate-700 transition hover:border-slate-400 hover:bg-slate-50"
+            >
+              Explore Our Services
+            </button>
+          </div>
+
+          <div className="mt-10 flex flex-wrap justify-center lg:justify-start gap-x-8 gap-y-3 text-sm font-medium text-slate-600">
+            <span>✔ Scalable Architecture</span>
+            <span>✔ Secure & Future-Ready</span>
+            <span>✔ Business-First Approach</span>
           </div>
         </div>
 
-        <div className="overflow-y-hidden">
-          <div className="relative z-0 mt-20 flex h-96 items-center justify-center rounded-4xl bg-gradient-to-b from-gray-50 to-gray-50">
-            <Parallax speed={20}>
-              <Image
-                src="./assets/Home/h1.png"
-                alt="Main Illustration"
-                width={200}
-                height={200}
-                className="z-10 w-50"
-              />
-            </Parallax>
-
+        <div className="relative mt-16 flex flex-1 justify-center lg:mt-0">
+          <div className="relative w-full max-w-md rounded-3xl border border-slate-200 bg-white p-4 shadow-xl">
             <Image
-              src="./assets/Home/h2.png"
-              alt=""
-              width={120}
-              height={80}
-              className="absolute top-20 left-1/3 -z-10 hidden rounded-3xl shadow-2xl md:block md:-translate-x-48 lg:-translate-x-40"
+              src="/assets/images/hero-dashboard.png"
+              alt="WEBRONIC dashboard preview"
+              width={600}
+              height={600}
+              className="rounded-2xl"
+              priority
             />
 
-            <Image
-              src="./assets/Home/h3.png"
-              alt=""
-              width={120}
-              height={96}
-              className="absolute right-1/3 bottom-20 hidden rounded-3xl shadow-2xl md:block md:translate-x-40 lg:translate-x-28"
-            />
-
-            <div className="absolute top-20 right-1/3 hidden min-w-fit rounded-3xl bg-black px-5 py-3 text-sm text-white md:block md:translate-x-40 lg:translate-x-10">
-              Create a Website
+            <div className="absolute -right-30 top-10 hidden rounded-2xl bg-white px-5 py-4 shadow-lg md:block">
+              <p className="text-sm font-semibold text-slate-900">
+                Scalable Systems
+              </p>
+              <p className="text-xs text-slate-500">
+                Built for long-term growth
+              </p>
             </div>
 
-            <div className="absolute bottom-10 left-1/3 hidden min-w-fit rounded-3xl bg-black px-5 py-3 text-sm text-white md:block md:-translate-x-40 lg:-translate-x-10">
-              SEO Analysis
+            <div className="absolute -left-30 bottom-10 hidden rounded-2xl bg-white px-5 py-4 shadow-lg md:block">
+              <p className="text-sm font-semibold text-slate-900">
+                Secure by Design
+              </p>
+              <p className="text-xs text-slate-500">
+                Enterprise-grade security
+              </p>
             </div>
-
-            <div className="inner-bottom-white absolute inset-0 rounded-4xl" />
           </div>
         </div>
       </div>

@@ -71,7 +71,7 @@ export default function Hero() {
 
             <div className="relative z-10 flex flex-col sm:flex-row items-center gap-8">
               <Image
-                src="./assets/image.png"
+                src="/assets/image.png"
                 alt="StoreTech"
                 width={180}
                 height={60}

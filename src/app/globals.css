@@ -207,3 +207,30 @@ body {
 .animate-scroll-review-xrev:hover {
   animation-play-state: paused;
 }
+
+
+@media (max-width: 768px) {
+
+  #partner .rounded-full {
+    width: 320px !important;
+    height: 320px !important;
+  }
+
+  #partner .relative.flex.h-\[260px\] {
+    height: 220px !important;
+  }
+
+  #partner [class*="translate-x-"] {
+    transform: translateX(40px) !important;
+  }
+
+  #partner .rounded-xl {
+    width: 48px !important;
+    height: 48px !important;
+  }
+
+  #partner img {
+    height: 28px !important;
+    max-width: 100%;
+  }
+}

@@ -12,7 +12,7 @@ export default function Services() {
   const services: Service[] = [
     {
       title: "App Development",
-      image: "./assets/images/appdevelopment.png",
+      image: "/assets/images/appdevelopment.png",
       description:
         "We design and build high-performance mobile applications with world-class UI/UX and cross-platform scalability.",
       points: [
@@ -24,7 +24,7 @@ export default function Services() {
     },
     {
       title: "Web Development",
-      image: "./assets/images/webdevelopment.png",
+      image: "/assets/images/webdevelopment.png",
       description:
         "Scalable, SEO-driven websites and platforms engineered for performance and growth.",
       points: [
@@ -36,7 +36,7 @@ export default function Services() {
     },
     {
       title: "Domain & Hosting",
-      image: "./assets/images/domainhosting.png",
+      image: "/assets/images/domainhosting.png",
       description:
         "Fast, secure, cloud-native hosting solutions powered by AWS and modern infrastructure.",
       points: [
@@ -48,7 +48,7 @@ export default function Services() {
     },
     {
       title: "Digital Marketing",
-      image: "./assets/images/digitalmarketing.png",
+      image: "/assets/images/digitalmarketing.png",
       description:
         "Performance-driven marketing strategies that convert traffic into revenue.",
       points: [
@@ -60,7 +60,7 @@ export default function Services() {
     },
     {
       title: "SEO Optimization",
-      image: "./assets/images/seo.png",
+      image: "/assets/images/seo.png",
       description:
         "Data-driven SEO strategies that put your business on top of search results.",
       points: [
@@ -72,7 +72,7 @@ export default function Services() {
     },
     {
       title: "IoT Solutions",
-      image: "./assets/images/iot.png",
+      image: "/assets/images/iot.png",
       description:
         "Smart IoT ecosystems for real-time monitoring, automation, and predictive insights.",
       points: [

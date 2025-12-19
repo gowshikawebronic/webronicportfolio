@@ -1,35 +1,35 @@
 "use client";
 
 const logos: string[] = [
-  "./assets/images/fpanalyzer.png",
-  "./assets/images/ekoion.png",
-  "./assets/images/bovalls.png",
-  "./assets/images/bluewaters.png",
-  "./assets/images/snus24.png",
-  "./assets/images/iit.png",
-  "./assets/images/akashavani.png",
-  "./assets/images/annauniv.png",
-  "./assets/images/locumap.png",
-  "./assets/images/rorstrand.png",
-  "./assets/images/hindustan.png",
-  "./assets/images/sciotech.png",
-  "./assets/images/tamilnadu.png",
-  "./assets/images/smartstoring.png",
-  "./assets/images/bharathwaj.png",
-  "./assets/images/valueflow.png",
-  "./assets/images/bluewaters.png",
-  "./assets/images/tsf.png",
-  "./assets/images/elshaddai.png",
-  "./assets/images/24sju.png",
-  "./assets/images/sahaya.png",
-  "./assets/images/sribalaji.png",
-  "./assets/images/atthi.png",
-  "./assets/images/cumi.png",
+  "/assets/images/fpanalyzer.png",
+  "/assets/images/ekoion.png",
+  "/assets/images/bovalls.png",
+  "/assets/images/bluewaters.png",
+  "/assets/images/snus24.png",
+  "/assets/images/iit.png",
+  "/assets/images/akashavani.png",
+  "/assets/images/annauniv.png",
+  "/assets/images/locumap.png",
+  "/assets/images/rorstrand.png",
+  "/assets/images/hindustan.png",
+  "/assets/images/sciotech.png",
+  "/assets/images/tamilnadu.png",
+  "/assets/images/smartstoring.png",
+  "/assets/images/bharathwaj.png",
+  "/assets/images/valueflow.png",
+  "/assets/images/bluewaters.png",
+  "/assets/images/tsf.png",
+  "/assets/images/elshaddai.png",
+  "/assets/images/24sju.png",
+  "/assets/images/sahaya.png",
+  "/assets/images/sribalaji.png",
+  "/assets/images/atthi.png",
+  "/assets/images/cumi.png",
 ];
 
 export default function Clients() {
   return (
-    <section className="mt-20 overflow-hidden mb-20">
+    <section id="client" className="mt-20 overflow-hidden mb-20">
       <div className="container mx-auto">
         <h3 className="mb-6 text-center text-3xl font-semibold   uppercase tracking-widest text-black">
           Trusted Clients
