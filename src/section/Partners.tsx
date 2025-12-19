@@ -10,17 +10,17 @@
 // export default function Partners() {
 //   const partners: Partner[] = [
 //     {
-//       src: "/assets/24sju-se.png",
+//       src: "./assets/24sju-se.png",
 //       alt: "24SJU",
 //       href: "https://24-sju.se/",
 //     },
 //     {
-//       src: "/assets/images/tanluxlogo.png",
+//       src: "./assets/images/tanluxlogo.png",
 //       alt: "Tanlux",
 //       href: "https://tanlux.se/",
 //     },
 //     {
-//       src: "/assets/image.png",
+//       src: "./assets/image.png",
 //       alt: "StoreTech",
 //       href: "https://store-tech.se/",
 //     },

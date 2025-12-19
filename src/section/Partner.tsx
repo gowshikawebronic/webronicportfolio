@@ -23,31 +23,31 @@ export default function Integrations() {
 
   const items: IntegrationItem[] = [
     {
-      image: "/assets/24sju-se.png",
+      image: "./assets/24sju-se.png",
       rotation: "rotate-[40deg]",
       rotation2: "-rotate-[40deg]",
       link: "https://24-sju.se/",
     },
     {
-      image: "/assets/images/slattens.png",
+      image: "./assets/images/slattens.png",
       rotation: "rotate-[65deg]",
       rotation2: "-rotate-[40deg]",
       link: "https://www.slattensfoder.se/",
     },
     {
-      image: "/assets/images/tanluxlogo.png",
+      image: "./assets/images/tanluxlogo.png",
       rotation: "rotate-[90deg]",
       rotation2: "-rotate-[90deg]",
       link: "https://tanlux.se/",
     },
     {
-      image: "/assets/images/matmed.png",
+      image: "./assets/images/matmed.png",
       rotation: "rotate-[115deg]",
       rotation2: "-rotate-[90deg]",
       link: "https://norlandiaforskolor.se/matmedsmak",
     },
     {
-      image: "/assets/images/storetech-logo-black.png",
+      image: "./assets/images/storetech-logo-black.png",
       rotation: "rotate-[140deg]",
       rotation2: "-rotate-[140deg]",
       link: "https://store-tech.se/",

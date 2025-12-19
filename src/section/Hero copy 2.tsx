@@ -27,7 +27,7 @@ export default function Home() {
               className="group flex items-center gap-4 rounded-3xl border border-black/10 bg-white px-6 py-3 shadow-sm shadow-black/10 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/20"
             >
               <img
-                src="/assets/images/storetech-logo-black.png"
+                src="./assets/images/storetech-logo-black.png"
                 alt="StoreTech"
                 className="h-10 w-auto object-contain"
               />
@@ -42,7 +42,7 @@ export default function Home() {
           <div className="relative z-0 mt-20 flex h-96 items-center justify-center rounded-4xl bg-gradient-to-b from-gray-50 to-gray-50">
             <Parallax speed={20}>
               <Image
-                src="/assets/Home/h1.png"
+                src="./assets/Home/h1.png"
                 alt="Main Illustration"
                 width={200}
                 height={200}
@@ -51,7 +51,7 @@ export default function Home() {
             </Parallax>
 
             <Image
-              src="/assets/Home/h2.png"
+              src="./assets/Home/h2.png"
               alt=""
               width={120}
               height={80}
@@ -59,7 +59,7 @@ export default function Home() {
             />
 
             <Image
-              src="/assets/Home/h3.png"
+              src="./assets/Home/h3.png"
               alt=""
               width={120}
               height={96}

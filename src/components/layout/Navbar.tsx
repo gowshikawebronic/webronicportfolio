@@ -51,7 +51,7 @@ export default function Navbar() {
           >
             <div className="flex items-center rounded-xl bg-slate-900 px-4 py-2 shadow-md ring-1 ring-slate-200">
               <Image
-                src="/assets/storetechlogo2.png"
+                src="./assets/storetechlogo2.png"
                 alt="WEBRONIC Logo"
                 width={160}
                 height={40}

@@ -37,7 +37,7 @@ export default function Footer() {
           <div className="flex flex-col items-center lg:items-start gap-6 text-center lg:text-left">
             <div className="inline-flex rounded-xl bg-slate-900 px-4 py-2 shadow-md ring-1 ring-slate-200">
               <Image
-                src="/assets/storetechlogo2.png"
+                src="./assets/storetechlogo2.png"
                 alt="WEBRONIC Logo"
                 width={150}
                 height={38}
@@ -113,10 +113,10 @@ export default function Footer() {
 
             <div className="mt-4 flex items-center justify-center lg:justify-start gap-4">
               {[
-                "/assets/icons/facebook.png",
-                "/assets/icons/instagram.png",
-                "/assets/icons/youtube.png",
-                "/assets/icons/linkedin.png",
+                "./assets/icons/facebook.png",
+                "./assets/icons/instagram.png",
+                "./assets/icons/youtube.png",
+                "./assets/icons/linkedin.png",
               ].map((src, i) => (
                 <Image
                   key={i}
@@ -137,7 +137,7 @@ export default function Footer() {
                 aria-label="Visit ThingsAtWeb"
               >
                 <Image
-                  src="/assets/images/thingsatweb.png"
+                  src="./assets/images/thingsatweb.png"
                   alt="ThingsAtWeb"
                   width={90}
                   height={24}

@@ -48,7 +48,7 @@ export default function Hero() {
               className="flex items-center gap-4 rounded-xl border border-slate-300 px-6 py-3 shadow-md bg-slate-900 hover:scale-105 transition-all ease-in duration-150"
             >
               <Image
-                src="/assets/images/storetech-logo-white.png"
+                src="./assets/images/storetech-logo-white.png"
                 alt="StoreTech Logo"
                 width={50}
                 height={50}
@@ -79,7 +79,7 @@ export default function Hero() {
         <div className="relative mt-16 flex flex-1 justify-center lg:mt-0">
           <div className="relative w-full max-w-md rounded-3xl border border-slate-200 bg-white p-4 shadow-xl">
             <Image
-              src="/assets/images/hero-dashboard.png"
+              src="./assets/images/hero-dashboard.png"
               alt="WEBRONIC dashboard preview"
               width={600}
               height={600}
