@@ -1,5 +1,8 @@
 "use client";
 
+import Image from "next/image";
+import { Sparkles } from "lucide-react";
+
 const logos: string[] = [
   "./assets/images/fpanalyzer.png",
   "./assets/images/ekoion.png",
@@ -28,32 +31,77 @@ const logos: string[] = [
 ];
 
 export default function Clients() {
+  const firstRow = logos.slice(0, Math.ceil(logos.length / 2));
+  const secondRow = logos.slice(Math.ceil(logos.length / 2));
+
   return (
-    <section id="client" className="mt-20 overflow-hidden mb-20">
-      <div className="container mx-auto">
-        <h3 className="mb-6 text-center text-3xl font-semibold   uppercase tracking-widest text-black">
-          Trusted Clients
-        </h3>
+    <section id="client" className="relative overflow-hidden bg-white py-5">
+      
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(15,23,42,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,0.02)_1px,transparent_1px)] bg-[size:72px_72px]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.05),transparent_70%)]" />
 
-        <div className="relative overflow-hidden">
-          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-linear-to-r from-white to-transparent" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-linear-to-l from-white to-transparent" />
-
-          <div className="animate-marquee flex w-max items-center gap-14 mt-10 px-4">
-            {[...logos, ...logos].map((src, i) => (
-              <div
-                key={i}
-                className="flex h-24 w-40 items-center justify-center"
-              >
-                <img
-                  src={src}
-                  alt="Client logo"
-                  className="h-20  w-40 object-contain opacity-90 transition-opacity duration-300 hover:opacity-100"
-                  loading="lazy"
-                />
-              </div>
-            ))}
+      <div className="relative mx-auto max-w-7xl px-6">
+        
+        <div className="mb-10 text-center animate-fade-up">
+          <div className="mb-6 inline-flex rounded-full bg-blue-50 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-blue-600 shadow-sm">
+            <Sparkles size={14} className="mr-2" />
+            Global Reach
           </div>
+          
+          <h2 className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
+            Trusted by <span className="bg-gradient-to-r from-blue-600 to-indigo-500 bg-clip-text text-transparent">Industry Leaders</span>
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-500 font-medium">
+            Partnering with prestigious institutions and innovative enterprises to build the future of digital retail.
+          </p>
+        </div>
+
+        <div className="relative mt-12 space-y-8">
+          
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-3 md:w-32 bg-gradient-to-r from-white via-white/80 to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-3 md:w-32 bg-gradient-to-l from-white via-white/80 to-transparent" />
+
+          <div className="flex overflow-hidden group">
+            <div className="animate-marquee flex w-max items-center gap-12 py-4">
+              {[...firstRow, ...firstRow].map((src, i) => (
+                <div
+                  key={i}
+                  className="flex h-20 w-44 items-center justify-center rounded-2xl border border-slate-100 bg-white/50 px-3 shadow-sm transition-all duration-300 hover:border-blue-200 hover:bg-white hover:shadow-md group-hover:[animation-play-state:paused]"
+                >
+                  <img
+                    src={src}
+                    alt="Client logo"
+                    className="h-12 w-full object-contain "
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="flex overflow-hidden group">
+            <div className="animate-scroll-review-xrev flex w-max items-center gap-12 py-4">
+              {[...secondRow, ...secondRow].map((src, i) => (
+                <div
+                  key={i}
+                  className="flex h-20 w-44 items-center justify-center rounded-2xl border border-slate-100 bg-white/50 px-6 shadow-sm transition-all duration-300 hover:border-blue-200 hover:bg-white hover:shadow-md group-hover:[animation-play-state:paused]"
+                >
+                  <img
+                    src={src}
+                    alt="Client logo"
+                    className="h-12 w-full object-contain "
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-20 flex items-center justify-center gap-4 text-center">
+            <div className="h-px w-12 bg-slate-200" />
+            <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-slate-300">Enterprise Grade Solutions</span>
+            <div className="h-px w-12 bg-slate-200" />
         </div>
       </div>
     </section>
