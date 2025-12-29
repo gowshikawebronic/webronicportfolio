@@ -14,6 +14,18 @@ import {
 } from "lucide-react";
 import { openPositions } from "../data";
 
+// --- START FIX FOR BUILD ERROR ---
+/**
+ * Since you are using "output: export", Next.js needs to know all 
+ * possible IDs at build time to generate static HTML files.
+ */
+export async function generateStaticParams() {
+  return openPositions.map((job) => ({
+    id: job.id,
+  }));
+}
+// --- END FIX FOR BUILD ERROR ---
+
 export default function JobDetailsPage() {
   const params = useParams();
   const router = useRouter();
