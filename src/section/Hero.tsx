@@ -8,12 +8,12 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative overflow-hidden bg-white py-15 mt-10 "
+      className="relative overflow-hidden bg-white py-15 mt-10 font-sora  "
     >
 
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(99,102,241,0.12),transparent_50%)]" />
+      {/* <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(99,102,241,0.12),transparent_50%)]" />
 
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(15,23,42,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,0.03)_1px,transparent_1px)] bg-[size:72px_72px]" />
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(15,23,42,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,0.03)_1px,transparent_1px)] bg-[size:72px_72px]" /> */}
 
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute top-20 left-10 h-[500px] w-[500px] rounded-full bg-blue-100/40 blur-[120px] animate-pulse" />

@@ -35,20 +35,18 @@ export default function Clients() {
   const secondRow = logos.slice(Math.ceil(logos.length / 2));
 
   return (
-    <section id="client" className="relative overflow-hidden bg-white py-5">
+    <section id="client" className="relative overflow-hidden bg-white py-5 font-sora">
       
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(15,23,42,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,0.02)_1px,transparent_1px)] bg-[size:72px_72px]" />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.05),transparent_70%)]" />
-
+      
       <div className="relative mx-auto max-w-7xl px-6">
         
         <div className="mb-10 text-center animate-fade-up">
-          <div className="mb-6 inline-flex rounded-full bg-blue-50 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-blue-600 shadow-sm">
-            <Sparkles size={14} className="mr-2" />
-            Global Reach
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-slate-50 border border-slate-200 px-4 py-1.5">
+            <span className="flex h-2 w-2 rounded-full bg-[#4888e8] animate-pulse" />
+            <span className="text-[10px] font-bold uppercase tracking-widest text-slate-600">Clients</span>
           </div>
           
-          <h2 className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
+          <h2 className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-6xl">
             Trusted by <span className="bg-gradient-to-r from-blue-600 to-indigo-500 bg-clip-text text-transparent">Industry Leaders</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-500 font-medium">
@@ -98,11 +96,11 @@ export default function Clients() {
           </div>
         </div>
 
-        <div className="mt-20 flex items-center justify-center gap-4 text-center">
+        {/* <div className="mt-20 flex items-center justify-center gap-4 text-center">
             <div className="h-px w-12 bg-slate-200" />
             <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-slate-300">Enterprise Grade Solutions</span>
             <div className="h-px w-12 bg-slate-200" />
-        </div>
+        </div> */}
       </div>
     </section>
   );

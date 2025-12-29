@@ -2,103 +2,145 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ShieldCheck, Zap, BarChart3 } from "lucide-react";
+import {
+  ArrowRight,
+  ShieldCheck,
+  Zap,
+  BarChart3,
+  CheckCircle2,
+} from "lucide-react";
 
 export default function About() {
   return (
-    <section id="about" className="relative overflow-hidden bg-slate-50 py-15 ">
-      
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(15,23,42,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,0.03)_1px,transparent_1px)] bg-[size:72px_72px]" />
-      
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_right,rgba(99,102,241,0.08),transparent_55%)]" />
+    <section
+      id="about"
+      className="relative overflow-hidden bg-white py-12 md:py-20 font-sora"
+    >
+      {/* Background Subtle Accents */}
+      <div className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-72 h-72 md:w-96 md:h-96 bg-[#4888e8]/10 rounded-full blur-[80px] md:blur-[120px] pointer-events-none" />
 
-      <div className="relative mx-auto max-w-7xl px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+      <div className="relative mx-auto max-w-7xl px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
         
-        <div className="relative flex justify-center group">
-          <div className="absolute inset-0 -z-10 rounded-[40px] bg-blue-200/40 blur-[80px] transition-opacity group-hover:opacity-70" />
+        {/* Top/Left Side: Professional Logo Showcase */}
+        {/* order-2 lg:order-1 keeps image below text on mobile, or swap to order-1 if you want image first */}
+        <div className="relative flex justify-center order-2 lg:order-1 group">
+          <div className="absolute inset-0 -z-10 rounded-[3rem] bg-gradient-to-tr from-[#4888e8]/20 to-[#09b125]/20 blur-[60px] md:blur-[80px] opacity-50" />
 
-          <div className="relative w-full rounded-[32px] bg-white p-3 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] border border-slate-200 transition-all duration-700 group-hover:scale-[1.02] group-hover:rotate-1">
-            <Image
-              src="./assets/images/hero-dashboard.png"
-              alt="Webronic dashboard preview"
-              width={900}
-              height={900}
-              className="rounded-[24px]"
-              priority
-            />
+          <div className="relative w-full max-w-[320px] sm:max-w-[400px] lg:max-w-[500px] aspect-square flex items-center justify-center rounded-[2.5rem] md:rounded-[3rem] bg-slate-50/50 backdrop-blur-sm border border-slate-200/60 shadow-2xl transition-all duration-700">
             
-            <div className="absolute -bottom-6 -right-6 hidden sm:flex items-center gap-3 rounded-2xl bg-slate-900 p-4 shadow-2xl animate-bounce-slow">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-500/20 text-blue-400">
-                <Zap size={20} fill="currentColor" />
+            {/* Decorative Frame - Hidden on very small screens to save space */}
+            <div className="absolute inset-3 md:inset-4 rounded-[2rem] md:rounded-[2.5rem] border border-dashed border-slate-300 opacity-30" />
+            
+            <div className="relative p-8 md:p-12 transition-transform duration-700 group-hover:scale-105">
+              <Image
+                src="./assets/images/hero-dashboard.png"
+                alt="Webronic Company Logo"
+                width={400}
+                height={400}
+                className="w-full h-auto object-contain drop-shadow-[0_15px_30px_rgba(72,136,232,0.2)]"
+                priority
+              />
+            </div>
+
+            {/* Floating Metric Badge - Scaled for Mobile */}
+            <div className="absolute -bottom-4 -right-2 md:-bottom-6 md:-right-6 flex items-center gap-3 md:gap-4 rounded-xl md:rounded-2xl bg-slate-900 px-4 py-3 md:px-6 md:py-4 shadow-2xl animate-float">
+              <div className="flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-lg md:rounded-xl bg-[#09b125]/20 text-[#09b125]">
+                <Zap size={20} className="md:size={24}" fill="currentColor" />
               </div>
-              <div className="pr-4">
-                <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400">Performance</p>
-                <p className="text-sm font-bold text-white">99.9% Uptime</p>
+              <div>
+                <p className="text-[8px] md:text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">
+                  Reliability
+                </p>
+                <p className="text-sm md:text-lg font-extrabold text-white">
+                  99.9% Uptime
+                </p>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="relative flex flex-col text-center lg:text-left">
-          <div className="mb-6 inline-flex self-center lg:self-start rounded-full bg-blue-50 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-blue-600">
-            About Webronic
+        {/* Right Side: Content */}
+        <div className="relative flex flex-col text-left order-1 lg:order-2">
+          <div className="mb-6 inline-flex self-start items-center gap-2 rounded-full bg-slate-50 border border-slate-200 px-4 py-1.5 md:px-5 md:py-2">
+            <span className="flex h-2 w-2 rounded-full bg-[#4888e8] animate-pulse" />
+            <span className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-slate-600">
+              About us
+            </span>
           </div>
 
-          <h2 className="text-4xl sm:text-5xl font-extrabold leading-[1.1] text-slate-900 tracking-tight">
-            WHEN YOU GROW WITH 
-            <span className="block bg-gradient-to-r from-blue-600 to-indigo-500 bg-clip-text text-transparent">
-              TECHNICAL EXPERTISE
-            </span>
-            <span className="text-slate-400 font-medium">WE GROW TOGETHER</span>
+          <h2 className="text-3xl md:text-5xl font-black leading-[1.1] text-slate-900 tracking-tight">
+            WHEN YOU GROW <br />
+            <span className="text-[#4888e8]">WITH OUR TECHNICAL EXPERTISE,</span> <br />
+            <span className="text-[#09b125]">WE GROW</span>
           </h2>
 
-          <div className="mt-8 space-y-4 text-lg text-slate-500 leading-relaxed font-medium">
+          <div className="mt-6 md:mt-8 space-y-6 text-base md:text-lg text-slate-500 leading-relaxed font-medium">
             <p>
-              We are the <span className="text-slate-900">One Stop Solution</span> for all your requirements. Our approach
-              blends clean design, robust engineering, and future-ready
-              architectures tailored to your growth.
+              We are the{" "}
+              <span className="text-slate-900 font-bold underline decoration-[#4888e8] decoration-2 underline-offset-4">
+                One Stop Solution
+              </span>{" "}
+              for all your high-performance infrastructure requirements.
             </p>
-            <p>
-              From concept to deployment, we focus on reliability, security, and
-              performance — ensuring your digital foundation evolves alongside your
-              business.
-            </p>
+
+            {/* Feature Checklist - Improved Grid for Mobile */}
+            <div className="grid grid-cols-2 lg:grid-cols-2 gap-y-3 gap-x-2 pt-2">
+              {[
+                "Agile Deployment",
+                "Scalable Architecture",
+                "Cloud Migration",
+                "Security First",
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="flex items-center gap-2 group/item"
+                >
+                  <div className="flex h-5 w-5 md:h-6 md:w-6 shrink-0 items-center justify-center rounded-full bg-blue-50 text-[#09b125]">
+                    <CheckCircle2 size={14} className="md:size={16}" strokeWidth={3} />
+                  </div>
+                  <span className="text-[11px] md:text-sm font-bold text-slate-700 whitespace-nowrap">
+                    {item}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
 
-          <div className="mt-10">
+          <div className="mt-10 md:mt-12">
             <Link
               href="/service"
-              className="group inline-flex items-center gap-2 text-base font-bold text-blue-600 transition-all hover:gap-4"
+              className="group relative inline-flex items-center justify-center w-full sm:w-auto gap-3 overflow-hidden rounded-xl md:rounded-2xl bg-[#4888e8] px-10 py-4 font-black uppercase tracking-widest text-[10px] md:text-xs text-white transition-all hover:bg-[#09b125] active:scale-95"
             >
-              Explore our services
-              <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
+              Our Services
+              <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
 
-          <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {/* Bottom Info Cards - Grid Fix for Mobile */}
+          <div className="mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[
-              { 
-                title: "Scalable", 
-                desc: "Built to evolve", 
-                icon: BarChart3 
-              },
-              { 
-                title: "Secure", 
-                desc: "Enterprise foundations", 
-                icon: ShieldCheck 
-              },
-              { 
-                title: "Reliable", 
-                desc: "Trustworthy performance", 
-                icon: Zap 
-              },
+              { title: "Scalable", desc: "Modular Code", icon: BarChart3, accent: "#4888e8" },
+              { title: "Secure", desc: "E2E Encryption", icon: ShieldCheck, accent: "#09b125" },
+              { title: "High Speed", desc: "Low Latency", icon: Zap, accent: "#4888e8" },
             ].map((point, i) => (
-              <div key={i} className="flex flex-col items-center lg:items-start p-4 rounded-2xl border border-slate-100 bg-white shadow-sm transition-all hover:shadow-md hover:border-blue-100">
-                <div className="mb-3 text-blue-600">
-                  <point.icon size={24} strokeWidth={2} />
+              <div
+                key={i}
+                className="flex items-center sm:flex-col sm:items-start p-4 md:p-5 rounded-2xl md:rounded-[2rem] border border-slate-100 bg-slate-50/50 transition-all hover:bg-white hover:shadow-xl"
+              >
+                <div
+                  className="mr-4 sm:mr-0 sm:mb-4 flex h-10 w-10 md:h-12 md:w-12 shrink-0 items-center justify-center rounded-xl bg-white shadow-sm"
+                  style={{ color: point.accent }}
+                >
+                  <point.icon size={20} className="md:size={22}" strokeWidth={2.5} />
                 </div>
-                <p className="font-bold text-slate-900">{point.title}</p>
-                <p className="mt-1 text-xs text-slate-400 leading-tight">{point.desc}</p>
+                <div>
+                  <p className="font-black text-[10px] md:text-[11px] uppercase tracking-widest text-slate-900">
+                    {point.title}
+                  </p>
+                  <p className="text-[9px] md:text-[10px] font-bold text-slate-400 uppercase tracking-tighter">
+                    {point.desc}
+                  </p>
+                </div>
               </div>
             ))}
           </div>

@@ -9,8 +9,9 @@ const primaryItems = [
   { name: "Home", type: "section", id: "hero" },
   { name: "Services", type: "page", href: "/service" },
   { name: "Projects", type: "page", href: "/projects" },
-  { name: "Team", type: "page", href: "/team" },
-  { name: "Contact", type: "section", id: "contact" },
+  { name: "Products", type: "page", href: "/products" },
+  { name: "Branches", type: "page", href: "/branch" },
+  // { name: "Contact", type: "section", id: "contact" },
 ];
 
 const secondaryItems = [
@@ -18,7 +19,8 @@ const secondaryItems = [
   { name: "Partners", type: "section", id: "partner" },
   { name: "Clients", type: "section", id: "client" },
   { name: "Career", type: "section", id: "career" },
-  { name: "Branches", type: "section", id: "branches" },
+  { name: "Location", type: "section", id: "location" },
+  { name: "Team", type: "page", href: "/team" },
 ];
 
 export default function Navbar() {
@@ -66,7 +68,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-white/5">
+      <header className="fixed inset-x-0 top-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-white/5 font-sora">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           
           <a href="/#hero" onClick={(e) => { e.preventDefault(); handleNavClick({ type: "section", id: "hero" }); }} className="flex items-center">
@@ -104,7 +106,7 @@ export default function Navbar() {
               onClick={() => handleNavClick({ type: "section", id: "contact" })}
               className="hidden sm:inline-flex items-center justify-center rounded-xl bg-white px-5 py-2 text-sm font-bold text-slate-900 shadow-lg hover:scale-105 transition"
             >
-              Get in Touch
+              Contact us
             </button>
             <button onClick={() => setOpen(true)} className="md:hidden p-2 text-white">☰</button>
           </div>

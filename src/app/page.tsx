@@ -1,13 +1,14 @@
 import Hero from "@/section/Hero"
 import About from "@/section/About"
 // import ServicesPage from "./service/page"
-// import Service from "@/section/Service"
+import Service from "@/section/Service"
 // import Partners from "@/section/Partners"
 import Client from "@/section/Client"
 import Partner from "@/section/Partner"
 import Contact from "@/section/Contact"
-import Branch from "@/section/Branch"
+import Location from "@/section/Location"
 import Career from "@/section/Career"
+// import CareerPage from "./career/page"
 
 
 
@@ -18,13 +19,12 @@ export default function page() {
     <>
     <Hero />
     <About />
+    <Service />
     <Partner />
-    {/* <ServicesPage /> */}
-    {/* <Service /> */}
     <Client />
     <Career />
     <Contact />
-    <Branch />
+    <Location />
     {/* <Team /> */}
    
     

@@ -72,18 +72,18 @@ export default function Integrations() {
   }, [eleProgress]);
 
   return (
-    <section id="partner" className="relative overflow-hidden bg-white py-12 md:py-20 lg:py-7">
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(15,23,42,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,0.03)_1px,transparent_1px)] bg-[size:72px_72px]" />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.08),transparent_70%)]" />
+    <section id="partner" className="relative overflow-hidden bg-white py-12 md:py-20 lg:py-7 font-sora">
+      {/* <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(15,23,42,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,0.03)_1px,transparent_1px)] bg-[size:72px_72px]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.08),transparent_70%)]" /> */}
 
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="flex flex-col gap-10 md:gap-16">
           
           <div className="text-center">
-            <div className="mb-4 md:mb-6 hidden  md:inline-flex  rounded-full bg-blue-50 px-4 py-1.5 text-[10px] md:text-xs font-bold uppercase tracking-widest text-blue-600 shadow-sm">
-              <Sparkles size={14} className="mr-2" />
-              Strategic Alliances
-            </div>
+            <div className="mb-4 max-h-6 max-w-fit inline-flex items-center gap-2 rounded-full bg-slate-50 border border-slate-200 px-4 py-1.5">
+            <span className="flex max-h-2 max-w-2   rounded-full bg-[#4888e8] animate-pulse" />
+            <span className="text-[10px] font-bold uppercase tracking-widest text-slate-600">partners</span>
+          </div>
             
             <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl leading-tight">
               Partnering with <br className="hidden sm:block" />
@@ -120,12 +120,12 @@ export default function Integrations() {
                         ref={(el) => {
                           eleRefs.current[i] = el;
                         }}
-                        className="flex h-20 w-20 translate-x-16 items-center justify-center rounded-2xl bg-white border border-slate-100 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 group-hover:-translate-y-2 group-hover:border-blue-200 group-hover:shadow-blue-100 group-hover:shadow-2xl"
+                        className="flex h-26 w-26 translate-x-16 items-center justify-center rounded-2xl bg-white border border-slate-100 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 group-hover:-translate-y-2 group-hover:border-blue-200 group-hover:shadow-blue-100 group-hover:shadow-2xl"
                       >
                         <img
                           src={item.image}
                           alt={`partner-${i + 1}`}
-                          className={`h-12 w-12 object-contain transition-transform duration-500 group-hover:scale-110 ${item.rotation2}`}
+                          className={`h-18 w-18 object-contain transition-transform duration-500 group-hover:scale-110 ${item.rotation2}`}
                         />
                       </div>
                     </a>
@@ -155,11 +155,11 @@ export default function Integrations() {
             </div>
           </div>
 
-          <div className="mt-4 md:mt-8 flex items-center justify-center gap-4 px-4 text-center">
+          {/* <div className="mt-4 md:mt-8 flex items-center justify-center gap-4 px-4 text-center">
              <div className="h-px w-8 md:w-12 bg-slate-200" />
              <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-[0.3em] text-slate-300 whitespace-nowrap">Shared Impact</span>
              <div className="h-px w-8 md:w-12 bg-slate-200" />
-          </div>
+          </div> */}
 
         </div>
       </div>

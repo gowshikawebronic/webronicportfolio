@@ -1,11 +1,22 @@
 "use client";
 
-import type { ReactNode, FormEvent } from "react";
+import type { FormEvent } from "react";
 import { useState } from "react";
-import { ChevronDown, X, Send, User, Mail, Phone, MessageSquare } from "lucide-react";
+import { 
+  ChevronDown, 
+  X, 
+  Send, 
+  User, 
+  Mail, 
+  Phone, 
+  MessageSquare, 
+  ArrowRight, 
+  CheckCircle2,
+  Briefcase 
+} from "lucide-react";
 import { services, type Service } from "@/app/service/components/data";
 
-
+// --- ENQUIRY MODAL ---
 const EnquiryModal = ({
   service,
   onClose,
@@ -23,62 +34,81 @@ const EnquiryModal = ({
 
   return (
     <div 
-      className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 transition-opacity duration-300"
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-900/60 backdrop-blur-md p-4 transition-all"
       onClick={onClose}
     >
       <div 
-        className="relative w-full max-w-lg overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-gray-900/5 animate-modal-pop"
+        className="relative w-full max-w-lg overflow-hidden rounded-[1.5rem] md:rounded-[2rem] bg-white shadow-2xl ring-1 ring-black/5 animate-modal-pop font-sora"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="bg-blue-600 p-6 text-white">
+        <div className="bg-[#4888e8] p-6 md:p-8 text-white">
           <div className="flex items-center justify-between">
-            <h3 className="text-xl font-bold">Enquire Now</h3>
-            <button onClick={onClose} className="rounded-full bg-white/20 p-1 hover:bg-white/40 transition">
-              <X size={20} />
+            <h3 className="text-xl md:text-2xl font-extrabold tracking-tight">Start a Project</h3>
+            <button onClick={onClose} className="rounded-full bg-white/10 p-2 hover:bg-white/40 transition-colors">
+              <X size={18} />
             </button>
           </div>
-          <p className="mt-2 text-blue-100 text-sm">
-            Tell us about your requirements for <span className="font-bold text-white">{service.title}</span>.
+          <p className="mt-2 text-blue-50 text-xs md:text-sm opacity-90 font-medium">
+            Consulting for <span className="font-bold underline decoration-[#09b125]">{service.title}</span>
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="p-6 space-y-4">
-          <div className="space-y-1">
-            <label className="text-sm font-medium text-gray-700">Full Name</label>
+        <form onSubmit={handleSubmit} className="p-5 md:p-8 space-y-4 md:space-y-5">
+          <div className="space-y-1.5">
+            <label className="text-[10px] font-black uppercase tracking-[0.1em] text-slate-400 ml-1">Full Name</label>
             <div className="relative">
-              <User className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
-              <input type="text" placeholder="John Doe" className="w-full rounded-lg border border-gray-200 pl-10 p-2.5 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition" required />
+              <User className="absolute left-4 top-3.5 h-4 w-4 md:h-5 md:w-5 text-slate-300" />
+              <input type="text" placeholder="e.g. Alex Jensen" className="w-full rounded-xl border border-slate-200 pl-10 md:pl-12 p-3 md:p-3.5 text-sm md:text-base focus:border-[#4888e8] focus:ring-4 focus:ring-blue-50 outline-none transition font-medium text-slate-700" required />
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="space-y-1">
-              <label className="text-sm font-medium text-gray-700">Email</label>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
+            <div className="space-y-1.5">
+              <label className="text-[10px] font-black uppercase tracking-[0.1em] text-slate-400 ml-1">Email</label>
               <div className="relative">
-                <Mail className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
-                <input type="email" placeholder="john@example.com" className="w-full rounded-lg border border-gray-200 pl-10 p-2.5 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition" required />
+                <Mail className="absolute left-4 top-3.5 h-4 w-4 md:h-5 md:w-5 text-slate-300" />
+                <input type="email" placeholder="alex@company.com" className="w-full rounded-xl border border-slate-200 pl-10 md:pl-12 p-3 md:p-3.5 text-sm md:text-base focus:border-[#4888e8] focus:ring-4 focus:ring-blue-50 outline-none transition font-medium text-slate-700" required />
               </div>
             </div>
-            <div className="space-y-1">
-              <label className="text-sm font-medium text-gray-700">Phone</label>
+            <div className="space-y-1.5">
+              <label className="text-[10px] font-black uppercase tracking-[0.1em] text-slate-400 ml-1">Phone</label>
               <div className="relative">
-                <Phone className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
-                <input type="tel" placeholder="+1 234 567 890" className="w-full rounded-lg border border-gray-200 pl-10 p-2.5 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition" required />
+                <Phone className="absolute left-4 top-3.5 h-4 w-4 md:h-5 md:w-5 text-slate-300" />
+                <input type="tel" placeholder="+1..." className="w-full rounded-xl border border-slate-200 pl-10 md:pl-12 p-3 md:p-3.5 text-sm md:text-base focus:border-[#4888e8] focus:ring-4 focus:ring-blue-50 outline-none transition font-medium text-slate-700" required />
               </div>
             </div>
           </div>
 
-          <div className="space-y-1">
-            <label className="text-sm font-medium text-gray-700">Message</label>
+          <div className="space-y-1.5">
+            <label className="text-[10px] font-black uppercase tracking-[0.1em] text-slate-400 ml-1">Interested Service</label>
             <div className="relative">
-              <MessageSquare className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
-              <textarea rows={3} placeholder="Describe your project needs..." className="w-full rounded-lg border border-gray-200 pl-10 p-2.5 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition resize-none" required />
+              <Briefcase className="absolute left-4 top-3.5 h-4 w-4 md:h-5 md:w-5 text-slate-300 pointer-events-none" />
+              <select 
+                defaultValue={service.id} 
+                className="w-full rounded-xl border border-slate-200 pl-10 md:pl-12 p-3 md:p-3.5 text-sm md:text-base focus:border-[#4888e8] focus:ring-4 focus:ring-blue-50 outline-none transition font-medium appearance-none bg-white text-slate-700 cursor-pointer"
+                required
+              >
+                {services.map((s) => (
+                  <option key={s.id} value={s.id}>
+                    {s.title}
+                  </option>
+                ))}
+              </select>
+              <ChevronDown className="absolute right-4 top-4 h-4 w-4 text-slate-400 pointer-events-none" />
             </div>
           </div>
 
-          <button type="submit" className="mt-2 flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 py-3 font-semibold text-white shadow-lg shadow-blue-600/30 hover:bg-blue-700 transition-all active:scale-[0.98]">
-            <Send size={18} />
-            Submit Request
+          <div className="space-y-1.5">
+            <label className="text-[10px] font-black uppercase tracking-[0.1em] text-slate-400 ml-1">Requirement</label>
+            <div className="relative">
+              <MessageSquare className="absolute left-4 top-3.5 h-4 w-4 md:h-5 md:w-5 text-slate-300" />
+              <textarea rows={2} placeholder="Tell us about your goals..." className="w-full rounded-xl border border-slate-200 pl-10 md:pl-12 p-3 md:p-3.5 text-sm md:text-base focus:border-[#4888e8] focus:ring-4 focus:ring-blue-50 outline-none transition resize-none font-medium text-slate-700" required />
+            </div>
+          </div>
+
+          <button type="submit" className="group mt-2 flex w-full items-center justify-center gap-3 rounded-xl md:rounded-2xl bg-[#4888e8] py-3.5 md:py-4 text-xs md:text-sm font-extrabold uppercase tracking-widest text-white shadow-xl shadow-blue-200 hover:bg-[#3a71c5] transition-all hover:translate-y-[-2px] active:scale-95">
+            Send Inquiry
+            <Send size={16} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
           </button>
         </form>
       </div>
@@ -86,6 +116,7 @@ const EnquiryModal = ({
   );
 };
 
+// --- SERVICE CARD ---
 const ServiceCard = ({ 
   service, 
   isOpen, 
@@ -102,112 +133,127 @@ const ServiceCard = ({
   return (
     <div 
       style={{ animationDelay: `${(index + 1) * 150}ms` }}
-      className="animate-on-load group relative overflow-hidden rounded-[2.5rem] border border-blue-100 bg-white/70 backdrop-blur-md p-8 shadow-lg transition-all duration-500 hover:border-blue-300 hover:shadow-2xl hover:shadow-blue-900/10 hover:-translate-y-2 opacity-0"
+      className="animate-on-load group relative overflow-hidden rounded-[1.5rem] md:rounded-[2.5rem] border border-slate-100 bg-white p-6 md:p-12 shadow-xl shadow-slate-200/50 transition-all duration-700 hover:shadow-2xl hover:shadow-[#4888e8]/10 hover:-translate-y-2 opacity-0 font-sora"
     >
-      <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] items-center">
-        <div className="flex flex-col h-full">
-          <div className="flex items-start gap-5">
-            <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 shadow-sm ring-1 ring-blue-100 group-hover:bg-blue-600 group-hover:text-white group-hover:rotate-6 transition-all duration-500">
+      <div className="absolute top-0 right-0 -mr-16 -mt-16 h-64 w-64 rounded-full bg-blue-50/50 blur-3xl transition-opacity group-hover:opacity-100 hidden md:block" />
+
+      <div className="grid gap-8 md:gap-12 lg:grid-cols-[1.3fr_0.7fr] items-center">
+        <div className="flex flex-col h-full relative z-10">
+          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 md:gap-6 text-center sm:text-left">
+            <div className="flex h-14 w-14 md:h-16 md:w-16 shrink-0 items-center justify-center rounded-xl md:rounded-2xl bg-[#4888e8] text-white shadow-lg shadow-blue-100 transition-all duration-500 group-hover:rotate-12 group-hover:scale-110">
               {service.icon}
             </div>
             <div>
-              <h3 className="text-2xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">{service.title}</h3>
-              <p className="mt-1 text-xs font-bold text-blue-600 uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full">
-                {service.tagline}
-              </p>
+              <div className="flex items-center justify-center sm:justify-start gap-2 mb-1.5 md:mb-2">
+                 <span className="h-1.5 w-1.5 rounded-full bg-[#09b125]" />
+                 <p className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-[#09b125]">{service.tagline}</p>
+              </div>
+              <h3 className="text-xl md:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">{service.title}</h3>
             </div>
           </div>
 
-          <p className="mt-6 text-slate-600 leading-relaxed text-sm md:text-base">
+          <p className="mt-4 md:mt-8 text-slate-500 text-center sm:text-left leading-relaxed text-sm md:text-lg font-medium max-w-xl">
             {service.description}
           </p>
 
-          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-4">
+          <div className="mt-6 md:mt-10 grid grid-cols-1 sm:grid-cols-2 gap-y-3 md:gap-y-4 gap-x-8">
             {service.points.map((point, idx) => (
-              <div key={idx} className="flex items-center gap-2.5 transition-transform duration-300 hover:translate-x-1">
-                <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-blue-500" />
-                <span className="text-sm font-medium text-slate-600">{point}</span>
+              <div key={idx} className="flex items-center gap-3 group/point">
+                <div className="flex h-5 w-5 md:h-6 md:w-6 items-center justify-center rounded-full bg-blue-50 text-[#4888e8] transition-colors group-hover/point:bg-[#09b125] group-hover/point:text-white shrink-0">
+                  <CheckCircle2 className="size={10} md:size={14} strokeWidth={4}" />
+                </div>
+                <span className="text-xs md:text-sm font-bold text-slate-700">{point}</span>
               </div>
             ))}
           </div>
 
-          <div className="mt-auto pt-8">
+          <div className="mt-auto pt-8 md:pt-12">
             <button
               onClick={onToggle}
-              className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-blue-600 transition-colors"
+              className="flex items-center justify-center sm:justify-start w-full sm:w-auto gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 hover:text-[#4888e8] transition-colors"
             >
-              Technology Stack
-              <ChevronDown className={`h-4 w-4 transition-transform duration-500 ${isOpen ? "rotate-180 text-blue-600" : ""}`} />
+              The Stack
+              <ChevronDown className={`h-3 w-3 transition-transform duration-500 ${isOpen ? "rotate-180 text-[#4888e8]" : ""}`} />
             </button>
 
-            <div className={`grid transition-all duration-500 ease-in-out ${isOpen ? "grid-rows-[1fr] mt-6 opacity-100" : "grid-rows-[0fr] mt-0 opacity-0"}`}>
+            <div className={`grid transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${isOpen ? "grid-rows-[1fr] mt-4 md:mt-6 opacity-100" : "grid-rows-[0fr] mt-0 opacity-0"}`}>
               <div className="overflow-hidden">
-                <div className="rounded-2xl bg-slate-50 p-4 border border-slate-100">
-                  <div className="flex flex-wrap gap-5">
-                    {service.technologies.map((t) => (
-                      <img 
-                        key={t.name} 
-                        src={t.logo} 
-                        alt={t.name} 
-                        title={t.name}
-                        className="h-7 w-auto " 
-                      />
-                    ))}
-                  </div>
+                <div className="flex flex-wrap gap-4 md:gap-6 justify-center sm:justify-start items-center rounded-xl md:rounded-2xl  border border-slate-100 p-4 md:p-6">
+                  {service.technologies.map((t) => (
+                    <img 
+                      key={t.name} 
+                      src={t.logo} 
+                      alt={t.name} 
+                      title={t.name}
+                      className="h-6 md:h-8 w-auto " 
+                    />
+                  ))}
                 </div>
               </div>
             </div>
 
-            <div className="mt-8">
+            <div className="mt-6 md:mt-10">
               <button 
                 onClick={() => onCtaClick(service)}
-                className="w-full sm:w-auto rounded-xl bg-slate-900 px-8 py-3.5 text-xs font-bold text-white uppercase tracking-[0.15em] shadow-xl transition-all duration-300 hover:bg-blue-600 hover:scale-105 active:scale-95 flex items-center justify-center gap-3"
+                className="group/btn relative w-full sm:w-auto inline-flex items-center justify-center gap-3 overflow-hidden rounded-xl md:rounded-2xl bg-[#4888e8] px-8 md:px-10 py-3.5 md:py-4 text-[10px] md:text-xs font-black uppercase tracking-[0.1em] text-white shadow-2xl shadow-blue-200 transition-all hover:bg-[#09b125]"
               >
-                {service.cta}
-                <Send size={14} className="opacity-70" />
+                <span className="relative z-10">{service.cta}</span>
+                <ArrowRight size={16} className="relative z-10 transition-transform group-hover/btn:translate-x-1" />
               </button>
             </div>
           </div>
         </div>
 
-        <div className="relative flex items-center justify-center">
-          <div className="absolute inset-0 bg-blue-100/50 rounded-full blur-3xl -z-10 animate-pulse" />
-          <img
-            src={service.image}
-            alt={service.title}
-            className="w-full max-w-[280px] object-contain animate-float drop-shadow-2xl transition-transform duration-700 group-hover:scale-110"
-          />
+        <div className="relative flex items-center justify-center lg:justify-end order-first lg:order-last">
+          <div className="absolute inset-0 bg-gradient-to-tr from-blue-100/40 to-green-100/20 rounded-full blur-2xl md:blur-3xl -z-10 animate-pulse" />
+          <div className="relative p-2 md:p-4">
+             <div className="absolute -inset-1 md:-inset-2 rounded-[1.5rem] md:rounded-[2rem] border border-dashed border-[#09b125]/20 " />
+             <img
+                src={service.image}
+                alt={service.title}
+                className="relative z-10 w-full max-w-[180px] md:max-w-[320px] object-contain animate-float drop-shadow-[0_10px_30px_rgba(72,136,232,0.15)] transition-transform duration-700 group-hover:scale-105"
+              />
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
+// --- MAIN PAGE ---
 export default function HowWorks() {
   const [openTechId, setOpenTechId] = useState<number | null>(null);
   const [selectedService, setSelectedService] = useState<Service | null>(null);
 
   return (
-    <>
-     
-
-      <section className="relative overflow-hidden py-24 sm:py-32 bg-slate-50">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.08),transparent_40%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(37,99,235,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(37,99,235,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
-
-        <div className="relative container mx-auto px-6 md:px-12 lg:px-20">
-          <div className="mb-20 text-center max-w-3xl mx-auto opacity-0 animate-header">
-            <span className="mb-4 block text-xs font-black tracking-[0.3em] text-blue-600 uppercase">Premium Solutions</span>
-            <h3 className="mb-6 text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">
-              Our <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Expertise</span>
-            </h3>
-            <p className="text-base md:text-lg text-slate-500 leading-relaxed font-medium">
-              We engineer scalable, future-proof digital architectures designed to 
-              transform and automate your business operations.
+    <main className="bg-white font-sora overflow-x-hidden">
+      <section className="relative overflow-hidden py-12 md:py-36 bg-slate-50/30">
+        {/* Background Gradients */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_100%_0%,rgba(72,136,232,0.05),transparent_25%),radial-gradient(circle_at_0%_100%,rgba(9,177,37,0.05),transparent_25%)]" />
+        
+        <div className="relative container mx-auto px-6 md:px-12 lg:px-24">
+          {/* Main Header - MOVED TO LEFT */}
+          <div className="mb-12 md:mb-24 text-left max-w-4xl opacity-0 animate-card-entry">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-slate-50 border border-slate-200 px-4 py-1.5">
+            <span className="flex h-2 w-2 rounded-full bg-[#4888e8] animate-pulse" />
+            <span className="text-[10px] font-bold uppercase tracking-widest text-slate-600">Solutions & Services</span>
+          </div>
+            {/* <h2 className="mb-4 md:mb-8 text-3xl md:text-7xl font-extrabold tracking-tight text-slate-900 leading-tight md:leading-[1.1]">
+              Architecting the <br />
+              <span className="text-[#4888e8]">Digital</span> Future.
+            </h2> */}
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900 leading-[1.1]">
+            Architecting the <br />
+            <span className="bg-gradient-to-r from-[#4888e8] to-[#09b125] bg-clip-text text-transparent">Digital Future</span>
+          </h2>
+            <p className="text-sm md:text-xl text-slate-500 leading-relaxed  max-w-2xl opacity-80">
+              WEBRONIC transforms legacy challenges into competitive advantages using 
+              high-performance digital architectures.
             </p>
           </div>
 
-          <div className="grid gap-16">
+          {/* Cards Grid */}
+          <div className="grid gap-10 md:gap-20">
             {services.map((service, index) => (
               <ServiceCard 
                 key={service.id} 
@@ -222,12 +268,13 @@ export default function HowWorks() {
         </div>
       </section>
 
+      {/* RENDER MODAL */}
       {selectedService && (
         <EnquiryModal 
           service={selectedService} 
           onClose={() => setSelectedService(null)} 
         />
       )}
-    </>
+    </main>
   );
 }
