@@ -1,4 +1,4 @@
-<iframe
+{/* <iframe
   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3906.4746102007784!2d77.87505197481997!3d11.731577088481279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba95526313cdf43%3A0xdf0cffa84e6434b1!2sWEBRONIC!5e0!3m2!1sen!2sin!4v1766765905867!5m2!1sen!2sin"
   width="600"
   height="450"
@@ -30,4 +30,4 @@
   src="https://www.google.com/maps/d/embed?mid=1_YV73DNApxBopTdb3rgM35fFRAg6c4g&ehbc=2E312F&noprof=1"
   width="640"
   height="480"
-></iframe>;
+></iframe>; */}
