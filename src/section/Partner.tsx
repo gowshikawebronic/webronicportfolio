@@ -72,28 +72,28 @@ export default function Integrations() {
   }, [eleProgress]);
 
   return (
-    <section id="partner" className="relative overflow-hidden bg-white py-12 md:py-20 lg:py-7 font-sora">
-      {/* <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(15,23,42,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,0.03)_1px,transparent_1px)] bg-[size:72px_72px]" />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.08),transparent_70%)]" /> */}
-
+    <section
+      id="partner"
+      className="relative overflow-hidden bg-white py-12 md:py-20 lg:py-7 font-sora"
+    >
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="flex flex-col gap-10 md:gap-16">
-          
           <div className="text-center">
-            <div className="mb-4 max-h-6 max-w-fit inline-flex items-center gap-2 rounded-full bg-slate-50 border border-slate-200 px-4 py-1.5">
-            <span className="flex max-h-2 max-w-2   rounded-full bg-[#4888e8] animate-pulse" />
-            <span className="text-[10px] font-bold uppercase tracking-widest text-slate-600">partners</span>
-          </div>
-            
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#336fa5]">
+                partners
+              </span>
+            </div>
+
             <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl leading-tight">
               Partnering with <br className="hidden sm:block" />
-              <span className="bg-gradient-to-r from-blue-600 to-indigo-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#336fa5] to-[#5ba12d] bg-clip-text text-transparent">
                 Innovative Brands
               </span>
             </h2>
-            
+
             <p className="mx-auto mt-4 md:mt-6 max-w-2xl text-base md:text-lg font-medium leading-relaxed text-slate-500 px-4">
-              Delivering scalable, reliable, and future-ready digital solutions 
+              Delivering scalable, reliable, and future-ready digital solutions
               through shared technical excellence.
             </p>
           </div>
@@ -102,9 +102,9 @@ export default function Integrations() {
             <div className="relative flex h-100 w-full justify-center overflow-hidden lg:h-125">
               <div
                 ref={ref}
-                className="relative mt-20 h-150 w-150  rounded-full border border-slate-100 bg-gradient-to-b from-blue-50/50 via-white to-white md:h-250 md:w-250 shadow-[inset_0_0_100px_rgba(99,102,241,0.05)]"
+                className="relative mt-20 h-150 w-150 rounded-full border border-slate-100 bg-gradient-to-b from-[#336fa5]/5 via-white to-white md:h-250 md:w-250 shadow-[inset_0_0_100px_rgba(51,111,165,0.05)]"
               >
-                <div className="absolute inset-[15%]  rounded-full border border-dashed border-slate-200 opacity-50" />
+                <div className="absolute inset-[15%] rounded-full border border-dashed border-[#5ba12d]/20 opacity-50" />
                 {items.map((item, i) => (
                   <div
                     key={i}
@@ -120,7 +120,7 @@ export default function Integrations() {
                         ref={(el) => {
                           eleRefs.current[i] = el;
                         }}
-                        className="flex h-26 w-26 translate-x-16 items-center justify-center rounded-2xl bg-white border border-slate-100 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 group-hover:-translate-y-2 group-hover:border-blue-200 group-hover:shadow-blue-100 group-hover:shadow-2xl"
+                        className="flex h-26 w-26 translate-x-16 items-center justify-center rounded-2xl bg-white border border-slate-100 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 group-hover:-translate-y-2 group-hover:border-[#336fa5]/30 group-hover:shadow-[#336fa5]/10 group-hover:shadow-2xl"
                       >
                         <img
                           src={item.image}
@@ -143,7 +143,7 @@ export default function Integrations() {
                   href={item.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex h-28 sm:h-32 w-full items-center justify-center rounded-2xl border border-slate-100 bg-white p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
+                  className="flex h-28 sm:h-32 w-full items-center justify-center rounded-2xl border border-slate-100 bg-white p-6 shadow-sm hover:border-[#336fa5]/20 hover:shadow-md transition-all duration-300"
                 >
                   <img
                     src={item.image}
@@ -154,13 +154,6 @@ export default function Integrations() {
               ))}
             </div>
           </div>
-
-          {/* <div className="mt-4 md:mt-8 flex items-center justify-center gap-4 px-4 text-center">
-             <div className="h-px w-8 md:w-12 bg-slate-200" />
-             <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-[0.3em] text-slate-300 whitespace-nowrap">Shared Impact</span>
-             <div className="h-px w-8 md:w-12 bg-slate-200" />
-          </div> */}
-
         </div>
       </div>
     </section>

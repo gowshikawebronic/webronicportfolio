@@ -17,14 +17,14 @@ export default function About() {
       className="relative overflow-hidden bg-white py-12 md:py-20 font-sora"
     >
       {/* Background Subtle Accents */}
-      <div className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-72 h-72 md:w-96 md:h-96 bg-[#4888e8]/10 rounded-full blur-[80px] md:blur-[120px] pointer-events-none" />
+      <div className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-72 h-72 md:w-96 md:h-96 bg-[#336fa5]/10 rounded-full blur-[80px] md:blur-[120px] pointer-events-none" />
 
       <div className="relative mx-auto max-w-7xl px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
         
         {/* Top/Left Side: Professional Logo Showcase */}
         {/* order-2 lg:order-1 keeps image below text on mobile, or swap to order-1 if you want image first */}
         <div className="relative flex justify-center order-2 lg:order-1 group">
-          <div className="absolute inset-0 -z-10 rounded-[3rem] bg-gradient-to-tr from-[#4888e8]/20 to-[#09b125]/20 blur-[60px] md:blur-[80px] opacity-50" />
+          <div className="absolute inset-0 -z-10 rounded-[3rem] bg-gradient-to-tr from-[#336fa5]/20 to-[#5ba12d]/20 blur-[60px] md:blur-[80px] opacity-50" />
 
           <div className="relative w-full max-w-[320px] sm:max-w-[400px] lg:max-w-[500px] aspect-square flex items-center justify-center rounded-[2.5rem] md:rounded-[3rem] bg-slate-50/50 backdrop-blur-sm border border-slate-200/60 shadow-2xl transition-all duration-700">
             
@@ -44,7 +44,7 @@ export default function About() {
 
             {/* Floating Metric Badge - Scaled for Mobile */}
             <div className="absolute -bottom-4 -right-2 md:-bottom-6 md:-right-6 flex items-center gap-3 md:gap-4 rounded-xl md:rounded-2xl bg-slate-900 px-4 py-3 md:px-6 md:py-4 shadow-2xl animate-float">
-              <div className="flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-lg md:rounded-xl bg-[#09b125]/20 text-[#09b125]">
+              <div className="flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-lg md:rounded-xl bg-[#5ba12d]/20 text-[#5ba12d]">
                 <Zap size={20} className="md:size={24}" fill="currentColor" />
               </div>
               <div>
@@ -61,23 +61,22 @@ export default function About() {
 
         {/* Right Side: Content */}
         <div className="relative flex flex-col text-left order-1 lg:order-2">
-          <div className="mb-6 inline-flex self-start items-center gap-2 rounded-full bg-slate-50 border border-slate-200 px-4 py-1.5 md:px-5 md:py-2">
-            <span className="flex h-2 w-2 rounded-full bg-[#4888e8] animate-pulse" />
-            <span className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-slate-600">
-              About us
-            </span>
-          </div>
+         <div className="flex items-center gap-4 mb-6">
+              <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#336fa5]">
+                About us
+              </span>
+            </div>
 
           <h2 className="text-3xl md:text-5xl font-black leading-[1.1] text-slate-900 tracking-tight">
             WHEN YOU GROW <br />
-            <span className="text-[#4888e8]">WITH OUR TECHNICAL EXPERTISE,</span> <br />
-            <span className="text-[#09b125]">WE GROW</span>
+            <span className="text-[#336fa5]">WITH OUR TECHNICAL EXPERTISE,</span> <br />
+            <span className="text-[#5ba12d]">WE GROW</span>
           </h2>
 
           <div className="mt-6 md:mt-8 space-y-6 text-base md:text-lg text-slate-500 leading-relaxed font-medium">
             <p>
               We are the{" "}
-              <span className="text-slate-900 font-bold underline decoration-[#4888e8] decoration-2 underline-offset-4">
+              <span className="text-slate-900 font-bold underline decoration-[#336fa5] decoration-2 underline-offset-4">
                 One Stop Solution
               </span>{" "}
               for all your high-performance infrastructure requirements.
@@ -95,7 +94,7 @@ export default function About() {
                   key={item}
                   className="flex items-center gap-2 group/item"
                 >
-                  <div className="flex h-5 w-5 md:h-6 md:w-6 shrink-0 items-center justify-center rounded-full bg-blue-50 text-[#09b125]">
+                  <div className="flex h-5 w-5 md:h-6 md:w-6 shrink-0 items-center justify-center rounded-full bg-blue-50 text-[#5ba12d]">
                     <CheckCircle2 size={14} className="md:size={16}" strokeWidth={3} />
                   </div>
                   <span className="text-[11px] md:text-sm font-bold text-slate-700 whitespace-nowrap">
@@ -109,7 +108,7 @@ export default function About() {
           <div className="mt-10 md:mt-12">
             <Link
               href="/service"
-              className="group relative inline-flex items-center justify-center w-full sm:w-auto gap-3 overflow-hidden rounded-xl md:rounded-2xl bg-[#4888e8] px-10 py-4 font-black uppercase tracking-widest text-[10px] md:text-xs text-white transition-all hover:bg-[#09b125] active:scale-95"
+              className="group relative inline-flex items-center justify-center w-full sm:w-auto gap-3 overflow-hidden rounded-xl md:rounded-2xl bg-[#336fa5] px-10 py-4 font-black uppercase tracking-widest text-[10px] md:text-xs text-white transition-all hover:bg-[#5ba12d] active:scale-95"
             >
               Our Services
               <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
@@ -119,9 +118,9 @@ export default function About() {
           {/* Bottom Info Cards - Grid Fix for Mobile */}
           <div className="mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[
-              { title: "Scalable", desc: "Modular Code", icon: BarChart3, accent: "#4888e8" },
-              { title: "Secure", desc: "E2E Encryption", icon: ShieldCheck, accent: "#09b125" },
-              { title: "High Speed", desc: "Low Latency", icon: Zap, accent: "#4888e8" },
+              { title: "Scalable", desc: "Modular Code", icon: BarChart3, accent: "#336fa5" },
+              { title: "Secure", desc: "E2E Encryption", icon: ShieldCheck, accent: "#5ba12d" },
+              { title: "High Speed", desc: "Low Latency", icon: Zap, accent: "#336fa5" },
             ].map((point, i) => (
               <div
                 key={i}

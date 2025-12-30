@@ -73,7 +73,7 @@ export default function Footer() {
             <Image
               src="./assets/storetechlogo2.png"
               alt="WEBRONIC"
-              width={160}
+              width={140}
               height={40}
               className="object-contain transition-opacity hover:opacity-80"
             />
@@ -98,7 +98,7 @@ export default function Footer() {
 
           {/* Navigation */}
           <div className="space-y-6">
-            <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#4888e8]">
+            <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#336fa5]">
               Navigation
             </h4>
             <ul className="space-y-3">
@@ -111,12 +111,12 @@ export default function Footer() {
               ].map((link) => (
                 <li key={link.href}>
                   <Link
-                    href={link.href}
+                    href={link.href} 
                     className="text-xs md:text-sm text-slate-400 hover:text-white transition-all flex items-center group"
                   >
                     <ArrowRight
                       size={12}
-                      className="mr-2 opacity-0 -translate-x-2 transition-all group-hover:opacity-100 group-hover:translate-x-0 text-[#09b125]"
+                      className="mr-2 opacity-0 -translate-x-2 transition-all group-hover:opacity-100 group-hover:translate-x-0 text-[#5ba12d]"
                     />
                     {link.label}
                   </Link>
@@ -127,7 +127,7 @@ export default function Footer() {
 
           {/* Company Section */}
           <div className="space-y-6">
-            <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#4888e8]">
+            <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#336fa5]">
               Company
             </h4>
             <ul className="space-y-3">
@@ -168,12 +168,12 @@ export default function Footer() {
                   {item.isExternal ? (
                     /* Separate Page Link for Team */
                     <Link
-                      href={item.id}
+                      href={item.id} 
                       className="text-xs md:text-sm text-slate-400 hover:text-white transition-all flex items-center group cursor-pointer"
                     >
                       <item.icon
                         size={13}
-                        className="mr-2 text-slate-600 group-hover:text-[#09b125] transition-colors"
+                        className="mr-2 text-slate-600 group-hover:text-[#5ba12d] transition-colors"
                       />
                       {item.label}
                     </Link>
@@ -185,7 +185,7 @@ export default function Footer() {
                     >
                       <item.icon
                         size={13}
-                        className="mr-2 text-slate-600 group-hover:text-[#09b125] transition-colors"
+                        className="mr-2 text-slate-600 group-hover:text-[#5ba12d] transition-colors"
                       />
                       {item.label}
                     </button>
@@ -196,19 +196,19 @@ export default function Footer() {
           </div>
           {/* Policies */}
           <div className="space-y-6">
-            <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#4888e8]">
+            <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#336fa5]">
               Policies
             </h4>
             <ul className="space-y-3">
               {policyLinks.map((policy) => (
                 <li key={policy.label}>
                   <Link
-                    href={policy.href}
+                    href={policy.href} 
                     className="text-xs md:text-sm text-slate-400 hover:text-white transition-all flex items-center group"
                   >
                     <policy.icon
                       size={14}
-                      className="mr-2 text-slate-600 group-hover:text-[#09b125] transition-colors"
+                      className="mr-2 text-slate-600 group-hover:text-[#5ba12d] transition-colors"
                     />
                     {policy.label}
                   </Link>
@@ -219,25 +219,25 @@ export default function Footer() {
 
           {/* Corporate HQ */}
           <div className="space-y-6">
-            <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#4888e8]">
+            <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#336fa5]">
               Registered Office
             </h4>
             <div className="space-y-4 text-xs md:text-sm text-slate-400">
               <div className="flex gap-3 items-start">
                 <MapPin
                   size={16}
-                  className="text-[#4888e8] mt-1 flex-shrink-0"
+                  className="text-[#336fa5] mt-1 flex-shrink-0"
                 />
                 <p className="leading-relaxed">
                   New #33, Old #17, 2nd St, Mylapore, Chennai - 600004
                 </p>
               </div>
               <div className="flex gap-3 items-center">
-                <Phone size={16} className="text-[#4888e8] flex-shrink-0" />
+                <Phone size={16} className="text-[#336fa5] flex-shrink-0" />
                 <p className="font-bold">+91 72000 88500</p>
               </div>
               <div className="flex gap-3 items-center">
-                <Mail size={16} className="text-[#4888e8] flex-shrink-0" />
+                <Mail size={16} className="text-[#336fa5] flex-shrink-0" />
                 <p>contact@webronic.com</p>
               </div>
             </div>
@@ -246,7 +246,7 @@ export default function Footer() {
 
         {/* Regional Offices Row */}
         <div className="mt-16 pt-12 border-t border-white/5">
-          <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#4888e8] mb-8">
+          <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#336fa5] mb-8">
             Regional Hubs
           </h4>
           <div className="grid gap-8 md:grid-cols-3">
@@ -258,7 +258,7 @@ export default function Footer() {
                 A1 - No. 20, Sakthi Apartments, Cenotoph Road, Teynampet -
                 600004
               </p>
-              <p className="text-xs mt-1 text-[#4888e8] font-bold">
+              <p className="text-xs mt-1 text-[#336fa5] font-bold">
                 +91 72000 88500
               </p>
             </div>
@@ -269,7 +269,7 @@ export default function Footer() {
               <p className="text-xs text-slate-300 leading-relaxed">
                 JS Tower, Alanganallur Main Road, Sikkandar Savadi - 625018
               </p>
-              <p className="text-xs mt-1 text-[#4888e8] font-bold">
+              <p className="text-xs mt-1 text-[#336fa5] font-bold">
                 +91 63833 26928
               </p>
             </div>
@@ -280,7 +280,7 @@ export default function Footer() {
               <p className="text-xs text-slate-300 leading-relaxed">
                 1-718, Sannasi Muniyappan Kovil, Surappalli, Salem - 636501
               </p>
-              <p className="text-xs mt-1 text-[#4888e8] font-bold">
+              <p className="text-xs mt-1 text-[#336fa5] font-bold">
                 +91 72000 88500
               </p>
             </div>
@@ -295,7 +295,7 @@ export default function Footer() {
               ALL RIGHTS RESERVED.
             </p>
             <div className="flex items-center justify-center md:justify-start gap-2 mt-2">
-              <span className="h-1 w-1 rounded-full bg-[#4888e8] animate-pulse" />
+              <span className="h-1 w-1 rounded-full bg-[#336fa5] animate-pulse" />
               <p className="text-[9px] text-slate-600 uppercase tracking-widest font-medium">
                 Global Enterprise Tech Solutions
               </p>

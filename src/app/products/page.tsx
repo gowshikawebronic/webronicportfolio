@@ -34,8 +34,8 @@ const products: Product[] = [
     description: "Enterprise-grade data visualization engine that transforms fragmented metrics into high-fidelity actionable insights for financial leadership.",
     features: ["Real-time Analytics", "Custom Reporting", "Forecasting"],
     icon: <BarChart3 size={24} />,
-    color1: "#4888e8",
-    color2: "#09b125",
+    color1: "#336fa5",
+    color2: "#5ba12d",
     image: "./assets/images/valuechart.png",
     link: "https://www.valueflowsoft.com/"
   },
@@ -46,10 +46,22 @@ const products: Product[] = [
     description: "A specialized ecosystem for manufacturing workflow optimization, integrating IoT monitoring with core resource planning modules.",
     features: ["Supply Chain Sync", "IoT Integration", "Resource Tracking"],
     icon: <Layers size={24} />,
-    color1: "#4888e8",
-    color2: "#09b125",
+    color1: "#336fa5",
+    color2: "#5ba12d",
     image: "./assets/images/tanluxlogo.png",
     link: "https://tanlux.se/"
+  },
+  {
+    id: "fpanalyxer",
+    name: "Fp analyzer",
+    tagline: "Industrial ERP",
+    description: "A specialized ecosystem for manufacturing workflow optimization, integrating IoT monitoring with core resource planning modules.",
+    features: ["Supply Chain Sync", "IoT Integration", "Resource Tracking"],
+    icon: <Layers size={24} />,
+    color1: "#336fa5",
+    color2: "#5ba12d",
+    image: "./assets/images/fpanalyzer.png",
+    link: "https://www.fpanalyzer.se/"
   },
   {
     id: "storetech",
@@ -58,8 +70,8 @@ const products: Product[] = [
     description: "Cloud-native retail infrastructure providing automated checkout solutions and synchronized inventory management across global storefronts.",
     features: ["AI Checkout", "Inventory Cloud", "Loyalty Systems"],
     icon: <Store size={24} />,
-    color1: "#4888e8",
-    color2: "#09b125",
+    color1: "#336fa5",
+    color2: "#5ba12d",
     image: "./assets/images/storetech-logo1.png",
     link: "https://store-tech.se/"
   }
@@ -79,13 +91,14 @@ export default function ProductSection() {
         
         {/* Professional Header */}
         <div className="mb-20 text-center lg:text-left max-w-4xl animate-card-entry">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-slate-50 border border-slate-200 px-4 py-1.5">
-            <span className="flex h-2 w-2 rounded-full bg-[#4888e8] animate-pulse" />
-            <span className="text-[10px] font-bold uppercase tracking-widest text-slate-600">Our Products</span>
-          </div>
+         <div className="flex items-center gap-4 mb-6">
+              <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#336fa5]">
+                Our products
+              </span>
+            </div>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900 leading-[1.1]">
             Transforming Industry with <br />
-            <span className="bg-gradient-to-r from-[#4888e8] to-[#09b125] bg-clip-text text-transparent">Proprietary Products</span>
+            <span className="bg-gradient-to-r from-[#336fa5] to-[#5ba12d] bg-clip-text text-transparent">Proprietary Products</span>
           </h2>
           <p className="mt-6 text-base md:text-lg text-slate-500 max-w-2xl font-medium leading-relaxed">
             Scalable software solutions meticulously engineered to bridge the gap between complex data and operational excellence.
@@ -138,7 +151,7 @@ export default function ProductSection() {
                   <Link 
                     href={product.link}
                     target="_blank"
-                    className="inline-flex items-center gap-2 rounded-full bg-[#4888e8] px-7 py-3.5 text-xs font-black uppercase tracking-widest text-white transition-all hover:bg-[#09b125] hover:shadow-xl active:scale-95 group/btn"
+                    className="inline-flex items-center gap-2 rounded-full bg-[#336fa5] px-7 py-3.5 text-xs font-black uppercase tracking-widest text-white transition-all hover:bg-[#5ba12d] hover:shadow-xl active:scale-95 group/btn"
                     
                   >
                     Explore Live Platform
@@ -172,8 +185,8 @@ export default function ProductSection() {
                          <Globe size={14} className="text-slate-400" />
                          <span className="text-[10px] font-bold text-slate-400 uppercase tracking-tighter truncate max-w-[150px]">{product.link.replace('https://', '')}</span>
                       </div>
-                      <span className="text-[10px] font-black uppercase text-[#4888e8] tracking-widest flex items-center gap-1">
-                        Active <span className="h-1.5 w-1.5 rounded-full bg-[#09b125]" />
+                      <span className="text-[10px] font-black uppercase text-[#336fa5] tracking-widest flex items-center gap-1">
+                        Active <span className="h-1.5 w-1.5 rounded-full bg-[#5ba12d]" />
                       </span>
                     </div>
                   </div>

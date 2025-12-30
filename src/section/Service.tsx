@@ -72,20 +72,24 @@ export default function ServiceCarousel() {
   ];
 
   return (
-    <section className="bg-white py-16 md:py-24 overflow-hidden font-sora">
+    <section className="bg-white py-16 md:py-24 mx-auto container overflow-hidden font-sora ">
       {/* Centered Heading Section */}
       <div className="container mx-auto px-6 mb-12 md:mb-20 text-center">
-        <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-slate-50 border border-slate-200 px-4 py-1.5">
-          <span className="flex h-2 w-2 rounded-full bg-[#4888e8] animate-pulse" />
-          <span className="text-[10px] font-bold uppercase tracking-widest text-slate-600">
-            Our Services
-          </span>
-        </div>
-
-        <h2 className="text-3xl md:text-6xl font-black text-slate-900 tracking-tight leading-tight">
+        <div className="flex items-center  justify-center gap-4 mb-6">
+              <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#336fa5]">
+                Our Services
+              </span>
+            </div>
+          <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl leading-tight">
+             Intelligent Solutions <br className="hidden sm:block" />
+              <span className="bg-gradient-to-r from-[#336fa5] to-[#5ba12d] bg-clip-text text-transparent">
+                Built for Growth
+              </span>
+            </h2>
+        {/* <h2 className="text-3xl md:text-6xl font-black text-slate-900 tracking-tight leading-tight">
           Intelligent Solutions <br />
-          <span className="text-[#4888e8]">Built for Growth.</span>
-        </h2>
+          <span className="text-[#336fa5]">Built for Growth.</span>
+        </h2> */}
 
         <p className="mt-6 text-sm md:text-lg text-slate-500 max-w-2xl mx-auto font-medium">
           WEBRONIC delivers scalable digital solutions that automate, optimize,
@@ -95,7 +99,7 @@ export default function ServiceCarousel() {
         <div className="mt-8">
           <Link
             href="/service"
-            className="group inline-flex items-center gap-2 text-sm font-bold text-[#4888e8] hover:underline"
+            className="group inline-flex items-center gap-2 text-sm font-bold text-[#336fa5] hover:underline"
           >
             Explore All Services
             <ArrowRight
@@ -123,7 +127,7 @@ export default function ServiceCarousel() {
                 <div
                   className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl text-white shadow-lg transition-transform duration-500 group-hover/card:rotate-6 group-hover/card:scale-110"
                   style={{
-                    backgroundColor: index % 2 === 0 ? "#4888e8" : "#09b125",
+                    backgroundColor: index % 2 === 0 ? "#336fa5" : "#09b125",
                   }}
                 >
                   {card.icon}

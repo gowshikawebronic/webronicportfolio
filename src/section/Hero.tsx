@@ -1,107 +1,259 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 import { ArrowRight, Sparkles } from "lucide-react";
+import Image from "next/image";
+const HERO_DATA = [
+  { text: "Smart Kiosk", img: "assets/images/hero/kiosk.png" },
+  { text: "Smart Vending Machine", img: "assets/images/hero/vending.png" },
+  { text: "Smart Fridge", img: "assets/images/hero/fridge.png" },
+  { text: "Shopping App", img: "assets/images/hero/shopping.png" },
+  { text: "Smart Door Controller", img: "assets/images/hero/door.png" },
+  { text: "Android TV Promotion Manager", img: "assets/images/hero/tv.png" },
+  { text: "Unified ERP & Management", img: "assets/images/hero/erp.png" },
+  { text: "AI-Powered Security", img: "assets/images/hero/security.png" },
+  { text: "Electronic Price Tags", img: "assets/images/hero/tags.png" },
+  { text: "Passage System", img: "assets/images/hero/passage.png" },
+  { text: "Automated Tan Beds", img: "assets/images/hero/tan.png" },
+];
 
 export default function Hero() {
+  const [index, setIndex] = useState(0);
+  const [displayText, setDisplayText] = useState("");
+  const [isMounted, setIsMounted] = useState(false);
+  const [typingComplete, setTypingComplete] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted) return;
+
+    const currentWord = HERO_DATA[index].text;
+
+    // STEP 1: Type the word fully
+    if (!typingComplete) {
+      if (displayText.length < currentWord.length) {
+        const typingTimeout = setTimeout(() => {
+          setDisplayText(currentWord.substring(0, displayText.length + 1));
+        }, 80);
+        return () => clearTimeout(typingTimeout);
+      } else {
+        setTypingComplete(true);
+      }
+    }
+    // STEP 2: Wait, then cycle
+    else {
+      const waitTimeout = setTimeout(() => {
+        setDisplayText("");
+        setTypingComplete(false);
+        setIndex((prev) => (prev + 1) % HERO_DATA.length);
+      }, 2500);
+      return () => clearTimeout(waitTimeout);
+    }
+  }, [displayText, index, isMounted, typingComplete]);
+
+  if (!isMounted) return null;
+
+  const prevIndex = (index - 1 + HERO_DATA.length) % HERO_DATA.length;
+  const nextIndex = (index + 1) % HERO_DATA.length;
+  const thirdIndex = (index + 2) % HERO_DATA.length;
+
   return (
-    <section
-      id="hero"
-      className="relative overflow-hidden bg-white py-15 mt-10 font-sora  "
-    >
+    <section className="relative overflow-hidden bg-white py-20 mt-10 font-sora min-h-[800px] flex items-center">
+      <style jsx global>{`
+        @keyframes card-enter {
+          0% {
+            transform: scale(0.95) translateY(10px) rotate(5deg);
+            opacity: 0;
+          }
+          100% {
+            transform: scale(1) translateY(0) rotate(0deg);
+            opacity: 1;
+          }
+        }
+        @keyframes card-cycle-back {
+          0% {
+            transform: scale(1) translateY(0) rotate(0deg);
+            opacity: 1;
+            z-index: 50;
+          }
+          50% {
+            transform: translateX(60px) translateY(20px) rotate(15deg)
+              scale(0.9);
+            opacity: 0.5;
+            z-index: 0;
+          }
+          100% {
+            transform: translateX(30px) translateY(-10px) rotate(24deg)
+              scale(0.85);
+            opacity: 0.2;
+            z-index: 0;
+          }
+        }
+        .animate-card-enter {
+          animation: card-enter 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+        .animate-cycle-back {
+          animation: card-cycle-back 0.8s ease-in-out forwards;
+        }
+        .card-transition {
+          transition: all 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
 
-      {/* <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(99,102,241,0.12),transparent_50%)]" />
+        /* Blinking Cursor Animation */
+        .cursor-blink {
+          display: inline-block;
+          width: 4px;
+          height: 1em;
+          background-color: #336fa5;
+          margin-left: 4px;
+          vertical-align: middle;
+          animation: blink 1s step-end infinite;
+        }
+        @keyframes blink {
+          50% {
+            opacity: 0;
+          }
+        }
+      `}</style>
 
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(15,23,42,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,0.03)_1px,transparent_1px)] bg-[size:72px_72px]" /> */}
+      {/* Grid Background */}
+      <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#336fa5_1px,transparent_1px)] [background-size:40px_40px]" />
 
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute top-20 left-10 h-[500px] w-[500px] rounded-full bg-blue-100/40 blur-[120px] animate-pulse" />
-        <div className="absolute bottom-10 right-10 h-[400px] w-[400px] rounded-full bg-indigo-100/30 blur-[100px] animate-pulse delay-1000" />
-      </div>
-
-
-      <div className="relative mx-auto max-w-7xl px-6">
-        <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
-
-          <div className="flex flex-col text-center lg:text-left">
-
-            <div className="mb-8 inline-flex self-center lg:self-start rounded-full border border-slate-200 bg-white/80 backdrop-blur-md px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-blue-600 shadow-sm">
-              <Sparkles size={14} className="mr-2" />
-              Product by WEBRONIC
+      <div className="relative z-10 mx-auto max-w-7xl px-6 w-full">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+          {/* LEFT COLUMN */}
+          <div className="flex flex-col text-center lg:text-left z-20">
+            <div className="mb-8 inline-flex self-center lg:self-start items-center gap-2 rounded-full bg-slate-50 border border-slate-200 px-4 py-1.5 text-[10px] font-black uppercase tracking-widest text-[#336fa5]">
+              <Sparkles size={14} className="text-[#5ba12d]" />
+              Innovation by WEBRONIC
             </div>
 
-            <h1 className="text-5xl font-extrabold tracking-tight text-slate-900 sm:text-6xl lg:text-7xl leading-[1.1]">
-              The Future of Retail,
-              <span className="block bg-gradient-to-r from-blue-600 via-indigo-500 to-slate-500 bg-clip-text text-transparent">
-                Automated.
+            {/* FIXED HEIGHT CONTAINER FOR H1 
+                min-h-[160px] reserves enough vertical space for 2 lines of text.
+                This prevents the layout from jumping when text is empty.
+            */}
+            <h1 className="min-h-[160px] text-4xl font-black tracking-tight text-slate-900 sm:text-5xl lg:text-6xl leading-[1.1]">
+              The Future of Retail, <br />
+              <span className="text-[#336fa5]">
+                {displayText}
+                {/* If text is empty, render a zero-width space to keep line-height active */}
+                {displayText === "" && <span>&nbsp;</span>}
               </span>
             </h1>
 
             <p className="mt-8 max-w-xl self-center lg:self-start text-lg lg:text-xl leading-relaxed text-slate-500 font-medium">
-              Transform traditional retail into efficient, secure, and customer-centric spaces that generate revenue <span className="text-slate-900 underline decoration-blue-200 underline-offset-4">24/7 without intervention</span>.
+              Revolutionizing traditional commerce into intelligent, autonomous
+              environments operating
+              <span className="text-slate-900 font-bold ml-1 underline decoration-[#5ba12d] decoration-2 underline-offset-4">
+                seamlessly 24/7
+              </span>
+              .
             </p>
-
-            <div className="mt-10 flex flex-wrap justify-center lg:justify-start gap-3">
-              {["Smart Automation", "AI Security", "24/7 Operation"].map((item) => (
-                <span key={item} className="rounded-full border border-slate-100 bg-slate-50/50 px-4 py-1 text-sm font-semibold text-slate-600 transition-colors hover:bg-white hover:border-blue-200 hover:text-blue-600">
-                  {item}
-                </span>
-              ))}
-            </div>
 
             <div className="mt-14 flex justify-center lg:justify-start">
               <Link
                 href="https://vasanthwebronic-oss.github.io/storetech-portfolio/"
                 target="_blank"
-                className="group relative inline-flex items-center gap-6 rounded-2xl border border-slate-200 bg-white px-8 py-5 shadow-[0_20px_50px_rgba(0,0,0,0.05)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_40px_80px_rgba(0,0,0,0.1)]"
+                className="group relative inline-flex items-center gap-6 rounded-2xl border border-slate-100 bg-white px-8 py-5 shadow-xl transition-all hover:-translate-y-1"
               >
-                <div className="absolute inset-0 -z-10 rounded-2xl bg-gradient-to-r from-blue-100 to-indigo-100 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                
                 <Image
                   src="./assets/images/storetech-logo-black.png"
                   alt="StoreTech"
                   width={140}
                   height={36}
-                  className="object-contain transition-transform duration-500 group-hover:scale-105"
+                  className="object-contain"
                 />
-                
+
                 <div className="h-8 w-px bg-slate-200" />
-                
-                <span className="flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-slate-900">
-                  View Product
-                  <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                <span className="flex items-center gap-2 text-sm font-black uppercase tracking-widest text-slate-900">
+                  Explore Product <ArrowRight size={16} />
                 </span>
               </Link>
             </div>
           </div>
 
-          <div className="relative flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-[640px] animate-float">
-              
-              <div className="absolute inset-0 -z-10 rounded-[40px] bg-blue-400/20 blur-[80px]" />
-              <div className="absolute -inset-4 -z-20 rounded-[40px] bg-indigo-200/20 blur-[120px] animate-pulse" />
+          {/* RIGHT COLUMN: Stack Animation */}
+          <div className="relative flex justify-center lg:justify-end h-[500px] items-center">
+            <div className="relative w-[320px] h-[450px] perspective-1000">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] bg-[#336fa5]/15 blur-[100px] rounded-full z-[-1]" />
 
-              <div className="overflow-hidden rounded-[32px] border border-slate-200 bg-white p-2 shadow-2xl transition-all duration-700 hover:rotate-[-1deg] hover:scale-[1.02]">
-                <Image
-                  src="./assets/images/storetech.png"
-                  alt="StoreTech Dashboard"
-                  width={1200}
-                  height={1200}
-                  className="rounded-[24px] object-cover"
-                  priority
+              {/* LAYER 0: Ghost/Previous */}
+              <div
+                key={`prev-${prevIndex}`}
+                className="animate-cycle-back absolute inset-0 rounded-[2rem] border border-slate-200/50 bg-white shadow-sm overflow-hidden"
+              >
+                <img
+                  src={HERO_DATA[prevIndex].img}
+                  alt="Exiting"
+                  className="h-full w-full object-contain p-8 opacity-40 grayscale"
                 />
               </div>
 
-              <div className="absolute -bottom-6 -left-6 rounded-2xl border border-slate-200 bg-white/90 backdrop-blur-xl p-4 shadow-xl hidden md:block animate-bounce-slow">
-                <div className="flex items-center gap-3">
-                  <div className="h-3 w-3 rounded-full bg-green-500 animate-pulse" />
-                  <span className="text-xs font-bold text-slate-800 uppercase tracking-tighter">System Live</span>
+              {/* LAYER 1: Back */}
+              <div
+                className="absolute inset-0 rounded-[2rem] border border-slate-100 bg-white/40 shadow-sm card-transition"
+                style={{
+                  transform:
+                    "translateX(50px) translateY(-15px) rotate(24deg) scale(0.85)",
+                  opacity: 0.3,
+                  zIndex: 10,
+                }}
+              >
+                <div className="relative h-full w-full opacity-60 grayscale blur-[1px]">
+                  <img
+                    src={HERO_DATA[thirdIndex].img}
+                    alt="Back Card"
+                    className="h-full w-full object-contain p-8"
+                  />
+                </div>
+              </div>
+
+              {/* LAYER 2: Middle */}
+              <div
+                className="absolute inset-0 rounded-[2rem] border border-slate-200 bg-white/80 shadow-md card-transition"
+                style={{
+                  transform:
+                    "translateX(25px) translateY(-8px) rotate(12deg) scale(0.92)",
+                  opacity: 0.6,
+                  zIndex: 20,
+                }}
+              >
+                <div className="relative h-full w-full">
+                  <img
+                    src={HERO_DATA[nextIndex].img}
+                    alt="Middle Card"
+                    className="h-full w-full object-contain p-8"
+                  />
+                </div>
+              </div>
+
+              {/* LAYER 3: Active Front */}
+              <div
+                key={index}
+                className="animate-card-enter absolute inset-0 z-30 rounded-[2rem] border border-slate-200 bg-white shadow-2xl overflow-hidden"
+              >
+                <div className="relative h-full w-full flex items-center justify-center p-8">
+                  <img
+                    src={HERO_DATA[index].img}
+                    alt={HERO_DATA[index].text}
+                    className="h-full w-full object-contain drop-shadow-sm"
+                    loading="eager"
+                  />
+                </div>
+
+                <div className="absolute top-6 right-6 rounded-full bg-slate-50/90 backdrop-blur-md px-3 py-1.5 shadow-sm border border-slate-100 flex items-center gap-2">
+                  <div className="h-1.5 w-1.5 rounded-full bg-[#5ba12d] animate-pulse" />
+                  <span className="text-[9px] font-black uppercase tracking-widest text-slate-700">
+                    Live
+                  </span>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>

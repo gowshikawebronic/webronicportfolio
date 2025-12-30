@@ -28,17 +28,22 @@ export default function Branches() {
       <div className="container mx-auto px-6 max-w-7xl">
         {/* --- HEADER --- */}
         <div className="flex flex-col items-center text-center mb-12">
-         <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-slate-50 border border-slate-200 px-4 py-1.5">
-          <span className="flex h-2 w-2 rounded-full bg-[#4888e8] animate-pulse" />
-          <span className="text-[10px] font-bold uppercase tracking-widest text-slate-600">
-            Location
-          </span>
-        </div>
+         <div className="flex items-center justify-center gap-4 mb-6">
+              <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#336fa5]">
+                Location
+              </span>
+            </div>
 
-          <h2 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tight max-w-4xl">
+          {/* <h2 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tight max-w-4xl">
             Strategic Presence Across <br />
-            <span style={{ color: "#4888e8" }}>Tamil Nadu</span>
-          </h2>
+            <span style={{ color: "#336fa5" }}>Tamil Nadu</span>
+          </h2> */}
+           <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl leading-tight">
+              Strategic Presence Across <br className="hidden sm:block" />
+              <span className="bg-gradient-to-r from-[#336fa5] to-[#5ba12d] bg-clip-text text-transparent">
+               Tamil Nadu
+              </span>
+            </h2>
         </div>
 
        
@@ -67,14 +72,14 @@ export default function Branches() {
           <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 w-full max-w-sm px-4">
             <div className="bg-white/90 backdrop-blur-md p-4 rounded-2xl border border-slate-100 flex items-center justify-between shadow-xl">
               <div className="flex items-center gap-3">
-                <div className="h-8 w-8 rounded-lg bg-[#4888e8] flex items-center justify-center text-white">
+                <div className="h-8 w-8 rounded-lg bg-[#336fa5] flex items-center justify-center text-white">
                   <Navigation size={16} />
                 </div>
                 <p className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-900">
                   Showing: {currentMap.city}
                 </p>
               </div>
-              <Globe2 size={18} className="text-[#09b125]" />
+              <Globe2 size={18} className="text-[#5ba12d]" />
             </div>
           </div>
         </div>

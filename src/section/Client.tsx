@@ -41,14 +41,21 @@ export default function Clients() {
       <div className="relative mx-auto max-w-7xl px-6">
         
         <div className="mb-10 text-center animate-fade-up">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-slate-50 border border-slate-200 px-4 py-1.5">
-            <span className="flex h-2 w-2 rounded-full bg-[#4888e8] animate-pulse" />
-            <span className="text-[10px] font-bold uppercase tracking-widest text-slate-600">Clients</span>
-          </div>
+          <div className="flex items-center justify-center gap-4 mb-6">
+              <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#336fa5]">
+                Clients
+              </span>
+            </div>
           
-          <h2 className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-6xl">
+          {/* <h2 className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-6xl">
             Trusted by <span className="bg-gradient-to-r from-blue-600 to-indigo-500 bg-clip-text text-transparent">Industry Leaders</span>
-          </h2>
+          </h2> */}
+           <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl leading-tight">
+              Trusted by <br className="hidden sm:block" />
+              <span className="bg-gradient-to-r from-[#336fa5] to-[#5ba12d] bg-clip-text text-transparent">
+               Industry Leaders
+              </span>
+            </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-500 font-medium">
             Partnering with prestigious institutions and innovative enterprises to build the future of digital retail.
           </p>
