@@ -60,18 +60,24 @@ export default function About() {
         </div>
 
         {/* Right Side: Content */}
-        <div className="relative flex flex-col text-left order-1 lg:order-2">
-         <div className="flex items-center gap-4 mb-6">
+        <div className="relative flex flex-col text-center lg:text-left order-1 lg:order-2">
+         <div className="flex justify-center lg:justify-start lg:items-center  gap-4 mb-6">
               <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#336fa5]">
                 About us
               </span>
             </div>
 
-          <h2 className="text-3xl md:text-5xl font-black leading-[1.1] text-slate-900 tracking-tight">
+          {/* <h2 className="text-3xl md:text-5xl font-black leading-[1.1] text-slate-900 tracking-tight">
             WHEN YOU GROW <br />
             <span className="text-[#336fa5]">WITH OUR TECHNICAL EXPERTISE,</span> <br />
             <span className="text-[#5ba12d]">WE GROW</span>
-          </h2>
+          </h2> */}
+          <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-3xl lg:text-5xl leading-tight">
+              WHEN YOU GROW  <br className="hidden sm:block" />
+              <span className="bg-gradient-to-r from-[#336fa5] to-[#5ba12d] bg-clip-text text-transparent">
+              WITH OUR TECHNICAL EXPERTISE, WE GROW
+              </span>
+            </h2>
 
           <div className="mt-6 md:mt-8 space-y-6 text-base md:text-lg text-slate-500 leading-relaxed font-medium">
             <p>

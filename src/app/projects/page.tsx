@@ -135,12 +135,10 @@ export default function Projects() {
                 onClick={() => setActiveTab(category.id)}
                 className={`flex shrink-0 items-center cursor-pointer justify-center gap-4 rounded-full border px-6 py-4 transition-all duration-500 md:flex-col md:items-start md:rounded-[2.5rem] md:p-10 lg:min-w-0 ${
                   activeTab === category.id 
-                  ? "bg-white border-white shadow-2xl scale-[1.02]" 
-                  : "bg-slate-50 border-slate-100 hover:bg-white hover:border-[#336fa5]/30"
+                  ? "bg-white border-[#5ba12d]  scale-[1]" 
+                  : "bg-slate-100 border-slate-100  hover:border-[#336fa5]/30"
                 }`}
-                style={{
-                  boxShadow: activeTab === category.id ? '0 30px 60px -12px rgba(72, 136, 232, 0.15)' : ''
-                }}
+                
               >
                 <div 
                   className={`flex h-10 w-10 items-center justify-center rounded-2xl transition-all duration-500 shadow-sm ${

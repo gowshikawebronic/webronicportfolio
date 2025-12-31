@@ -73,7 +73,7 @@ const EnquiryModal = ({
               <User className="absolute left-4 top-3.5 h-4 w-4 md:h-5 md:w-5 text-slate-300" />
               <input
                 type="text"
-                placeholder="e.g. Alex Jensen"
+                placeholder="Your Name"
                 className="w-full rounded-xl border border-slate-200 pl-10 md:pl-12 p-3 md:p-3.5 text-sm md:text-base focus:border-[#336fa5] focus:ring-4 focus:ring-blue-50 outline-none transition font-medium text-slate-700"
                 required
               />
@@ -89,7 +89,7 @@ const EnquiryModal = ({
                 <Mail className="absolute left-4 top-3.5 h-4 w-4 md:h-5 md:w-5 text-slate-300" />
                 <input
                   type="email"
-                  placeholder="alex@company.com"
+                  placeholder="company@email.com"
                   className="w-full rounded-xl border border-slate-200 pl-10 md:pl-12 p-3 md:p-3.5 text-sm md:text-base focus:border-[#336fa5] focus:ring-4 focus:ring-blue-50 outline-none transition font-medium text-slate-700"
                   required
                 />
@@ -103,7 +103,7 @@ const EnquiryModal = ({
                 <Phone className="absolute left-4 top-3.5 h-4 w-4 md:h-5 md:w-5 text-slate-300" />
                 <input
                   type="tel"
-                  placeholder="+1..."
+                  placeholder="+91..."
                   className="w-full rounded-xl border border-slate-200 pl-10 md:pl-12 p-3 md:p-3.5 text-sm md:text-base focus:border-[#336fa5] focus:ring-4 focus:ring-blue-50 outline-none transition font-medium text-slate-700"
                   required
                 />
@@ -306,13 +306,13 @@ export default function HowWorks() {
               </span>
             </div>
             
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900 leading-[1.1]">
+            <h2 className="text-4xl md:text-5xl flex flex-col items-center lg:items-start font-black tracking-tight text-slate-900 leading-[1.1]">
               Architecting the <br />
               <span className="bg-gradient-to-r from-[#336fa5] to-[#5ba12d] bg-clip-text text-transparent">
                 Digital Future
               </span>
             </h2>
-            <p className="text-sm md:text-xl text-slate-500 leading-relaxed  max-w-2xl opacity-80">
+            <p className="text-sm md:text-xl text-center lg:text-start text-slate-500 leading-relaxed mt-5 max-w-2xl opacity-80">
               WEBRONIC transforms legacy challenges into competitive advantages
               using high-performance digital architectures.
             </p>

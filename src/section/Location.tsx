@@ -39,9 +39,9 @@ export default function Branches() {
             <span style={{ color: "#336fa5" }}>Tamil Nadu</span>
           </h2> */}
            <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl leading-tight">
-              Strategic Presence Across <br className="hidden sm:block" />
+              Strategic  {" "} 
               <span className="bg-gradient-to-r from-[#336fa5] to-[#5ba12d] bg-clip-text text-transparent">
-               Tamil Nadu
+               Presence
               </span>
             </h2>
         </div>

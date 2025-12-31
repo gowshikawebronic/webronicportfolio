@@ -30,7 +30,7 @@ export default function CareerSection() {
   return (
     <section
       id="career"
-      className="relative py-20 lg:py-32 bg-white font-sora overflow-hidden"
+      className="relative py-20 lg:py-32 bg-white font-sora overflow-hidden px-5 lg:px-25"
     >
       {/* Background Decor */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#336fa5]/5 rounded-full blur-[120px] pointer-events-none" />

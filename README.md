@@ -36,7 +36,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
 
-<!-- Polished & Corporate -->
+<!-- Polished & Corporate
 
 Collaborating with Innovative Brands
 
@@ -58,17 +58,17 @@ Partnering with Brands That Lead Innovation
 <!-- 
 Confident & Impact-Driven -->
 
-Driving Innovation with Trusted Brands
+<!-- Driving Innovation with Trusted Brands
 
 Building the Future with Innovative Brands
 
 Innovating Together with Leading Brands
 
-Shaping Innovation with Visionary Brands
+Shaping Innovation with Visionary Brands -->
 
 <!-- Short & Tagline-Style -->
 
-Innovating Together
+<!-- Innovating Together
 
 Innovation Through Partnership
 
@@ -82,6 +82,6 @@ Partners in Innovation
 
 Innovating Together with Leading Brands
 
-Building the Future with Innovative Brands
+Building the Future with Innovative Brands --> -->
 
 

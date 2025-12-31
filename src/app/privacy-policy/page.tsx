@@ -41,13 +41,16 @@ export default function PrivacyPolicy() {
         </div>
         
         <div className="relative mx-auto max-w-5xl px-5 md:px-6">
-          <div className="inline-flex items-center gap-2 rounded-full bg-white border border-slate-200 px-3 py-1.5 md:px-4 mb-6 md:mb-8 shadow-sm">
+          
+          <div className="flex items-center  gap-4 mb-6">
             <ShieldCheck size={14} className="text-[#336fa5] shrink-0" />
-            <span className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-slate-600">Enterprise Data Protection</span>
-          </div>
+              <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#336fa5]">
+                Enterprise Data Protection
+              </span>
+            </div>
           {/* Responsive Font Sizes: text-3xl for mobile, 7xl for desktop */}
           <h1 className="text-3xl sm:text-5xl md:text-7xl font-black text-slate-900 tracking-tighter leading-tight">
-            Privacy <span className="text-[#336fa5]">Policy</span>
+            Privacy <span className="bg-gradient-to-r from-[#336fa5] to-[#5ba12d] bg-clip-text text-transparent">Policy</span>
           </h1>
           <p className="mt-4 md:mt-6 text-slate-500 max-w-2xl text-sm md:text-lg font-medium leading-relaxed">
             Architecting trust through transparency. Our global privacy framework is designed to protect 

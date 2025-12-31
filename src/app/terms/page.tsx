@@ -55,14 +55,15 @@ export default function TermsAndConditions() {
         </div>
 
         <div className="relative mx-auto max-w-5xl px-6">
-          <div className="inline-flex items-center gap-2 rounded-full bg-white border border-slate-200 px-4 py-1.5 mb-8 shadow-sm">
+          
+          <div className="flex items-center  gap-4 mb-6">
             <FileText size={14} className="text-[#336fa5]" />
-            <span className="text-[10px] font-black uppercase tracking-widest text-slate-600">
+            <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#336fa5]">
               Corporate Governance
             </span>
           </div>
           <h1 className="text-4xl md:text-7xl font-black text-slate-900 tracking-tighter leading-tight">
-            Terms & <span className="text-[#336fa5]">Conditions</span>
+            Terms & <span className="bg-gradient-to-r from-[#336fa5] to-[#5ba12d] bg-clip-text text-transparent">Conditions</span>
           </h1>
           <div className="mt-8 flex flex-wrap items-center gap-8 text-sm font-bold text-slate-400">
             <div className="flex items-center gap-2">
@@ -384,15 +385,15 @@ export default function TermsAndConditions() {
               className="scroll-mt-32 p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-4"
             >
               <p className="text-xs font-bold text-slate-600">
-                <strong>15. Severability:</strong> Invalid provisions will not
+                <strong> Severability:</strong> Invalid provisions will not
                 affect the validity of remaining terms.
               </p>
               <p className="text-xs font-bold text-slate-600">
-                <strong>16. Entire Agreement:</strong> This constitutes the
+                <strong> Entire Agreement:</strong> This constitutes the
                 complete agreement between you and Webronic Industries Pvt Ltd.
               </p>
               <p className="text-xs font-bold text-slate-600">
-                <strong>17. No Waiver:</strong> Failure to enforce terms does
+                <strong> No Waiver:</strong> Failure to enforce terms does
                 not waive our right to enforce them later.
               </p>
             </div>

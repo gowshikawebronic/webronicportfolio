@@ -45,7 +45,7 @@ export default function Contact() {
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:items-start">
           <div className="flex flex-col">
             {/* --- REQUESTED BADGE STYLE --- */}
-            <div className="flex items-center gap-4 mb-6">
+            <div className="flex items-center justify-center lg:justify-start gap-4 mb-6">
               <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#336fa5]">
                 Contact us
               </span>
@@ -55,7 +55,7 @@ export default function Contact() {
               Ready to Build <br />
               <span style={{ color: '#336fa5' }}>Something Great?</span>
             </h2> */}
-            <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl leading-tight">
+            <h2 className="text-3xl font-extrabold flex flex-col items-center lg:items-start tracking-tight text-slate-900 sm:text-5xl lg:text-6xl leading-tight">
               Ready to Build 
               <br className="hidden sm:block" />
               <span className="bg-gradient-to-r from-[#336fa5] to-[#5ba12d] bg-clip-text text-transparent">
@@ -132,7 +132,7 @@ export default function Contact() {
                   className="group relative rounded-2xl border border-slate-100 bg-white p-6 md:p-8 transition-all hover:border-[#336fa5]/20 hover:shadow-2xl hover:shadow-slate-200/50"
                 >
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-6">
+                    <div className="flex items-center gap-2">
                       <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-50 text-[#336fa5] transition-colors group-hover:bg-[#336fa5] group-hover:text-white">
                         <item.icon size={22} strokeWidth={2} />
                       </div>
@@ -211,7 +211,7 @@ export default function Contact() {
                   </label>
                   <input
                     type="text"
-                    placeholder="John Doe"
+                    placeholder="Your Name"
                     className="w-full rounded-xl border border-slate-200 p-4 text-sm focus:ring-2 focus:ring-[#336fa5] focus:border-transparent outline-none transition font-medium text-slate-700"
                     required
                   />
@@ -222,7 +222,7 @@ export default function Contact() {
                   </label>
                   <input
                     type="email"
-                    placeholder="john@webronic.com"
+                    placeholder="eg@gmail.com"
                     className="w-full rounded-xl border border-slate-200 p-4 text-sm focus:ring-2 focus:ring-[#336fa5] focus:border-transparent outline-none transition font-medium text-slate-700"
                     required
                   />

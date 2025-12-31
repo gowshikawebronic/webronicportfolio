@@ -127,18 +127,10 @@ export default function Hero() {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           {/* LEFT COLUMN */}
           <div className="flex flex-col text-center lg:text-left z-20">
-            <div className="mb-8 inline-flex self-center lg:self-start items-center gap-2 rounded-full bg-slate-50 border border-slate-200 px-4 py-1.5 text-[10px] font-black uppercase tracking-widest text-[#336fa5]">
-              <Sparkles size={14} className="text-[#5ba12d]" />
-              Innovation by WEBRONIC
-            </div>
-
-            {/* FIXED HEIGHT CONTAINER FOR H1 
-                min-h-[160px] reserves enough vertical space for 2 lines of text.
-                This prevents the layout from jumping when text is empty.
-            */}
+            
             <h1 className="min-h-[160px] text-4xl font-black tracking-tight text-slate-900 sm:text-5xl lg:text-6xl leading-[1.1]">
               The Future of Retail, <br />
-              <span className="text-[#336fa5]">
+              <span className="bg-gradient-to-r from-[#336fa5] to-[#5ba12d] bg-clip-text text-transparent">
                 {displayText}
                 {/* If text is empty, render a zero-width space to keep line-height active */}
                 {displayText === "" && <span>&nbsp;</span>}

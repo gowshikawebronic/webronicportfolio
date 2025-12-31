@@ -66,12 +66,8 @@ export default function Contact() {
               </span>
             </div>
 
-            {/* <h2 className="text-4xl max-md:text-center font-black tracking-tight text-slate-900 sm:text-6xl leading-[1.1] mb-8">
-              Let’s Architect <br />
-              <span style={{ color: '#336fa5' }}>The Future </span> 
-              <span style={{ color: '#5ba12d' }}>Together.</span>
-            </h2> */}
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900 leading-[1.1]">
+            
+            <h2 className="text-4xl md:text-5xl mb-5 font-black tracking-tight text-slate-900 leading-[1.1]">
             Let’s Architect <br />
             <span className="bg-gradient-to-r from-[#336fa5] to-[#5ba12d] bg-clip-text text-transparent">The Future Together</span>
           </h2>
@@ -163,7 +159,7 @@ export default function Contact() {
                 >
                    <Image src="./assets/images/thingsatweb.png" alt="Partner" width={110} height={30} style={{height: "auto"}} />
                    <div className="h-6 w-px bg-slate-200" />
-                   <span className="text-[9px] font-black uppercase tracking-widest text-slate-400 group-hover:text-[#336fa5] transition-colors">Tech Partner</span>
+                   <span className="text-[9px] font-black uppercase tracking-widest text-slate-400 group-hover:text-[#336fa5] transition-colors">Global Partner</span>
                 </Link>
               </div>
             </div>
