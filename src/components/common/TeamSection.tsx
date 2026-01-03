@@ -16,8 +16,8 @@ export default function Team() {
         </div>
 
         <div className="overflow-hidden relative">
-          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-white to-transparent" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-white to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-linear-to-r from-white to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-linear-to-l from-white to-transparent" />
 
           <div className="animate-scroll-review-x flex w-max items-center gap-10 py-6">
             {[...teamMembers, ...teamMembers].map((member, i) => (

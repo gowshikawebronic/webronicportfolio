@@ -29,7 +29,6 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate API logic
     await new Promise((resolve) => setTimeout(resolve, 2000));
     setIsSubmitting(false);
     setIsModalOpen(false);
@@ -44,21 +43,16 @@ export default function Contact() {
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:items-start">
           <div className="flex flex-col">
-            {/* --- REQUESTED BADGE STYLE --- */}
             <div className="flex items-center justify-center lg:justify-start gap-4 mb-6">
-              <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#336fa5]">
+              <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#4a7dc0]">
                 Contact us
               </span>
             </div>
 
-            {/* <h2 className="text-4xl max-md:text-center font-black tracking-tight text-slate-900 sm:text-5xl lg:text-6xl leading-[1.1]">
-              Ready to Build <br />
-              <span style={{ color: '#336fa5' }}>Something Great?</span>
-            </h2> */}
             <h2 className="text-3xl font-extrabold flex flex-col items-center lg:items-start tracking-tight text-slate-900 sm:text-5xl lg:text-6xl leading-tight">
-              Ready to Build 
+              Ready to Build
               <br className="hidden sm:block" />
-              <span className="bg-gradient-to-r from-[#336fa5] to-[#5ba12d] bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-[#4a7dc0] to-[#63b344] bg-clip-text text-transparent">
                 Something Great?
               </span>
             </h2>
@@ -69,11 +63,10 @@ export default function Contact() {
               delivers precision engineering from strategy to deployment.
             </p>
 
-            {/* Modal Trigger Button */}
             <div className="mt-10 max-md:text-center">
               <button
                 onClick={() => setIsModalOpen(true)}
-                className="group relative inline-flex cursor-pointer items-center gap-3 overflow-hidden rounded-2xl bg-[#336fa5] px-10 py-5 font-black uppercase tracking-widest text-xs text-white transition-all hover:bg-[#5ba12d] hover:shadow-xl hover:shadow-blue-500/20 active:scale-95"
+                className="group relative inline-flex cursor-pointer items-center gap-3 overflow-hidden rounded-2xl bg-[#4a7dc0] px-10 py-5 font-black uppercase tracking-widest text-xs text-white transition-all hover:bg-[#63b344] hover:shadow-xl hover:shadow-blue-500/20 active:scale-95"
               >
                 Send a Message
                 <ArrowRight
@@ -100,13 +93,12 @@ export default function Contact() {
                 />
                 <div className="h-8 w-px bg-slate-200" />
                 <span className="text-[9px] font-black uppercase tracking-widest text-slate-400">
-                  Digital Partner
+                  Global Partner
                 </span>
               </a>
             </div>
           </div>
 
-          {/* Contact Details List */}
           <div className="relative">
             <div className="space-y-4">
               {[
@@ -129,11 +121,11 @@ export default function Contact() {
               ].map((item, i) => (
                 <div
                   key={i}
-                  className="group relative rounded-2xl border border-slate-100 bg-white p-6 md:p-8 transition-all hover:border-[#336fa5]/20 hover:shadow-2xl hover:shadow-slate-200/50"
+                  className="group relative rounded-2xl border border-slate-100 bg-white p-6 md:p-8 transition-all hover:border-[#4a7dc0]/20 hover:shadow-2xl hover:shadow-slate-200/50"
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-50 text-[#336fa5] transition-colors group-hover:bg-[#336fa5] group-hover:text-white">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white text-[#4a7dc0] transition-colors group-hover:bg-[#4a7dc0] group-hover:text-white  duration-200 ease-in">
                         <item.icon size={22} strokeWidth={2} />
                       </div>
                       <div>
@@ -143,7 +135,7 @@ export default function Contact() {
                         {item.href ? (
                           <a
                             href={item.href}
-                            className="mt-1 block text-lg font-bold text-slate-900 hover:text-[#336fa5] transition-colors"
+                            className="mt-1 block text-lg font-bold text-slate-900 hover:text-[#4a7dc0] transition-colors"
                           >
                             {item.value}
                           </a>
@@ -157,10 +149,10 @@ export default function Contact() {
 
                     <button
                       onClick={() => handleCopy(item.value, item.label)}
-                      className="rounded-lg p-2 text-slate-300 hover:bg-slate-50 hover:text-[#5ba12d] transition-all"
+                      className="rounded-lg p-2 text-slate-300 hover:bg-slate-50 hover:text-[#63b344] transition-all"
                     >
                       {copied === item.label ? (
-                        <Check size={18} className="text-[#5ba12d]" />
+                        <Check size={18} className="text-[#63b344]" />
                       ) : (
                         <Copy size={18} />
                       )}
@@ -173,9 +165,8 @@ export default function Contact() {
         </div>
       </div>
 
-      {/* --- CONTACT MODAL --- */}
       {isModalOpen && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-6">
+        <div className="fixed inset-0 z-100 flex items-center justify-center p-4 md:p-6">
           <div
             className="absolute inset-0 bg-slate-900/60 backdrop-blur-md transition-opacity duration-300"
             onClick={() => setIsModalOpen(false)}
@@ -190,7 +181,7 @@ export default function Contact() {
                 <X size={20} />
               </button>
               <div className="flex items-center gap-3 mb-4">
-                <div className="h-10 w-10 flex items-center justify-center rounded-xl bg-[#336fa5]/20 text-[#336fa5]">
+                <div className="h-10 w-10 flex items-center justify-center rounded-xl bg-[#4a7dc0]/20 text-[#4a7dc0]">
                   <MessageSquare size={20} />
                 </div>
                 <h3 className="text-2xl font-black tracking-tight">
@@ -212,7 +203,7 @@ export default function Contact() {
                   <input
                     type="text"
                     placeholder="Your Name"
-                    className="w-full rounded-xl border border-slate-200 p-4 text-sm focus:ring-2 focus:ring-[#336fa5] focus:border-transparent outline-none transition font-medium text-slate-700"
+                    className="w-full rounded-xl border border-slate-200 p-4 text-sm focus:ring-2 focus:ring-[#4a7dc0] focus:border-transparent outline-none transition font-medium text-slate-700"
                     required
                   />
                 </div>
@@ -223,7 +214,7 @@ export default function Contact() {
                   <input
                     type="email"
                     placeholder="eg@gmail.com"
-                    className="w-full rounded-xl border border-slate-200 p-4 text-sm focus:ring-2 focus:ring-[#336fa5] focus:border-transparent outline-none transition font-medium text-slate-700"
+                    className="w-full rounded-xl border border-slate-200 p-4 text-sm focus:ring-2 focus:ring-[#4a7dc0] focus:border-transparent outline-none transition font-medium text-slate-700"
                     required
                   />
                 </div>
@@ -233,7 +224,7 @@ export default function Contact() {
                 <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">
                   Subject
                 </label>
-                <select className="w-full rounded-xl border border-slate-200 p-4 text-sm focus:ring-2 focus:ring-[#336fa5] outline-none transition font-medium text-slate-700 appearance-none bg-white cursor-pointer">
+                <select className="w-full rounded-xl border border-slate-200 p-4 text-sm focus:ring-2 focus:ring-[#4a7dc0] outline-none transition font-medium text-slate-700 appearance-none bg-white cursor-pointer">
                   <option>New Project Consultation</option>
                   <option>Technical Support</option>
                   <option>Partnership Inquiry</option>
@@ -248,7 +239,7 @@ export default function Contact() {
                 <textarea
                   rows={4}
                   placeholder="Briefly describe your requirements..."
-                  className="w-full rounded-xl border border-slate-200 p-4 text-sm focus:ring-2 focus:ring-[#336fa5] outline-none transition resize-none font-medium text-slate-700"
+                  className="w-full rounded-xl border border-slate-200 p-4 text-sm focus:ring-2 focus:ring-[#4a7dc0] outline-none transition resize-none font-medium text-slate-700"
                   required
                 />
               </div>
@@ -256,7 +247,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-[#336fa5] text-white font-black uppercase tracking-[0.2em] text-[10px] py-5 rounded-2xl hover:bg-slate-900 transition-all shadow-xl shadow-blue-500/10 flex items-center justify-center gap-3 disabled:opacity-70"
+                className="w-full bg-[#4a7dc0] text-white font-black uppercase tracking-[0.2em] text-[10px] py-5 rounded-2xl hover:bg-[#63b344] transition-all shadow-xl shadow-blue-500/10 flex items-center justify-center gap-3 disabled:opacity-70"
               >
                 {isSubmitting ? (
                   "Processing..."

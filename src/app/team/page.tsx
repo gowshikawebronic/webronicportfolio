@@ -2,7 +2,15 @@
 
 import { useState } from "react";
 import teamMembers from "@/components/common/TeamData";
-import { X, ExternalLink, Briefcase, Linkedin, Github, Terminal, ArrowRight } from "lucide-react";
+import {
+  X,
+  ExternalLink,
+  Briefcase,
+  Linkedin,
+  Github,
+  Terminal,
+  ArrowRight,
+} from "lucide-react";
 
 type TeamMember = {
   name: string;
@@ -14,30 +22,25 @@ export default function TeamPage() {
 
   return (
     <section className="relative overflow-hidden bg-white py-16 md:py-28 font-sora">
-      
       <div className="relative mx-auto max-w-5xl px-6 animate-card-entry">
         <div className="flex items-center gap-4 mb-6">
-          <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#336fa5]">
+          <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#4a7dc0]">
             our Team
           </span>
         </div>
-        {/* --- REFINED HEADER --- */}
         <div className="mb-16 md:mb-24 text-left border-l-2 border-slate-100 pl-24 ">
-          
-          {/* <h2 className="text-3xl md:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
-            Our <span className="text-[#336fa5]">Core</span> Team
-          </h2> */}
           <h2 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900 leading-[1.1]">
             Our <br />
-            <span className="bg-gradient-to-r from-[#336fa5] to-[#5ba12d] bg-clip-text text-transparent">Core Team</span>
+            <span className="bg-linear-to-r from-[#4a7dc0] to-[#63b344] bg-clip-text text-transparent">
+              Core Team
+            </span>
           </h2>
           <p className="mt-4 max-w-xl text-base text-slate-500 font-medium leading-relaxed">
-            A specialized collective of software architects and digital consultants 
-            delivering enterprise-grade retail automation solutions.
+            A specialized collective of software architects and digital
+            consultants delivering enterprise-grade retail automation solutions.
           </p>
         </div>
 
-        {/* --- MINIMALIST DIRECTORY GRID --- */}
         <div className="divide-y divide-slate-100 border-t border-b border-slate-100">
           {teamMembers.map((member, index) => (
             <div
@@ -45,13 +48,12 @@ export default function TeamPage() {
               className="group flex flex-col md:flex-row md:items-center justify-between py-6 md:py-8 transition-all duration-300 hover:px-4"
             >
               <div className="flex items-center gap-8">
-                {/* Index Number */}
-                <span className="hidden md:block text-xs font-bold text-slate-300 group-hover:text-[#5ba12d] transition-colors tabular-nums">
-                  {(index + 1).toString().padStart(2, '0')}
+                <span className="hidden md:block text-xs font-bold text-slate-300 group-hover:text-[#63b344] transition-colors tabular-nums">
+                  {(index + 1).toString().padStart(2, "0")}
                 </span>
-                
+
                 <div>
-                  <h4 className="text-lg md:text-xl font-bold text-slate-900 group-hover:text-[#336fa5] transition-colors">
+                  <h4 className="text-lg md:text-xl font-bold text-slate-900 group-hover:text-[#4a7dc0] transition-colors">
                     {member.name}
                   </h4>
                   <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mt-0.5">
@@ -60,37 +62,41 @@ export default function TeamPage() {
                 </div>
               </div>
 
-              {/* Action Suite */}
               <div className="mt-6 md:mt-0 flex items-center gap-6">
-                {/* Social Group */}
                 <div className="flex items-center gap-4 opacity-0 -translate-x-2 transition-all group-hover:opacity-100 group-hover:translate-x-0">
-                  <a href="#" className="text-slate-300 hover:text-[#336fa5] transition-colors">
+                  <a
+                    href="#"
+                    className="text-slate-300 hover:text-[#4a7dc0] transition-colors"
+                  >
                     <Linkedin size={16} />
                   </a>
-                  <a href="#" className="text-slate-300 hover:text-slate-900 transition-colors">
+                  <a
+                    href="#"
+                    className="text-slate-300 hover:text-slate-900 transition-colors"
+                  >
                     <Github size={16} />
                   </a>
                 </div>
 
                 <button
                   onClick={() => setSelectedMember(member)}
-                  className="flex items-center gap-2 text-[10px] cursor-pointer font-black uppercase tracking-widest text-slate-400 group-hover:text-[#5ba12d] transition-all"
+                  className="flex items-center gap-2 text-[10px] cursor-pointer font-black uppercase tracking-widest text-slate-400 group-hover:text-[#63b344] transition-all"
                 >
                   Briefing
-                  <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight
+                    size={12}
+                    className="group-hover:translate-x-1 transition-transform"
+                  />
                 </button>
               </div>
             </div>
           ))}
         </div>
-
-        
       </div>
 
-      {/* --- REFINED MODAL --- */}
       {selectedMember && (
         <div
-          className="fixed inset-0 z-[110] flex items-center justify-center p-6"
+          className="fixed inset-0 z-110 flex items-center justify-center p-6"
           onClick={() => setSelectedMember(null)}
         >
           <div className="absolute inset-0 bg-white/90 backdrop-blur-sm" />
@@ -107,31 +113,37 @@ export default function TeamPage() {
             </button>
 
             <div className="text-center">
-              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-slate-900 text-[#5ba12d]">
+              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-slate-900 text-[#63b344]">
                 <Briefcase size={20} />
               </div>
-              
+
               <div className="mt-6">
                 <h3 className="text-2xl font-extrabold text-slate-900 tracking-tight">
                   {selectedMember.name}
                 </h3>
-                <p className="text-xs font-bold uppercase tracking-widest text-[#336fa5] mt-1">
+                <p className="text-xs font-bold uppercase tracking-widest text-[#4a7dc0] mt-1">
                   {selectedMember.role}
                 </p>
               </div>
 
               <div className="mt-8 border-t border-slate-50 pt-8">
                 <p className="text-sm leading-relaxed text-slate-500 font-medium italic">
-                  &quot;Architecting scalable digital environments with a focus 
+                  &quot;Architecting scalable digital environments with a focus
                   on industrial automation and retail efficiency.&quot;
                 </p>
               </div>
 
               <div className="mt-8 flex justify-center gap-6 border-t border-slate-50 pt-8">
-                <a href="#" className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-[#336fa5] transition-colors">
+                <a
+                  href="#"
+                  className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-[#4a7dc0] transition-colors"
+                >
                   <Linkedin size={16} /> LinkedIn
                 </a>
-                <a href="#" className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-slate-900 transition-colors">
+                <a
+                  href="#"
+                  className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-slate-900 transition-colors"
+                >
                   <Github size={16} /> GitHub
                 </a>
               </div>

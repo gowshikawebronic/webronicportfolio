@@ -30,20 +30,19 @@ export default function PrivacyPolicy() {
 
   return (
     <main className="bg-white font-sora pt-24 pb-20">
-      {/* --- HERO HEADER --- */}
       <section className="relative overflow-hidden bg-slate-50 py-24 border-b border-slate-100">
         <div className="absolute inset-0 pointer-events-none opacity-40">
-           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#336fa5]/10 rounded-full blur-[120px]" />
-           <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#5ba12d]/10 rounded-full blur-[120px]" />
+           <div className="absolute top-0 right-0 w-125 h-125 bg-[#4a7dc0]/10 rounded-full blur-[120px]" />
+           <div className="absolute bottom-0 left-0 w-125 h-125 bg-[#63b344]/10 rounded-full blur-[120px]" />
         </div>
         
         <div className="relative mx-auto max-w-5xl px-6">
           <div className="inline-flex items-center gap-2 rounded-full bg-white border border-slate-200 px-4 py-1.5 mb-8 shadow-sm">
-            <ShieldCheck size={14} className="text-[#336fa5]" />
+            <ShieldCheck size={14} className="text-[#4a7dc0]" />
             <span className="text-[10px] font-black uppercase tracking-widest text-slate-600">Enterprise Data Protection</span>
           </div>
           <h1 className="text-4xl md:text-7xl font-black text-slate-900 tracking-tighter leading-tight">
-            Privacy <span className="text-[#336fa5]">Policy</span>
+            Privacy <span className="text-[#4a7dc0]">Policy</span>
           </h1>
           <p className="mt-6 text-slate-500 max-w-2xl text-lg font-medium leading-relaxed">
             Architecting trust through transparency. Our global privacy framework is designed to protect 
@@ -51,10 +50,10 @@ export default function PrivacyPolicy() {
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-8 text-sm font-bold text-slate-400">
             <div className="flex items-center gap-2">
-              <Clock size={18} className="text-[#336fa5]" /> Last Updated: Dec 18, 2025
+              <Clock size={18} className="text-[#4a7dc0]" /> Last Updated: Dec 18, 2025
             </div>
             <div className="flex items-center gap-2">
-              <Globe size={18} className="text-[#5ba12d]" /> Webronic Industries Private Limited
+              <Globe size={18} className="text-[#63b344]" /> Webronic Industries Private Limited
             </div>
           </div>
         </div>
@@ -63,7 +62,6 @@ export default function PrivacyPolicy() {
       <section className="mx-auto max-w-7xl px-6 py-20">
         <div className="grid lg:grid-cols-[320px_1fr] gap-16">
           
-          {/* --- SIDE NAVIGATION --- */}
           <aside className="hidden lg:block sticky top-32 h-[calc(100vh-140px)] overflow-y-auto pr-4 custom-scrollbar">
             <div className="space-y-1">
               <p className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-6 px-4">Policy Framework</p>
@@ -71,52 +69,48 @@ export default function PrivacyPolicy() {
                 <a
                   key={item.id}
                   href={`#${item.id}`}
-                  className="flex items-center gap-3 px-4 py-3.5 rounded-2xl text-[11px] font-black uppercase tracking-widest text-slate-500 hover:bg-slate-50 hover:text-[#336fa5] transition-all group border border-transparent hover:border-slate-100"
+                  className="flex items-center gap-3 px-4 py-3.5 rounded-2xl text-[11px] font-black uppercase tracking-widest text-slate-500 hover:bg-slate-50 hover:text-[#4a7dc0] transition-all group border border-transparent hover:border-slate-100"
                 >
-                  <item.icon size={16} className="group-hover:scale-110 transition-transform text-slate-400 group-hover:text-[#336fa5]" />
+                  <item.icon size={16} className="group-hover:scale-110 transition-transform text-slate-400 group-hover:text-[#4a7dc0]" />
                   {item.title}
                 </a>
               ))}
             </div>
           </aside>
 
-          {/* --- MAIN CONTENT --- */}
           <div className="space-y-32">
             
-            {/* 1. Controller */}
             <div id="controller" className="scroll-mt-32">
-  <h3 className="text-lg md:text-xl font-black uppercase tracking-widest text-[#336fa5] mb-6 md:mb-8 flex items-center gap-3">
+  <h3 className="text-lg md:text-xl font-black uppercase tracking-widest text-[#4a7dc0] mb-6 md:mb-8 flex items-center gap-3">
     <UserCheck size={24} className="shrink-0" /> 1. Data Controller Information
   </h3>
   
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 bg-white border border-slate-100 rounded-2xl md:rounded-[2.5rem] p-6 md:p-10 shadow-sm relative overflow-hidden">
     
-    {/* Left Column: HQ Info */}
     <div className="space-y-6">
       <div>
         <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Corporate HQ</p>
         <p className="text-lg md:text-xl font-black text-slate-900 leading-tight">Webronic Industries Private Limited</p>
         <div className="flex gap-3 mt-4 text-slate-500 text-sm font-medium italic">
-          <MapPin size={18} className="shrink-0 text-[#336fa5]" />
+          <MapPin size={18} className="shrink-0 text-[#4a7dc0]" />
           <p className="leading-relaxed">33, East Abhiramapuram, Second Street, Mylapore, Chennai - 600004, India</p>
         </div>
       </div>
       
       <div className="pt-6 border-t border-slate-50 space-y-4">
         <div className="flex items-center gap-3">
-           <Mail size={16} className="text-[#5ba12d] shrink-0" />
+           <Mail size={16} className="text-[#63b344] shrink-0" />
            <span className="text-sm font-bold text-slate-700 break-all">contact@webronic.com</span>
         </div>
         <div className="flex items-center gap-3">
-           <Phone size={16} className="text-[#336fa5] shrink-0" />
+           <Phone size={16} className="text-[#4a7dc0] shrink-0" />
            <span className="text-sm font-bold text-slate-700">+91 72000 88500</span>
         </div>
       </div>
     </div>
 
-    {/* Right Column: Support Cards */}
     <div className="bg-slate-50 rounded-xl md:rounded-3xl p-5 md:p-6 border border-slate-100">
-      <p className="text-[10px] font-black text-[#336fa5] uppercase tracking-widest mb-4">Dedicated Support</p>
+      <p className="text-[10px] font-black text-[#4a7dc0] uppercase tracking-widest mb-4">Dedicated Support</p>
       <div className="space-y-3 md:space-y-4">
         <div className="p-4 bg-white rounded-xl border border-slate-100">
           <p className="text-[9px] font-black text-slate-400 uppercase mb-1">DPO Inquiries</p>
@@ -132,9 +126,8 @@ export default function PrivacyPolicy() {
   </div>
 </div>
 
-            {/* 2. Collection */}
             <div id="collection" className="scroll-mt-32">
-              <h3 className="text-xl font-black uppercase tracking-widest text-[#336fa5] mb-8 flex items-center gap-3">
+              <h3 className="text-xl font-black uppercase tracking-widest text-[#4a7dc0] mb-8 flex items-center gap-3">
                 <Database size={24} /> 2. Information We Collect
               </h3>
               <div className="grid sm:grid-cols-2 gap-4">
@@ -146,9 +139,9 @@ export default function PrivacyPolicy() {
                   { title: "Usage Data", details: "System interactions, access logs", icon: Eye },
                   { title: "Communication", details: "Feedback, correspondence, support", icon: RefreshCw }
                 ].map((item, i) => (
-                  <div key={i} className="p-6 rounded-3xl bg-slate-50 border border-slate-100 hover:bg-white hover:border-[#336fa5]/30 transition-all group">
+                  <div key={i} className="p-6 rounded-3xl bg-slate-50 border border-slate-100 hover:bg-white hover:border-[#4a7dc0]/30 transition-all group">
                     <div className="flex items-center gap-3 mb-3">
-                       <item.icon size={18} className="text-[#5ba12d]" />
+                       <item.icon size={18} className="text-[#63b344]" />
                        <p className="text-xs font-black text-slate-900 uppercase tracking-widest">{item.title}</p>
                     </div>
                     <p className="text-sm font-medium text-slate-500 leading-relaxed">{item.details}</p>
@@ -156,26 +149,25 @@ export default function PrivacyPolicy() {
                 ))}
               </div>
               <div className="mt-8 p-6 rounded-3xl bg-blue-50/50 border border-blue-100">
-                <p className="text-[10px] font-black text-[#336fa5] uppercase tracking-widest mb-2 flex items-center gap-2">
+                <p className="text-[10px] font-black text-[#4a7dc0] uppercase tracking-widest mb-2 flex items-center gap-2">
                   <ShieldAlert size={14} /> 2.2 Special Categories
                 </p>
                 <p className="text-xs text-slate-600 font-medium italic">We do not intentionally collect sensitive personal data (health, biometric, religious origin) unless explicitly required for service delivery with your consent.</p>
               </div>
             </div>
 
-            {/* 3. Methods */}
             <div id="method" className="scroll-mt-32">
-              <h3 className="text-xl font-black uppercase tracking-widest text-[#336fa5] mb-8 flex items-center gap-3">
+              <h3 className="text-xl font-black uppercase tracking-widest text-[#4a7dc0] mb-8 flex items-center gap-3">
                 <Globe size={24} /> 3. How We Collect Data
               </h3>
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="space-y-3">
-                  <div className="h-1 w-10 bg-[#5ba12d]" />
+                  <div className="h-1 w-10 bg-[#63b344]" />
                   <p className="text-sm font-black text-slate-900 uppercase">Direct Interactions</p>
                   <p className="text-xs text-slate-500 font-medium">Form submissions, contact requests, and service registration.</p>
                 </div>
                 <div className="space-y-3">
-                  <div className="h-1 w-10 bg-[#336fa5]" />
+                  <div className="h-1 w-10 bg-[#4a7dc0]" />
                   <p className="text-sm font-black text-slate-900 uppercase">Automated Tech</p>
                   <p className="text-xs text-slate-500 font-medium">Cookies, server logs, and automated tracking pixels.</p>
                 </div>
@@ -186,9 +178,8 @@ export default function PrivacyPolicy() {
                 </div>
               </div>
             </div>
-            {/* 4. Legal Basis */}
             <div id="basis" className="scroll-mt-32">
-              <h3 className="text-xl font-black uppercase tracking-widest text-[#336fa5] mb-8 flex items-center gap-3">
+              <h3 className="text-xl font-black uppercase tracking-widest text-[#4a7dc0] mb-8 flex items-center gap-3">
                 <Gavel size={24} /> 4. Legal Basis for Processing
               </h3>
               <div className="grid sm:grid-cols-2 gap-4">
@@ -199,20 +190,19 @@ export default function PrivacyPolicy() {
                    { t: "Legitimate Interests", d: "For business operations and service improvement." }
                  ].map((item, i) => (
                    <div key={i} className="p-6 rounded-3xl border border-slate-100 bg-white shadow-sm">
-                      <p className="text-sm font-black text-[#5ba12d] uppercase mb-2">{item.t}</p>
+                      <p className="text-sm font-black text-[#63b344] uppercase mb-2">{item.t}</p>
                       <p className="text-xs text-slate-500 font-medium leading-relaxed">{item.d}</p>
                    </div>
                  ))}
               </div>
             </div>
 
-            {/* 5. How We Use Data */}
             <div id="usage" className="scroll-mt-32">
-              <h3 className="text-xl font-black uppercase tracking-widest text-[#336fa5] mb-8 flex items-center gap-3">
+              <h3 className="text-xl font-black uppercase tracking-widest text-[#4a7dc0] mb-8 flex items-center gap-3">
                 <Eye size={24} /> 5. How We Use Your Information
               </h3>
-              <div className="overflow-hidden rounded-[2rem] border border-slate-100 shadow-sm overflow-x-auto">
-                <table className="w-full text-left border-collapse min-w-[700px]">
+              <div className="overflow-hidden rounded-4xl border border-slate-100 shadow-sm overflow-x-auto">
+                <table className="w-full text-left border-collapse min-w-175">
                   <thead className="bg-slate-50">
                     <tr>
                       <th className="px-6 py-5 text-[10px] font-black uppercase text-slate-400">Purpose</th>
@@ -232,31 +222,30 @@ export default function PrivacyPolicy() {
                       <tr key={i} className="hover:bg-slate-50 transition-colors">
                         <td className="px-6 py-4 text-sm font-bold text-slate-700">{row.p}</td>
                         <td className="px-6 py-4 text-[11px] text-slate-500 font-medium">{row.t}</td>
-                        <td className="px-6 py-4 text-[10px] text-[#336fa5] font-black uppercase">{row.l}</td>
+                        <td className="px-6 py-4 text-[10px] text-[#4a7dc0] font-black uppercase">{row.l}</td>
                       </tr>
                     ))}
                   </tbody>
                 </table>
               </div>
             </div>
-            {/* 6. Data Sharing */}
             <div id="sharing" className="scroll-mt-32">
-              <h3 className="text-xl font-black uppercase tracking-widest text-[#336fa5] mb-8 flex items-center gap-3">
+              <h3 className="text-xl font-black uppercase tracking-widest text-[#4a7dc0] mb-8 flex items-center gap-3">
                 <Users size={24} /> 6. Data Sharing and Disclosure
               </h3>
               <div className="space-y-6">
                 <div className="bg-slate-900 text-white p-8 rounded-[2.5rem]">
-                   <h4 className="text-xs font-black uppercase tracking-widest text-[#5ba12d] mb-6">6.1 When We Share Your Data</h4>
+                   <h4 className="text-xs font-black uppercase tracking-widest text-[#63b344] mb-6">6.1 When We Share Your Data</h4>
                    <ul className="grid sm:grid-cols-2 gap-4 list-none p-0">
                       {["Service Providers", "Professional Advisors", "Government Authorities", "Strategic Partners"].map(li => (
                         <li key={li} className="flex items-center gap-3 text-sm font-bold opacity-80">
-                           <CheckCircle2 size={16} className="text-[#5ba12d]" /> {li}
+                           <CheckCircle2 size={16} className="text-[#63b344]" /> {li}
                         </li>
                       ))}
                    </ul>
                 </div>
                 <div className="p-8 border border-slate-100 rounded-[2.5rem]">
-                   <h4 className="text-xs font-black uppercase tracking-widest text-[#336fa5] mb-4">6.2 International Data Transfers</h4>
+                   <h4 className="text-xs font-black uppercase tracking-widest text-[#4a7dc0] mb-4">6.2 International Data Transfers</h4>
                    <p className="text-sm text-slate-500 font-medium leading-relaxed italic">
                       Data may be transferred to countries with adequate data protection standards using standard contractual clauses and privacy impact assessments.
                    </p>
@@ -264,9 +253,8 @@ export default function PrivacyPolicy() {
               </div>
             </div>
 
-            {/* 7. Data Security */}
             <div id="security" className="scroll-mt-32">
-              <h3 className="text-xl font-black uppercase tracking-widest text-[#336fa5] mb-8 flex items-center gap-3">
+              <h3 className="text-xl font-black uppercase tracking-widest text-[#4a7dc0] mb-8 flex items-center gap-3">
                 <Lock size={24} /> 7. Data Security Measures
               </h3>
               <div className="grid md:grid-cols-2 gap-4">
@@ -279,15 +267,14 @@ export default function PrivacyPolicy() {
                   "Documented Incident Response (IR) protocols"
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-4 p-5 rounded-2xl bg-slate-900 text-white shadow-lg">
-                    <ShieldCheck size={20} className="text-[#5ba12d] shrink-0" />
+                    <ShieldCheck size={20} className="text-[#63b344] shrink-0" />
                     <span className="text-[11px] font-black uppercase tracking-widest leading-relaxed">{item}</span>
                   </div>
                 ))}
               </div>
             </div>
-            {/* 8. Retention */}
             <div id="retention" className="scroll-mt-32">
-              <h3 className="text-xl font-black uppercase tracking-widest text-[#336fa5] mb-8 flex items-center gap-3">
+              <h3 className="text-xl font-black uppercase tracking-widest text-[#4a7dc0] mb-8 flex items-center gap-3">
                 <Clock size={24} /> 8. Data Retention
               </h3>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -299,7 +286,7 @@ export default function PrivacyPolicy() {
                    { t: "Security Logs", v: "3-5 years", icon: Lock }
                  ].map((item, i) => (
                    <div key={i} className="p-6 rounded-3xl bg-slate-50 border border-slate-100 text-center">
-                      <item.icon size={20} className="mx-auto mb-3 text-[#5ba12d]" />
+                      <item.icon size={20} className="mx-auto mb-3 text-[#63b344]" />
                       <p className="text-[10px] font-black uppercase text-slate-400 mb-1">{item.t}</p>
                       <p className="text-xs font-black text-slate-800">{item.v}</p>
                    </div>
@@ -307,9 +294,8 @@ export default function PrivacyPolicy() {
               </div>
             </div>
 
-            {/* 9. Rights */}
             <div id="rights" className="scroll-mt-32">
-              <h3 className="text-xl font-black uppercase tracking-widest text-[#336fa5] mb-8 flex items-center gap-3">
+              <h3 className="text-xl font-black uppercase tracking-widest text-[#4a7dc0] mb-8 flex items-center gap-3">
                 <ShieldCheck size={24} /> 9. Your Privacy Rights
               </h3>
               <div className="grid sm:grid-cols-3 gap-4">
@@ -318,19 +304,18 @@ export default function PrivacyPolicy() {
                   "Restriction of Processing", "Data Portability", "Right to Object",
                   "Withdraw Consent"
                 ].map((right, i) => (
-                  <div key={i} className="p-5 rounded-2xl border border-slate-100 bg-white flex flex-col justify-between h-32 hover:border-[#336fa5] transition-all">
-                    <p className="text-[10px] font-black text-[#5ba12d] uppercase">0{i+1}</p>
+                  <div key={i} className="p-5 rounded-2xl border border-slate-100 bg-white flex flex-col justify-between h-32 hover:border-[#4a7dc0] transition-all">
+                    <p className="text-[10px] font-black text-[#63b344] uppercase">0{i+1}</p>
                     <p className="text-sm font-bold text-slate-800 leading-tight">{right}</p>
                   </div>
                 ))}
               </div>
-              <div className="mt-8 flex flex-col md:flex-row gap-4 items-center justify-between p-8 rounded-[2rem] bg-slate-50 border border-slate-100">
-                <p className="text-sm font-medium text-slate-500">To exercise these rights, email us at <span className="text-[#336fa5] font-bold">privacy@webronic.com</span>. We aim to respond within 30 days.</p>
+              <div className="mt-8 flex flex-col md:flex-row gap-4 items-center justify-between p-8 rounded-4xl bg-slate-50 border border-slate-100">
+                <p className="text-sm font-medium text-slate-500">To exercise these rights, email us at <span className="text-[#4a7dc0] font-bold">privacy@webronic.com</span>. We aim to respond within 30 days.</p>
               </div>
             </div>
-            {/* 10. Cookies Policy */}
             <div id="cookies" className="scroll-mt-32">
-              <h3 className="text-xl font-black uppercase tracking-widest text-[#336fa5] mb-8 flex items-center gap-3">
+              <h3 className="text-xl font-black uppercase tracking-widest text-[#4a7dc0] mb-8 flex items-center gap-3">
                 <Cookie size={24} /> 10. Cookies and Tracking
               </h3>
               <div className="grid sm:grid-cols-2 gap-4">
@@ -349,37 +334,36 @@ export default function PrivacyPolicy() {
             </div>
             <div className="space-y-16">
                <div id="children" className="scroll-mt-32">
-                  <h4 className="text-sm font-black uppercase tracking-widest text-[#336fa5] mb-4 flex items-center gap-2">
+                  <h4 className="text-sm font-black uppercase tracking-widest text-[#4a7dc0] mb-4 flex items-center gap-2">
                     <ShieldAlert size={18} /> 11. Children&apos;s Privacy
                   </h4>
                   <p className="text-sm text-slate-500 font-medium leading-relaxed">Our services are not directed at children under 18 years of age. If we discover data collected from a minor, we will delete it immediately.</p>
                </div>
 
                <div id="breach" className="scroll-mt-32">
-                  <h4 className="text-sm font-black uppercase tracking-widest text-[#336fa5] mb-4 flex items-center gap-2">
+                  <h4 className="text-sm font-black uppercase tracking-widest text-[#4a7dc0] mb-4 flex items-center gap-2">
                     <AlertTriangle size={18} /> 12. Data Breach Notification
                   </h4>
                   <p className="text-sm text-slate-500 font-medium leading-relaxed">In the event of a breach posing high risk, we notify affected individuals and relevant authorities within **72 hours**.</p>
                </div>
 
                <div id="thirdparty" className="scroll-mt-32">
-                  <h4 className="text-sm font-black uppercase tracking-widest text-[#336fa5] mb-4 flex items-center gap-2">
+                  <h4 className="text-sm font-black uppercase tracking-widest text-[#4a7dc0] mb-4 flex items-center gap-2">
                     <ExternalLink size={18} /> 13. Third-Party Links
                   </h4>
                   <p className="text-sm text-slate-500 font-medium leading-relaxed">We are not responsible for the privacy practices of external sites linked from our platform. Please review their policies independently.</p>
                </div>
 
                <div id="changes" className="scroll-mt-32">
-                  <h4 className="text-sm font-black uppercase tracking-widest text-[#336fa5] mb-4 flex items-center gap-2">
+                  <h4 className="text-sm font-black uppercase tracking-widest text-[#4a7dc0] mb-4 flex items-center gap-2">
                     <RefreshCw size={18} /> 14. Changes to Policy
                   </h4>
                   <p className="text-sm text-slate-500 font-medium leading-relaxed">We may update this policy periodically. Continued use of our services constitutes acceptance of the latest version.</p>
                </div>
             </div>
 
-            {/* 15. Agreements */}
             <div id="agreements" className="scroll-mt-32">
-              <h3 className="text-xl font-black uppercase tracking-widest text-[#336fa5] mb-8 flex items-center gap-3">
+              <h3 className="text-xl font-black uppercase tracking-widest text-[#4a7dc0] mb-8 flex items-center gap-3">
                 <FileText size={24} /> 15. Data Processing Agreements (DPA)
               </h3>
               <div className="bg-slate-900 text-white rounded-[2.5rem] p-10 relative overflow-hidden group">
@@ -391,7 +375,7 @@ export default function PrivacyPolicy() {
                   <div className="grid sm:grid-cols-2 gap-6">
                     {["Clear Processing Instructions", "Sub-processor safeguards", "Audit & Deletion rights", "Security Breach Protocols"].map((item) => (
                       <div key={item} className="flex items-center gap-3">
-                        <CheckCircle2 size={16} className="text-[#5ba12d]" />
+                        <CheckCircle2 size={16} className="text-[#63b344]" />
                         <span className="text-xs font-black uppercase tracking-widest">{item}</span>
                       </div>
                     ))}
@@ -400,9 +384,8 @@ export default function PrivacyPolicy() {
               </div>
             </div>
 
-            {/* 16. Compliance */}
             <div id="compliance" className="scroll-mt-32">
-              <h3 className="text-xl font-black uppercase tracking-widest text-[#336fa5] mb-8 flex items-center gap-3">
+              <h3 className="text-xl font-black uppercase tracking-widest text-[#4a7dc0] mb-8 flex items-center gap-3">
                 <Scale size={24} /> 16. Legal Compliance
               </h3>
               <div className="grid sm:grid-cols-3 gap-4">
@@ -411,8 +394,8 @@ export default function PrivacyPolicy() {
                   { title: "IT Act 2000", sub: "India", link: "Information Tech" },
                   { title: "EU GDPR", sub: "Europe", link: "Global Standard" }
                 ].map((item) => (
-                  <div key={item.title} className="p-6 rounded-2xl border-2 border-slate-50 bg-white hover:border-[#336fa5] transition-all">
-                    <p className="text-[10px] font-black text-[#5ba12d] uppercase mb-1">{item.sub}</p>
+                  <div key={item.title} className="p-6 rounded-2xl border-2 border-slate-50 bg-white hover:border-[#4a7dc0] transition-all">
+                    <p className="text-[10px] font-black text-[#63b344] uppercase mb-1">{item.sub}</p>
                     <p className="text-lg font-black text-slate-900">{item.title}</p>
                     <p className="text-xs text-slate-400 mt-2 font-medium">{item.link}</p>
                   </div>
@@ -420,7 +403,6 @@ export default function PrivacyPolicy() {
               </div>
             </div>
 
-            {/* Footer Final CTA */}
             <div className="mt-20 pt-16 border-t border-slate-100 flex flex-col md:flex-row items-center justify-between gap-12">
               <div className="max-w-md">
                 <h4 className="text-3xl font-black text-slate-900 tracking-tighter">Secure. Compliant. Future-Ready.</h4>
@@ -429,7 +411,7 @@ export default function PrivacyPolicy() {
               <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
                 <a 
                   href="mailto:security@webronic.com"
-                  className="flex items-center justify-center gap-3 bg-[#336fa5] text-white px-10 py-5 rounded-2xl font-black text-[11px] uppercase tracking-[0.2em] hover:bg-[#5ba12d] transition-all shadow-2xl active:scale-95"
+                  className="flex items-center justify-center gap-3 bg-[#4a7dc0] text-white px-10 py-5 rounded-2xl font-black text-[11px] uppercase tracking-[0.2em] hover:bg-[#63b344] transition-all shadow-2xl active:scale-95"
                 >
                   Contact DPO <Mail size={18} />
                 </a>

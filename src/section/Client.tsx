@@ -35,36 +35,33 @@ export default function Clients() {
   const secondRow = logos.slice(Math.ceil(logos.length / 2));
 
   return (
-    <section id="client" className="relative overflow-hidden bg-white py-5 font-sora">
-      
-      
+    <section
+      id="client"
+      className="relative overflow-hidden bg-white py-5 font-sora"
+    >
       <div className="relative mx-auto max-w-7xl px-6">
-        
         <div className="mb-10 text-center animate-fade-up">
           <div className="flex items-center justify-center gap-4 mb-6">
-              <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#336fa5]">
-                Clients
-              </span>
-            </div>
-          
-          {/* <h2 className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-6xl">
-            Trusted by <span className="bg-gradient-to-r from-blue-600 to-indigo-500 bg-clip-text text-transparent">Industry Leaders</span>
-          </h2> */}
-           <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl leading-tight">
-              Trusted by <br className="hidden sm:block" />
-              <span className="bg-gradient-to-r from-[#336fa5] to-[#5ba12d] bg-clip-text text-transparent">
-               Industry Leaders
-              </span>
-            </h2>
+            <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#4a7dc0]">
+              Clients
+            </span>
+          </div>
+
+          <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl leading-tight">
+            Trusted by <br className="hidden sm:block" />
+            <span className="bg-linear-to-r from-[#4a7dc0] to-[#63b344] bg-clip-text text-transparent">
+              Industry Leaders
+            </span>
+          </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-500 font-medium">
-            Partnering with prestigious institutions and innovative enterprises to build the future of digital retail.
+            Partnering with prestigious institutions and innovative enterprises
+            to build the future of digital retail.
           </p>
         </div>
 
         <div className="relative mt-12 space-y-8">
-          
-          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-3 md:w-32 bg-gradient-to-r from-white via-white/80 to-transparent" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-3 md:w-32 bg-gradient-to-l from-white via-white/80 to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-3 md:w-32 bg-linear-to-r from-white via-white/80 to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-3 md:w-32 bg-linear-to-l from-white via-white/80 to-transparent" />
 
           <div className="flex overflow-hidden group">
             <div className="animate-marquee flex w-max items-center gap-12 py-4">
@@ -102,12 +99,6 @@ export default function Clients() {
             </div>
           </div>
         </div>
-
-        {/* <div className="mt-20 flex items-center justify-center gap-4 text-center">
-            <div className="h-px w-12 bg-slate-200" />
-            <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-slate-300">Enterprise Grade Solutions</span>
-            <div className="h-px w-12 bg-slate-200" />
-        </div> */}
       </div>
     </section>
   );

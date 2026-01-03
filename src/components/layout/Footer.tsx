@@ -62,14 +62,11 @@ export default function Footer() {
       id="footer"
       className="relative w-full z-10 overflow-hidden bg-slate-900 border-t border-white/5 pt-16 md:pt-20 pb-10 font-sora"
     >
-      {/* Dynamic Background Glows */}
       <div className="absolute -bottom-24 -left-24 h-64 w-64 md:h-96 md:w-96 rounded-full bg-blue-600/10 blur-[80px] md:blur-[120px] pointer-events-none" />
       <div className="absolute top-0 right-0 h-48 w-48 md:h-64 md:w-64 rounded-full bg-indigo-500/5 blur-[70px] md:blur-[100px] pointer-events-none" />
 
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="grid gap-10 lg:grid-cols-6 md:grid-cols-3 grid-cols-1 sm:grid-cols-2">
-          
-          {/* Brand Identity */}
           <div className="space-y-6 lg:col-span-2 md:col-span-3">
             <div className="flex justify-start">
               <Image
@@ -93,15 +90,14 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="flex h-9 w-9 items-center justify-center rounded-xl bg-white/5 border border-white/5 transition-all hover:bg-white/10 hover:-translate-y-1"
                 >
-                  <Image src={social.src} alt="Social" width={16} height={16} />
+                  <Image src={social.src} alt="Social" width={20} height={20} />
                 </a>
               ))}
             </div>
           </div>
 
-          {/* Navigation */}
           <div className="space-y-4 md:space-y-6">
-            <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#336fa5]">
+            <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#4a7dc0]">
               Navigation
             </h4>
             <ul className="space-y-3">
@@ -119,7 +115,7 @@ export default function Footer() {
                   >
                     <ArrowRight
                       size={12}
-                      className="mr-2 opacity-0 -translate-x-2 transition-all group-hover:opacity-100 group-hover:translate-x-0 text-[#5ba12d]"
+                      className="mr-2 opacity-0 -translate-x-2 transition-all group-hover:opacity-100 group-hover:translate-x-0 text-[#63b344]"
                     />
                     {link.label}
                   </Link>
@@ -128,19 +124,43 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Company Section */}
           <div className="space-y-4 md:space-y-6">
-            <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#336fa5]">
+            <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#4a7dc0]">
               Company
             </h4>
             <ul className="space-y-3">
               {[
-                { label: "About Us", id: "about", icon: Info, isExternal: false },
-                { label: "Partners", id: "partner", icon: Handshake, isExternal: false },
-                { label: "Clients", id: "client", icon: Globe, isExternal: false },
-                { label: "Careers", id: "career", icon: Briefcase, isExternal: false },
+                {
+                  label: "About Us",
+                  id: "about",
+                  icon: Info,
+                  isExternal: false,
+                },
+                {
+                  label: "Partners",
+                  id: "partner",
+                  icon: Handshake,
+                  isExternal: false,
+                },
+                {
+                  label: "Clients",
+                  id: "client",
+                  icon: Globe,
+                  isExternal: false,
+                },
+                {
+                  label: "Careers",
+                  id: "career",
+                  icon: Briefcase,
+                  isExternal: false,
+                },
                 { label: "Team", id: "/team", icon: Users, isExternal: true },
-                { label: "Location", id: "location", icon: MapPin, isExternal: false },
+                {
+                  label: "Location",
+                  id: "location",
+                  icon: MapPin,
+                  isExternal: false,
+                },
               ].map((item) => (
                 <li key={item.label}>
                   {item.isExternal ? (
@@ -150,7 +170,7 @@ export default function Footer() {
                     >
                       <item.icon
                         size={13}
-                        className="mr-2 text-slate-600 group-hover:text-[#5ba12d] transition-colors flex-shrink-0"
+                        className="mr-2 text-slate-600 group-hover:text-[#63b344] transition-colors shrink-0"
                       />
                       {item.label}
                     </Link>
@@ -161,7 +181,7 @@ export default function Footer() {
                     >
                       <item.icon
                         size={13}
-                        className="mr-2 text-slate-600 group-hover:text-[#5ba12d] transition-colors flex-shrink-0"
+                        className="mr-2 text-slate-600 group-hover:text-[#63b344] transition-colors shrink-0"
                       />
                       {item.label}
                     </button>
@@ -171,9 +191,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Policies */}
           <div className="space-y-4 md:space-y-6">
-            <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#336fa5]">
+            <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#4a7dc0]">
               Policies
             </h4>
             <ul className="space-y-3">
@@ -185,7 +204,7 @@ export default function Footer() {
                   >
                     <policy.icon
                       size={14}
-                      className="mr-2 text-slate-600 group-hover:text-[#5ba12d] transition-colors flex-shrink-0"
+                      className="mr-2 text-slate-600 group-hover:text-[#63b344] transition-colors shrink-0"
                     />
                     {policy.label}
                   </Link>
@@ -194,64 +213,65 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Corporate HQ */}
           <div className="space-y-4 md:space-y-6">
-            <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#336fa5]">
+            <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#4a7dc0]">
               Registered Office
             </h4>
             <div className="space-y-4 text-xs md:text-sm text-slate-400">
               <div className="flex gap-3 items-start">
-                <MapPin
-                  size={16}
-                  className="text-[#336fa5] mt-1 flex-shrink-0"
-                />
+                <MapPin size={16} className="text-[#4a7dc0] mt-1 shrink-0" />
                 <p className="leading-relaxed">
                   New #33, Old #17, 2nd St, Mylapore, Chennai - 600004
                 </p>
               </div>
               <div className="flex gap-3 items-center">
-                <Phone size={16} className="text-[#336fa5] flex-shrink-0" />
+                <Phone size={16} className="text-[#4a7dc0] shrink-0" />
                 <p className="font-bold">+91 72000 88500</p>
               </div>
               <div className="flex gap-3 items-center">
-                <Mail size={16} className="text-[#336fa5] flex-shrink-0" />
+                <Mail size={16} className="text-[#4a7dc0] shrink-0" />
                 <p className="break-all">contact@webronic.com</p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Regional Offices Row */}
         <div className="mt-16 pt-12 border-t border-white/5">
-          <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#336fa5] mb-8 text-center md:text-left">
+          <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#4a7dc0] mb-8 text-center md:text-left">
             Regional Hubs
           </h4>
           <div className="grid gap-8 grid-cols-1 md:grid-cols-3">
             {[
-              { 
-                title: "Chennai Digital Hub", 
-                address: "A1 - No. 20, Sakthi Apartments, Cenotoph Road, Teynampet - 600004", 
-                phone: "+91 72000 88500" 
+              {
+                title: "Chennai Digital Hub",
+                address:
+                  "A1 - No. 20, Sakthi Apartments, Cenotoph Road, Teynampet - 600004",
+                phone: "+91 72000 88500",
               },
-              { 
-                title: "Madurai Operations", 
-                address: "JS Tower, Alanganallur Main Road, Sikkandar Savadi - 625018", 
-                phone: "+91 63833 26928" 
+              {
+                title: "Madurai Operations",
+                address:
+                  "JS Tower, Alanganallur Main Road, Sikkandar Savadi - 625018",
+                phone: "+91 63833 26928",
               },
-              { 
-                title: "Salem Hub", 
-                address: "1-718, Sannasi Muniyappan Kovil, Surappalli, Salem - 636501", 
-                phone: "+91 72000 88500" 
+              {
+                title: "Salem Hub",
+                address:
+                  "1-718, Sannasi Muniyappan Kovil, Surappalli, Salem - 636501",
+                phone: "+91 72000 88500",
               },
             ].map((hub, idx) => (
-              <div key={idx} className="group transition-all text-center md:text-left">
-                <p className="text-[10px] font-black uppercase tracking-[0.1em] text-slate-500 mb-2">
+              <div
+                key={idx}
+                className="group transition-all text-center md:text-left"
+              >
+                <p className="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-2">
                   {hub.title}
                 </p>
                 <p className="text-xs text-slate-300 leading-relaxed">
                   {hub.address}
                 </p>
-                <p className="text-xs mt-1 text-[#336fa5] font-bold">
+                <p className="text-xs mt-1 text-[#4a7dc0] font-bold">
                   {hub.phone}
                 </p>
               </div>
@@ -259,7 +279,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Final Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8 text-center md:text-left">
           <div className="order-2 md:order-1">
             <p className="text-[9px] md:text-[10px] font-bold uppercase tracking-[0.15em] md:tracking-[0.25em] text-slate-500 max-w-xs md:max-w-none">
@@ -267,7 +286,7 @@ export default function Footer() {
               <br className="block md:hidden" /> ALL RIGHTS RESERVED.
             </p>
             <div className="flex items-center justify-center md:justify-start gap-2 mt-3 md:mt-2">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#336fa5] animate-pulse" />
+              <span className="h-1.5 w-1.5 rounded-full bg-[#4a7dc0] animate-pulse" />
               <p className="text-[9px] text-slate-600 uppercase tracking-widest font-medium">
                 Global Enterprise Tech Solutions
               </p>

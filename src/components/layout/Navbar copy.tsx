@@ -46,7 +46,6 @@ export default function Navbar() {
       <header className="fixed top-0 inset-x-0 z-50 bg-black/95 backdrop-blur border-b border-gray-800">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <div className="flex items-center justify-between h-20">
-            {/* Logo */}
             <Link href="/#hero" className="flex items-center">
               <Image
                 src="./assets/storetechlogo2.png"

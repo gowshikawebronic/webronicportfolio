@@ -24,38 +24,38 @@ export default function Integrations() {
   const items: IntegrationItem[] = [
     {
       image: "./assets/24sju-se.png",
-      rotation: "rotate-[30deg]",
-      rotation2: "-rotate-[30deg]",
+      rotation: "rotate-[24deg]",
+      rotation2: "-rotate-[24deg]",
       link: "https://24-sju.se/",
     },
     {
       image: "./assets/images/valuechart.png",
-      rotation: "rotate-[54deg]",
-      rotation2: "-rotate-[54deg]",
+      rotation: "rotate-[50deg]",
+      rotation2: "-rotate-[50deg]",
       link: "https://www.valueflowsoft.com/",
     },
     {
       image: "./assets/images/tanluxlogo.png",
-      rotation: "rotate-[78deg]",
-      rotation2: "-rotate-[78deg]",
+      rotation: "rotate-[76deg]",
+      rotation2: "-rotate-[76deg]",
       link: "https://tanlux.se/",
     },
     {
       image: "./assets/images/fpanalyzer.png",
-      rotation: "rotate-[102deg]",
-      rotation2: "-rotate-[102deg]",
+      rotation: "rotate-[104deg]",
+      rotation2: "-rotate-[104deg]",
       link: "https://www.fpanalyzer.se/",
     },
     {
       image: "./assets/images/storetech-logo1.png",
-      rotation: "rotate-[126deg]",
-      rotation2: "-rotate-[126deg]",
+      rotation: "rotate-[130deg]",
+      rotation2: "-rotate-[130deg]",
       link: "https://store-tech.se/",
     },
     {
       image: "./assets/images/thingsatweb.png",
-      rotation: "rotate-[150deg]",
-      rotation2: "-rotate-[150deg]",
+      rotation: "rotate-[156deg]",
+      rotation2: "-rotate-[156deg]",
       link: "https://www.thingsatweb.com/",
     },
   ];
@@ -80,14 +80,14 @@ export default function Integrations() {
         <div className="flex flex-col gap-10 md:gap-16">
           <div className="text-center">
             <div className="flex items-center justify-center gap-4 mb-6">
-              <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#336fa5]">
+              <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#4a7dc0]">
                 partners
               </span>
             </div>
 
             <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl leading-tight">
               Partnering with <br className="hidden sm:block" />
-              <span className="bg-gradient-to-r from-[#336fa5] to-[#5ba12d] bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-[#4a7dc0] to-[#63b344] bg-clip-text text-transparent">
                 Innovative Brands
               </span>
             </h2>
@@ -102,13 +102,13 @@ export default function Integrations() {
             <div className="relative flex h-100 w-full justify-center overflow-hidden lg:h-125">
               <div
                 ref={ref}
-                className="relative mt-20 h-150 w-150 rounded-full border border-slate-100 bg-gradient-to-b from-[#336fa5]/5 via-white to-white md:h-250 md:w-250 shadow-[inset_0_0_100px_rgba(51,111,165,0.05)]"
+                className="relative mt-20 h-150 w-150 rounded-full border border-slate-100 bg-linear-to-b from-[#4a7dc0]/5 via-white to-white md:h-250 md:w-250 shadow-[inset_0_0_100px_rgba(51,111,165,0.05)]"
               >
-                <div className="absolute inset-[15%] rounded-full border border-dashed border-[#5ba12d]/20 opacity-50" />
+                {/* <div className="absolute inset-[15%] rounded-full border border-dashed border-[#63b344]/20 opacity-50" /> */}
                 {items.map((item, i) => (
                   <div
                     key={i}
-                    className={`absolute top-1/2 w-full -translate-y-1/2 ${item.rotation}`}
+                    className={`absolute top-1/2 w-full -translate-y-3/4  ${item.rotation}`}
                   >
                     <a
                       href={item.link}
@@ -120,7 +120,7 @@ export default function Integrations() {
                         ref={(el) => {
                           eleRefs.current[i] = el;
                         }}
-                        className="flex h-26 w-26 translate-x-16 items-center justify-center rounded-2xl bg-white border border-slate-100 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 group-hover:-translate-y-2 group-hover:border-[#336fa5]/30 group-hover:shadow-[#336fa5]/10 group-hover:shadow-2xl"
+                        className="flex h-26 w-26 translate-x-16 items-center justify-center rounded-2xl bg-white border border-slate-100 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 group-hover:-translate-y-2 group-hover:border-[#4a7dc0]/30 group-hover:shadow-[#4a7dc0]/10 group-hover:shadow-2xl"
                       >
                         <img
                           src={item.image}
@@ -143,7 +143,7 @@ export default function Integrations() {
                   href={item.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex h-28 sm:h-32 w-full items-center justify-center rounded-2xl border border-slate-100 bg-white p-6 shadow-sm hover:border-[#336fa5]/20 hover:shadow-md transition-all duration-300"
+                  className="flex h-28 sm:h-32 w-full items-center justify-center rounded-2xl border border-slate-100 bg-white p-6 shadow-sm hover:border-[#4a7dc0]/20 hover:shadow-md transition-all duration-300"
                 >
                   <img
                     src={item.image}

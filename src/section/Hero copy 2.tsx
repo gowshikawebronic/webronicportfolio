@@ -10,7 +10,7 @@ export default function Home() {
         <div className="flex flex-col items-center justify-between text-black lg:flex-row">
           <div className="flex flex-col items-center text-[clamp(1.25rem,4vw,3.75rem)] font-medium lg:items-start">
             <span className="font-bold tracking-wide">WEBRONIC</span>
-            <span className="bg-gradient-to-b from-black via-gray-500 to-gray-300 bg-clip-text text-nowrap text-transparent">
+            <span className="bg-linear-to-b from-black via-gray-500 to-gray-300 bg-clip-text text-nowrap text-transparent">
               DESIGNING THE FUTURE
             </span>
           </div>
@@ -39,7 +39,7 @@ export default function Home() {
         </div>
 
         <div className="overflow-y-hidden">
-          <div className="relative z-0 mt-20 flex h-96 items-center justify-center rounded-4xl bg-gradient-to-b from-gray-50 to-gray-50">
+          <div className="relative z-0 mt-20 flex h-96 items-center justify-center rounded-4xl bg-linear-to-b from-gray-50 to-gray-50">
             <Parallax speed={20}>
               <Image
                 src="./assets/Home/h1.png"

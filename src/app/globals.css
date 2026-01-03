@@ -2,17 +2,14 @@
 @import "tailwindcss";
 
 @theme {
-  /* Font Definitions */
   --font-sora: "Sora", sans-serif;
   --font-sans: var(--font-sora);
 
-  /* Animation Definitions */
   --animate-modal-pop: modalPop 0.3s ease-out forwards;
   --animate-header: revealDown 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
   --animate-on-load: revealUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
   --animate-float: float 4s ease-in-out infinite;
 
-  /* Keyframes nested in theme */
   @keyframes modalPop {
     0% { opacity: 0; transform: scale(0.95) translateY(10px); }
     100% { opacity: 1; transform: scale(1) translateY(0); }
@@ -32,7 +29,6 @@
 }
 @layer base {
   html {
-    /* Explicitly setting the font on the root element */
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -338,23 +334,19 @@ body {
 }
 
 @theme {
-  /* ... your other settings ... */
   --animate-carousel-x: carousel-x 40s linear infinite;
 
   @keyframes carousel-x {
     0% { transform: translateX(0); }
-    /* Translate exactly half of the total width (the first set of cards) */
     100% { transform: translateX(calc(-50% - 12px)); } 
   }
 }
 
-/* Pause logic */
 .pause-animation:hover .animate-carousel-x {
   animation-play-state: paused;
 }
 
-/* src/app/globals.css */
-/* 1. The Swipe-Away Animation (Top Card) */
+
 @keyframes soltioSwap {
   0% { 
     transform: translateX(0) scale(1); 
@@ -362,13 +354,11 @@ body {
     z-index: 20; 
   }
   40% { 
-    /* Slides right and tilts slightly */
     transform: translateX(110%) scale(0.95) rotate(4deg); 
     opacity: 0.5; 
     z-index: 20; 
   }
   50% { 
-    /* Move behind the other cards */
     transform: translateX(110%); 
     z-index: 5; 
     opacity: 0; 
@@ -380,7 +370,6 @@ body {
   }
 }
 
-/* 2. The Reveal Animation (Bottom Card moving to front) */
 @keyframes soltioReveal {
   0% { 
     transform: scale(0.9); 
@@ -392,20 +381,17 @@ body {
   }
 }
 
-/* 3. Updated Cursor (Matching your Blue #336fa5) */
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
 
-/* --- Class Assignments --- */
 
 .animate-soltio-swap {
   animation: soltioSwap 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 .animate-soltio-reveal {
-  /* Starts slightly after the top card begins moving */
   animation: soltioReveal 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.1s forwards;
 }
 
@@ -413,8 +399,8 @@ body {
   display: inline-block;
   width: 3px;
   height: 1.1em;
-  background-color: #336fa5;
+  background-color: #4a7dc0;
   margin-left: 4px;
   vertical-align: middle;
-  animation: blink 0.8s step-end infinite; /* step-end makes it a crisp blink like a real terminal */
+  animation: blink 0.8s step-end infinite; 
 }

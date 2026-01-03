@@ -33,7 +33,6 @@ export default function Hero() {
 
     const currentWord = HERO_DATA[index].text;
 
-    // STEP 1: Type the word fully
     if (!typingComplete) {
       if (displayText.length < currentWord.length) {
         const typingTimeout = setTimeout(() => {
@@ -43,9 +42,7 @@ export default function Hero() {
       } else {
         setTypingComplete(true);
       }
-    }
-    // STEP 2: Wait, then cycle
-    else {
+    } else {
       const waitTimeout = setTimeout(() => {
         setDisplayText("");
         setTypingComplete(false);
@@ -62,7 +59,7 @@ export default function Hero() {
   const thirdIndex = (index + 2) % HERO_DATA.length;
 
   return (
-    <section className="relative overflow-hidden bg-white py-20 mt-10 font-sora min-h-[800px] flex items-center">
+    <section className="relative overflow-hidden bg-white py-20 mt-10 font-sora min-h-200 flex items-center">
       <style jsx global>{`
         @keyframes card-enter {
           0% {
@@ -108,7 +105,7 @@ export default function Hero() {
           display: inline-block;
           width: 4px;
           height: 1em;
-          background-color: #336fa5;
+          background-color: #4a7dc0;
           margin-left: 4px;
           vertical-align: middle;
           animation: blink 1s step-end infinite;
@@ -120,19 +117,15 @@ export default function Hero() {
         }
       `}</style>
 
-      {/* Grid Background */}
-      <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#336fa5_1px,transparent_1px)] [background-size:40px_40px]" />
+      <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#4a7dc0_1px,transparent_1px)] bg-size-[40px_40px]" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 w-full">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
-          {/* LEFT COLUMN */}
           <div className="flex flex-col text-center lg:text-left z-20">
-            
-            <h1 className="min-h-[160px] text-4xl font-black tracking-tight text-slate-900 sm:text-5xl lg:text-6xl leading-[1.1]">
+            <h1 className="min-h-40 text-4xl font-black tracking-tight text-slate-900 sm:text-5xl lg:text-6xl leading-[1.1]">
               The Future of Retail, <br />
-              <span className="bg-gradient-to-r from-[#336fa5] to-[#5ba12d] bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-[#4a7dc0] to-[#63b344] bg-clip-text text-transparent">
                 {displayText}
-                {/* If text is empty, render a zero-width space to keep line-height active */}
                 {displayText === "" && <span>&nbsp;</span>}
               </span>
             </h1>
@@ -140,7 +133,7 @@ export default function Hero() {
             <p className="mt-8 max-w-xl self-center lg:self-start text-lg lg:text-xl leading-relaxed text-slate-500 font-medium">
               Revolutionizing traditional commerce into intelligent, autonomous
               environments operating
-              <span className="text-slate-900 font-bold ml-1 underline decoration-[#5ba12d] decoration-2 underline-offset-4">
+              <span className="text-slate-900 font-bold ml-1 underline decoration-[#63b344] decoration-2 underline-offset-4">
                 seamlessly 24/7
               </span>
               .
@@ -168,15 +161,13 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* RIGHT COLUMN: Stack Animation */}
-          <div className="relative flex justify-center lg:justify-end h-[500px] items-center">
-            <div className="relative w-[320px] h-[450px] perspective-1000">
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] bg-[#336fa5]/15 blur-[100px] rounded-full z-[-1]" />
+          <div className="relative flex justify-center lg:justify-end h-125 items-center">
+            <div className="relative w-[320px] h-112.5 perspective-1000">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-125 w-125 bg-[#4a7dc0]/15 blur-[100px] rounded-full z-[-1]" />
 
-              {/* LAYER 0: Ghost/Previous */}
               <div
                 key={`prev-${prevIndex}`}
-                className="animate-cycle-back absolute inset-0 rounded-[2rem] border border-slate-200/50 bg-white shadow-sm overflow-hidden"
+                className="animate-cycle-back absolute inset-0 rounded-4xl border border-slate-200/50 bg-white shadow-sm overflow-hidden"
               >
                 <img
                   src={HERO_DATA[prevIndex].img}
@@ -185,9 +176,8 @@ export default function Hero() {
                 />
               </div>
 
-              {/* LAYER 1: Back */}
               <div
-                className="absolute inset-0 rounded-[2rem] border border-slate-100 bg-white/40 shadow-sm card-transition"
+                className="absolute inset-0 rounded-4xl border border-slate-100 bg-white/40 shadow-sm card-transition"
                 style={{
                   transform:
                     "translateX(50px) translateY(-15px) rotate(24deg) scale(0.85)",
@@ -204,9 +194,8 @@ export default function Hero() {
                 </div>
               </div>
 
-              {/* LAYER 2: Middle */}
               <div
-                className="absolute inset-0 rounded-[2rem] border border-slate-200 bg-white/80 shadow-md card-transition"
+                className="absolute inset-0 rounded-4xl border border-slate-200 bg-white/80 shadow-md card-transition"
                 style={{
                   transform:
                     "translateX(25px) translateY(-8px) rotate(12deg) scale(0.92)",
@@ -223,10 +212,9 @@ export default function Hero() {
                 </div>
               </div>
 
-              {/* LAYER 3: Active Front */}
               <div
                 key={index}
-                className="animate-card-enter absolute inset-0 z-30 rounded-[2rem] border border-slate-200 bg-white shadow-2xl overflow-hidden"
+                className="animate-card-enter absolute inset-0 z-30 rounded-4xl border border-slate-200 bg-white shadow-2xl overflow-hidden"
               >
                 <div className="relative h-full w-full flex items-center justify-center p-8">
                   <img
@@ -238,7 +226,7 @@ export default function Hero() {
                 </div>
 
                 <div className="absolute top-6 right-6 rounded-full bg-slate-50/90 backdrop-blur-md px-3 py-1.5 shadow-sm border border-slate-100 flex items-center gap-2">
-                  <div className="h-1.5 w-1.5 rounded-full bg-[#5ba12d] animate-pulse" />
+                  <div className="h-1.5 w-1.5 rounded-full bg-[#63b344] animate-pulse" />
                   <span className="text-[9px] font-black uppercase tracking-widest text-slate-700">
                     Live
                   </span>

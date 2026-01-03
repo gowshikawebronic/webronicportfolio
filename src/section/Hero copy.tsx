@@ -5,26 +5,22 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden bg-[#0b0f1a] text-white flex items-center">
-      
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(99,102,241,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.06)_1px,transparent_1px)] bg-[size:64px_64px] animate-grid" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(99,102,241,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.06)_1px,transparent_1px)] bg-size-[64px_64px] animate-grid" />
 
-      <div className="absolute left-1/2 top-1/2 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-indigo-500/25 animate-spin-slow" />
-      <div className="absolute left-1/2 top-1/2 h-[720px] w-[720px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan-400/20 animate-spin-reverse" />
+      <div className="absolute left-1/2 top-1/2 h-130 w-130 -translate-x-1/2 -translate-y-1/2 rounded-full border border-indigo-500/25 animate-spin-slow" />
+      <div className="absolute left-1/2 top-1/2 h-180 w-180 -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan-400/20 animate-spin-reverse" />
 
       <div className="absolute top-24 left-24 h-48 w-48 bg-indigo-500/20 blur-3xl animate-float" />
       <div className="absolute bottom-32 right-32 h-56 w-56 bg-cyan-400/20 blur-3xl animate-float delay-3000" />
 
       <div className="relative z-10 mx-auto max-w-6xl px-6 text-center">
-        
         <p className="mb-4 mt-35 text-xs tracking-[0.35em] text-indigo-400 animate-fade-in">
           DIGITAL SOLUTIONS PARTNER
         </p>
 
         <h1 className="text-5xl sm:text-7xl font-extrabold leading-tight animate-reveal">
-          <span className="block text-gray-200">
-            DESIGNING THE FUTURE
-          </span>
-          <span className="block bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
+          <span className="block text-gray-200">DESIGNING THE FUTURE</span>
+          <span className="block bg-linear-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
             WEBRONIC
           </span>
         </h1>
@@ -33,36 +29,12 @@ export default function Hero() {
           When you grow, with our technical expertise — we grow together.
         </p>
 
-{/* <div className="mt-14 max-w-5xl mx-auto grid gap-4 sm:grid-cols-2 lg:grid-cols-3 animate-fade-in delay-600">
-  {[
-    "Are you planning to create a website for your business?",
-    "Want to convert your business ideas into a mobile app?",
-    "How about getting an SEO analysis done for your website?",
-    "Need help reaching your target audience online?",
-    "Thinking of making your business process smart with IoT?",
-    "Still confused about choosing the right domain & hosting service?",
-  ].map((text, index) => (
-    <div
-      key={index}
-     className="group relative rounded-xl border border-white/10 bg-white/5 backdrop-blur-md px-6 py-5 text-sm leading-relaxed text-gray-300 transition-all duration-300 hover:border-indigo-400/40 hover:bg-white/10 hover:shadow-[0_0_20px_rgba(99,102,241,0.25)] hover:-translate-y-1"
-
-    >
-      
-
-      {text}
-    </div>
-  ))}
-</div> */}
-
-
-        
         <div className="mt-24 mb-10 animate-fade-in delay-900 flex justify-center">
           <a
             href="https://vasanthwebronic-oss.github.io/storetech-portfolio/"
             target="_blank"
             rel="noopener noreferrer"
-           className="group relative w-full max-w-3xl overflow-hidden rounded-xl border border-white/10 bg-white/5 backdrop-blur-md px-10 py-8 transition-all duration-700 hover:border-indigo-400/50"
-
+            className="group relative w-full max-w-3xl overflow-hidden rounded-xl border border-white/10 bg-white/5 backdrop-blur-md px-10 py-8 transition-all duration-700 hover:border-indigo-400/50"
           >
             <span
               aria-hidden
@@ -97,7 +69,6 @@ export default function Hero() {
             </div>
           </a>
         </div>
-
       </div>
     </section>
   );
