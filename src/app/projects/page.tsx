@@ -262,7 +262,7 @@ export default function Projects() {
               </div>
 
               <div
-                className="flex items-center gap-3 px-5 py-2.5 rounded-full bg-slate-50 text-[11px] font-black uppercase tracking-[0.2em]"
+                className="flex items-center gap-3 px-5 py-2.5 rounded-full  text-[11px] font-black uppercase tracking-[0.2em]"
                 style={{ color: "#63b344" }}
               >
                 <span className="relative flex h-2.5 w-2.5">
