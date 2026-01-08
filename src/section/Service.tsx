@@ -25,48 +25,48 @@ export default function ServiceCarousel() {
     {
       id: 1,
       icon: <Smartphone size={24} />,
-      title: "App Development",
+      title: "Custom Software Development",
       description:
-        "High-performance mobile applications with world-class UI/UX.",
+        "Build enterprise-grade applications tailored to your unique requirements. Full-stack development expertise across web, mobile, and IoT platforms",
       image: "./assets/images/appdevelopment.png",
     },
     {
       id: 2,
       icon: <Globe size={24} />,
-      title: "Web Development",
-      description: "Scalable, SEO-driven platforms engineered for performance.",
+      title: "AI & Machine Learning",
+      description: "Transform your business with intelligent automation and predictive analytics. Our AI-first approach embeds machine learning across all solutions, from computer vision to natural language processing",
       image: "./assets/images/webdevelopment.png",
     },
     {
       id: 3,
       icon: <Server size={24} />,
-      title: "Domain & Hosting",
+      title: "Cloud & DevOps",
       description:
-        "Fast, secure, cloud-native solutions powered by modern infrastructure.",
+        "Accelerate digital transformation with cloud-native architectures. We design scalable, secure cloud solutions across AWS, Azure, and Google Cloud platforms",
       image: "./assets/images/domainhosting.png",
     },
     {
       id: 4,
       icon: <Megaphone size={24} />,
-      title: "Digital Marketing",
+      title: " Digital Transformation",
       description:
-        "Performance-driven strategies that convert traffic into revenue.",
+        "Reimagine your business processes with cutting-edge technology. From strategy to execution, we guide organizations through comprehensive digital evolution",
       image: "./assets/images/digitalmarketing.png",
     },
     {
       id: 5,
       icon: <Search size={24} />,
-      title: "SEO Optimization",
+      title: "Cybersecurity",
       description:
-        "Data-driven strategies that put your business on top of search.",
+        "Protect your digital assets with enterprise-grade security solutions. From threat assessment to managed security operations, we safeguard your business",
       image: "./assets/images/seo.png",
     },
     {
       id: 6,
       icon: <Cpu size={24} />,
-      title: "IoT Solutions",
+      title: "IoT & Industry 4.0",
       description:
-        "Smart IoT ecosystems for monitoring and predictive insights.",
+        "Connect your operations with intelligent IoT ecosystems. Real-time monitoring, predictive maintenance, and automated workflows for manufacturing excellence",
       image: "./assets/images/iot.png",
     },
   ];
@@ -132,12 +132,20 @@ export default function ServiceCarousel() {
                   {card.description}
                 </p>
 
-                <div className="mt-auto relative">
+                <div className="mt-auto relative flex flex-col items-center">
                   <img
                     src={card.image}
                     alt={card.title}
-                    className="h-32 md:h-48 w-full object-contain transition-transform duration-1000 group-hover/card:scale-110 drop-shadow-2xl"
+                    className="h-32 md:h-48 w-full object-contain transition-transform duration-1000 group-hover/card:scale-110 drop-shadow-2xl mb-6"
                   />
+                  
+                  {/* --- ADDED: LEARN MORE LINK --- */}
+                  <Link
+                    href="/service"
+                    className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#4a7dc0] hover:text-[#63b344] transition-colors"
+                  >
+                    Learn More <ArrowRight size={14} />
+                  </Link>
                 </div>
               </div>
 

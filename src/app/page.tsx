@@ -8,6 +8,11 @@ import Partner from "@/section/Partner"
 import Contact from "@/section/Contact"
 import Location from "@/section/Location"
 import Career from "@/section/Career"
+import IndustryFocus from "@/section/IndustryFocus"
+import WhyChooseUs from "@/section/WhyChooseUs"
+import LatestInsights from "@/section/LatestInsights"
+
+
 // import CareerPage from "./career/page"
 
 
@@ -20,11 +25,15 @@ export default function page() {
     <Hero />
     <About />
     <Service />
+    <IndustryFocus />
+    <WhyChooseUs />
     <Partner />
     <Client />
+    <LatestInsights />
     <Career />
     <Contact />
     <Location />
+    
     {/* <Team /> */}
    
     

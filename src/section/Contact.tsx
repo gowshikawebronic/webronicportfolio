@@ -5,7 +5,6 @@ import { useState } from "react";
 import {
   Mail,
   Phone,
-  Globe,
   MapPin,
   Copy,
   Check,
@@ -19,6 +18,27 @@ export default function Contact() {
   const [copied, setCopied] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // --- CONTACT DATA ---
+  const contactDetails = [
+    {
+      label: "Phone Support",
+      value: "+91 72000 88500",
+      icon: Phone,
+      href: "tel:+917200088500",
+    },
+    {
+      label: "Email Enquiries",
+      value: "contact@webronic.com",
+      icon: Mail,
+      href: "mailto:contact@webronic.com",
+    },
+    {
+        label: "Registered Office",
+        value: "Mylapore, Chennai, TN 600004.",
+        icon: MapPin,
+    },
+  ];
 
   const handleCopy = (text: string, id: string) => {
     navigator.clipboard.writeText(text);
@@ -38,37 +58,39 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden bg-white py-12 lg:py-15 font-sora"
+      className="relative overflow-hidden bg-white py-12 lg:py-20 font-sora"
     >
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:items-start">
+          
+          {/* --- LEFT COLUMN: CTA & TEXT --- */}
           <div className="flex flex-col">
             <div className="flex items-center justify-center lg:justify-start gap-4 mb-6">
               <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#4a7dc0]">
-                Contact us
+                Get Started
               </span>
             </div>
 
             <h2 className="text-3xl font-extrabold flex flex-col items-center lg:items-start tracking-tight text-slate-900 sm:text-5xl lg:text-6xl leading-tight">
-              Ready to Build
+              Ready to Transform
               <br className="hidden sm:block" />
-              <span className="bg-linear-to-r from-[#4a7dc0] to-[#63b344] bg-clip-text text-transparent">
-                Something Great?
+              <span className="bg-gradient-to-r from-[#4a7dc0] to-[#63b344] bg-clip-text text-transparent">
+                Your Business?
               </span>
             </h2>
 
-            <p className="mt-8 max-w-lg max-md:text-center text-lg leading-relaxed text-slate-500 font-medium">
-              Enterprise automation or custom digital systems
-              <span className="font-bold text-slate-900"> WEBRONIC</span>{" "}
-              delivers precision engineering from strategy to deployment.
-            </p>
+            <div className="mt-8 max-w-lg text-center lg:text-start text-lg leading-relaxed text-slate-500 font-medium">
+              Our solution architects are ready to discuss your technology 
+              challenges and design custom solutions that drive measurable
+               business results.
+            </div>
 
             <div className="mt-10 max-md:text-center">
               <button
                 onClick={() => setIsModalOpen(true)}
-                className="group relative inline-flex cursor-pointer items-center gap-3 overflow-hidden rounded-2xl bg-[#4a7dc0] px-10 py-5 font-black uppercase tracking-widest text-xs text-white transition-all hover:bg-[#63b344] hover:shadow-xl hover:shadow-blue-500/20 active:scale-95"
+                className="group relative inline-flex cursor-pointer items-center gap-3 overflow-hidden rounded-2xl bg-[#4a7dc0] px-5 py-4 font-black uppercase tracking-widest text-xs text-white transition-all hover:bg-[#63b344] hover:shadow-xl hover:shadow-blue-500/20 active:scale-95"
               >
-                Send a Message
+                Schedule Free Consultation
                 <ArrowRight
                   size={18}
                   className="transition-transform group-hover:translate-x-1"
@@ -76,7 +98,8 @@ export default function Contact() {
               </button>
             </div>
 
-            <div className="mt-16 relative group max-w-xs">
+            {/* Partner Logo */}
+            <div className="mt-16 relative group max-w-xs mx-auto lg:mx-0">
               <a
                 href="https://www.thingsatweb.com/"
                 target="_blank"
@@ -99,33 +122,17 @@ export default function Contact() {
             </div>
           </div>
 
+          {/* --- RIGHT COLUMN: CONTACT CARDS --- */}
           <div className="relative">
-            <div className="space-y-4">
-              {[
-                {
-                  label: "Email Support",
-                  value: "contact@webronic.com",
-                  icon: Mail,
-                  href: "mailto:contact@webronic.com",
-                },
-                {
-                  label: "Phone Enquiries",
-                  value: "+91 72000 88500",
-                  icon: Phone,
-                },
-                {
-                  label: "Registered Office",
-                  value: "Mylapore, Chennai, TN 600004.",
-                  icon: MapPin,
-                },
-              ].map((item, i) => (
+            <div className="space-y-10">
+              {contactDetails.map((item, i) => (
                 <div
                   key={i}
                   className="group relative rounded-2xl border border-slate-100 bg-white p-6 md:p-8 transition-all hover:border-[#4a7dc0]/20 hover:shadow-2xl hover:shadow-slate-200/50"
                 >
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white text-[#4a7dc0] transition-colors group-hover:bg-[#4a7dc0] group-hover:text-white  duration-200 ease-in">
+                    <div className="flex items-center gap-4">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-50 text-[#4a7dc0] transition-colors group-hover:bg-[#4a7dc0] group-hover:text-white duration-200 ease-in">
                         <item.icon size={22} strokeWidth={2} />
                       </div>
                       <div>
@@ -135,12 +142,12 @@ export default function Contact() {
                         {item.href ? (
                           <a
                             href={item.href}
-                            className="mt-1 block text-lg font-bold text-slate-900 hover:text-[#4a7dc0] transition-colors"
+                            className="mt-1 block text-base md:text-lg font-bold text-slate-900 hover:text-[#4a7dc0] transition-colors"
                           >
                             {item.value}
                           </a>
                         ) : (
-                          <p className="mt-1 text-lg font-bold text-slate-900 leading-snug">
+                          <p className="mt-1 text-base md:text-lg font-bold text-slate-900 leading-snug">
                             {item.value}
                           </p>
                         )}
@@ -150,6 +157,7 @@ export default function Contact() {
                     <button
                       onClick={() => handleCopy(item.value, item.label)}
                       className="rounded-lg p-2 text-slate-300 hover:bg-slate-50 hover:text-[#63b344] transition-all"
+                      title="Copy to clipboard"
                     >
                       {copied === item.label ? (
                         <Check size={18} className="text-[#63b344]" />
@@ -165,14 +173,15 @@ export default function Contact() {
         </div>
       </div>
 
+      {/* --- MODAL --- */}
       {isModalOpen && (
-        <div className="fixed inset-0 z-100 flex items-center justify-center p-4 md:p-6">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-6">
           <div
             className="absolute inset-0 bg-slate-900/60 backdrop-blur-md transition-opacity duration-300"
             onClick={() => setIsModalOpen(false)}
           />
 
-          <div className="relative w-full max-w-xl overflow-hidden rounded-[2.5rem] bg-white shadow-2xl transition-all">
+          <div className="relative w-full max-w-xl overflow-hidden rounded-[2.5rem] bg-white shadow-2xl transition-all animate-in zoom-in-95">
             <div className="bg-slate-900 p-8 text-white relative">
               <button
                 onClick={() => setIsModalOpen(false)}
