@@ -143,16 +143,3 @@ export default function FAQSection() {
   );
 }
 
-import FAQSection, { FAQDataProps } from "@/components/FAQSection";
-
-// This is your data object (you can move this to a separate file later)
-const devOpsFAQ: FAQDataProps = FAQ_DATA 
-
-export default function Page() {
-  return (
-    <main>
-      {/* Pass the data prop to the reusable component */}
-      <FAQSection data={devOpsFAQ} />
-    </main>
-  );
-}

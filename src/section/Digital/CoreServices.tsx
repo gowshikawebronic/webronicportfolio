@@ -142,11 +142,11 @@ export default function CoreServices() {
                 </div>
 
                 {/* Render the Dynamic Content Blocks */}
-                <div className="prose prose-slate max-w-none prose-headings:font-bold prose-a:text-[#2776ea]">
+                {/* <div className="prose prose-slate max-w-none prose-headings:font-bold prose-a:text-[#2776ea]">
                   {CORE_SERVICES_DATA[activeTab].content.map((block, index) => 
                     renderContent(block, index)
                   )}
-                </div>
+                </div> */}
 
               </div>
             </div>
