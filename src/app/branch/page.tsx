@@ -43,20 +43,20 @@ export default function Branches() {
       className="relative overflow-hidden bg-white py-20 lg:py-32 font-sora mx-auto container"
     >
       <div className="absolute inset-0 pointer-events-none opacity-40">
-        <div className="absolute top-1/4 -right-20 w-80 h-80 bg-[#4a7dc0]/10 rounded-full blur-[120px]" />
-        <div className="absolute bottom-1/4 -left-20 w-80 h-80 bg-[#63b344]/10 rounded-full blur-[120px]" />
+        <div className="absolute top-1/4 -right-20 w-80 h-80 bg-[#2776ea]/10 rounded-full blur-[120px]" />
+        <div className="absolute bottom-1/4 -left-20 w-80 h-80 bg-[#76ea27]/10 rounded-full blur-[120px]" />
       </div>
 
       <div className="relative mx-auto px-6 md:px-12 lg:px-24">
         <div className="mb-16 text-center lg:text-left max-w-4xl animate-card-entry">
           <div className="flex items-center gap-4 mb-6">
-            <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#4a7dc0]">
+            <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#2776ea]">
               our presence
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900 leading-[1.1]">
             Strategic Digital <br />
-            <span className="bg-linear-to-r from-[#4a7dc0] to-[#63b344] bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-[#2776ea] to-[#76ea27] bg-clip-text text-transparent">
               Operations Hubs
             </span>
           </h2>
@@ -70,7 +70,7 @@ export default function Branches() {
           <div className="rounded-[40px] border border-slate-100 bg-white p-8 md:p-16 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.03)]">
             <div className="mb-12 flex flex-col items-center justify-between gap-6 md:flex-row border-b border-slate-50 pb-10">
               <div className="text-center md:text-left">
-                <div className="flex items-center gap-2 justify-center md:justify-start text-[#63b344]">
+                <div className="flex items-center gap-2 justify-center md:justify-start text-[#76ea27]">
                   <Globe2 size={18} />
                   <span className="text-sm font-bold uppercase tracking-widest">
                     Network Coverage
@@ -78,10 +78,10 @@ export default function Branches() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 px-5 py-2.5  text-[11px] font-black uppercase tracking-[0.2em] text-[#4a7dc0]">
+              <div className="flex items-center gap-3 px-5 py-2.5  text-[11px] font-black uppercase tracking-[0.2em] text-[#2776ea]">
                 <span className="relative flex h-2.5 w-2.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#4a7dc0] opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#4a7dc0]"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#2776ea] opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#2776ea]"></span>
                 </span>
                 Active Hubs
               </div>
@@ -97,7 +97,7 @@ export default function Branches() {
 
                   <div className="relative z-10">
                     <div className="mb-8 flex items-center justify-between">
-                      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-50 text-[#4a7dc0] shadow-sm transition-all duration-500 group-hover:bg-[#4a7dc0] group-hover:text-white group-hover:rotate-6">
+                      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-50 text-[#2776ea] shadow-sm transition-all duration-500 group-hover:bg-[#2776ea] group-hover:text-white group-hover:rotate-6">
                         <Building2 size={26} strokeWidth={1.5} />
                       </div>
                       <a
@@ -112,7 +112,7 @@ export default function Branches() {
 
                     <div className="space-y-4">
                       <div>
-                        <span className="text-[10px] font-black uppercase tracking-[0.2em] text-[#63b344]">
+                        <span className="text-[10px] font-black uppercase tracking-[0.2em] text-[#76ea27]">
                           {branch.type}
                         </span>
                         <h3 className="text-3xl font-black text-slate-900 tracking-tight">
@@ -123,7 +123,7 @@ export default function Branches() {
                       <div className="flex gap-3 text-slate-500">
                         <MapPin
                           size={18}
-                          className="mt-1 shrink-0 text-slate-300 group-hover:text-[#4a7dc0] transition-colors"
+                          className="mt-1 shrink-0 text-slate-300 group-hover:text-[#2776ea] transition-colors"
                         />
                         <p className="text-sm font-medium leading-relaxed">
                           {branch.address}
@@ -135,10 +135,10 @@ export default function Branches() {
                   <div className="relative z-10 mt-10 pt-6 border-t border-slate-50">
                     <a
                       href={`tel:${branch.contact.replace(/\s/g, "")}`}
-                      className="group/phone flex items-center justify-between text-slate-900 hover:text-[#4a7dc0] transition-colors"
+                      className="group/phone flex items-center justify-between text-slate-900 hover:text-[#2776ea] transition-colors"
                     >
                       <div className="flex items-center gap-3">
-                        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-50 text-[#4a7dc0] group-hover/phone:bg-[#4a7dc0] group-hover/phone:text-white transition-all">
+                        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-50 text-[#2776ea] group-hover/phone:bg-[#2776ea] group-hover/phone:text-white transition-all">
                           <Phone size={14} fill="currentColor" />
                         </div>
                         <span className="font-bold tracking-tight text-sm">
@@ -152,7 +152,7 @@ export default function Branches() {
                     </a>
                   </div>
 
-                  <div className="absolute bottom-0 left-0 h-1 w-0 bg-linear-to-r from-[#4a7dc0] to-[#63b344] transition-all duration-700 group-hover:w-full" />
+                  <div className="absolute bottom-0 left-0 h-1 w-0 bg-linear-to-r from-[#2776ea] to-[#76ea27] transition-all duration-700 group-hover:w-full" />
                 </div>
               ))}
             </div>

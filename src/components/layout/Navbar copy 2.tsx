@@ -128,7 +128,7 @@ export default function Navbar() {
                 <ChevronDown
                   size={14}
                   className="transition-transform duration-300 group-hover:rotate-180"
-                  style={{ color: '#4a7dc0' }}
+                  style={{ color: '#2776ea' }}
                 />
               </button>
 
@@ -141,7 +141,7 @@ export default function Navbar() {
                       className="flex items-center justify-between w-full rounded-xl px-4 py-3 text-[10px] cursor-pointer font-black uppercase tracking-widest text-slate-400 hover:bg-white/5 hover:text-white transition group/item"
                     >
                       {item.name}
-                      <Sparkles size={10} className="opacity-0 group-hover/item:opacity-100 transition-opacity" style={{ color: '#4a7dc0' }} />
+                      <Sparkles size={10} className="opacity-0 group-hover/item:opacity-100 transition-opacity" style={{ color: '#2776ea' }} />
                     </button>
                   ))}
                 </div>
@@ -152,7 +152,7 @@ export default function Navbar() {
           <div className="flex items-center gap-2 lg:gap-4">
             <Link
               href="/contact"
-              className="hidden sm:inline-flex items-center justify-center rounded-xl bg-white px-5 lg:px-6 py-2 lg:py-2.5 text-[10px] lg:text-[11px] uppercase tracking-[0.15em] text-slate-500 font-semibold shadow-xl transition-all duration-300 active:scale-95 hover:bg-[#4a7dc0] hover:text-white"
+              className="hidden sm:inline-flex items-center justify-center rounded-xl bg-white px-5 lg:px-6 py-2 lg:py-2.5 text-[10px] lg:text-[11px] uppercase tracking-[0.15em] text-slate-500 font-semibold shadow-xl transition-all duration-300 active:scale-95 hover:bg-[#2776ea] hover:text-white"
             >
               Contact us
             </Link>
@@ -190,7 +190,7 @@ export default function Navbar() {
             </div>
             <button 
               onClick={() => setOpen(false)} 
-              className="h-10 w-10 flex items-center justify-center bg-white/5 rounded-full text-slate-300 active:bg-[#4a7dc0] active:text-white transition-all"
+              className="h-10 w-10 flex items-center justify-center bg-white/5 rounded-full text-slate-300 active:bg-[#2776ea] active:text-white transition-all"
             >
               <X size={20} />
             </button>
@@ -199,7 +199,7 @@ export default function Navbar() {
           <div className="flex-1 overflow-y-auto px-6 py-4 space-y-8">
             <div className="space-y-2">
               <div className="flex items-center gap-2 px-4 mb-4">
-                <Globe size={12} className="text-[#4a7dc0]" />
+                <Globe size={12} className="text-[#2776ea]" />
                 <p className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-500">Navigation</p>
               </div>
               
@@ -218,7 +218,7 @@ export default function Navbar() {
 
             <div className="space-y-2">
               <div className="flex items-center gap-2 px-4 mb-2">
-                <Layers size={12} className="text-[#63b344]" />
+                <Layers size={12} className="text-[#76ea27]" />
                 <p className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-500">Resources</p>
               </div>
               
@@ -228,7 +228,7 @@ export default function Navbar() {
                   className="flex items-center justify-between w-full px-6 py-5 rounded-2xl transition-all"
                 >
                   <span className="text-[13px] font-bold text-slate-200">Company Hub</span>
-                  <ChevronDown size={18} className={`text-[#4a7dc0] transition-transform duration-500 ${mobileCompanyOpen ? "rotate-180" : ""}`} />
+                  <ChevronDown size={18} className={`text-[#2776ea] transition-transform duration-500 ${mobileCompanyOpen ? "rotate-180" : ""}`} />
                 </button>
                 
                 <div className={`overflow-hidden transition-all duration-500 ${mobileCompanyOpen ? "max-h-125 opacity-100" : "max-h-0 opacity-0"}`}>
@@ -237,7 +237,7 @@ export default function Navbar() {
                       <button
                         key={item.name}
                         onClick={() => handleNavClick(item)}
-                        className="flex flex-col items-center justify-center p-4 rounded-2xl bg-white/3 border border-white/5 active:bg-[#4a7dc0]/20 transition-all"
+                        className="flex flex-col items-center justify-center p-4 rounded-2xl bg-white/3 border border-white/5 active:bg-[#2776ea]/20 transition-all"
                       >
                          <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest">{item.name}</span>
                       </button>
@@ -253,7 +253,7 @@ export default function Navbar() {
               href="/contact"
               onClick={() => setOpen(false)}
               className="flex items-center justify-between w-full rounded-2xl p-5 text-[11px] font-black uppercase tracking-[0.2em] text-white shadow-2xl active:scale-[0.98] transition-all overflow-hidden relative group"
-              style={{ backgroundColor: '#4a7dc0' }}
+              style={{ backgroundColor: '#2776ea' }}
             >
               <span className="relative z-10">Contact our experts</span>
               <ArrowRight size={16} className="relative z-10 transition-transform group-active:translate-x-1" />
@@ -289,7 +289,7 @@ function NavItem({ item, active, path, onClick }: any) {
         {!isActive && (
             <span 
               className="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-1 rounded-full group-hover:w-1 transition-all duration-300" 
-              style={{ backgroundColor: '#63b344' }}
+              style={{ backgroundColor: '#76ea27' }}
             />
         )}
       </button>
@@ -307,12 +307,12 @@ function MobileNavItem({ item, active, path, onClick }: any) {
       onClick={() => onClick(item)}
       className={`group flex items-center justify-between w-full text-left rounded-2xl px-6 py-5 transition-all duration-300 ${
         isActive 
-          ? "bg-linear-to-r from-[#4a7dc0]/20 to-transparent border border-[#4a7dc0]/30 shadow-[0_0_20px_rgba(51,111,165,0.1)]" 
+          ? "bg-linear-to-r from-[#2776ea]/20 to-transparent border border-[#2776ea]/30 shadow-[0_0_20px_rgba(51,111,165,0.1)]" 
           : "hover:bg-white/5 border border-transparent"
       }`}
     >
       <div className="flex items-center gap-4">
-        {isActive && <div className="w-1.5 h-1.5 rounded-full bg-[#4a7dc0] shadow-[0_0_10px_#4a7dc0]" />}
+        {isActive && <div className="w-1.5 h-1.5 rounded-full bg-[#2776ea] shadow-[0_0_10px_#2776ea]" />}
         <span className={`text-[13px] font-bold transition-colors ${
             isActive ? "text-white tracking-widest" : "text-slate-400 group-active:text-white"
         }`}>
@@ -321,7 +321,7 @@ function MobileNavItem({ item, active, path, onClick }: any) {
       </div>
       
       {isActive ? (
-        <Sparkles size={14} className="text-[#4a7dc0] animate-pulse" />
+        <Sparkles size={14} className="text-[#2776ea] animate-pulse" />
       ) : (
         <ArrowRight size={12} className="text-slate-700 opacity-0 group-active:opacity-100 group-active:translate-x-1 transition-all" />
       )}

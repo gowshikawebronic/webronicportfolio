@@ -35,8 +35,8 @@ const products: Product[] = [
       "Enterprise-grade data visualization engine that transforms fragmented metrics into high-fidelity actionable insights for financial leadership.",
     features: ["Real-time Analytics", "Custom Reporting", "Forecasting"],
     icon: <BarChart3 size={24} />,
-    color1: "#4a7dc0",
-    color2: "#63b344",
+    color1: "#2776ea",
+    color2: "#76ea27",
     image: "./assets/images/valuechart.png",
     link: "https://www.valueflowsoft.com/",
   },
@@ -48,8 +48,8 @@ const products: Product[] = [
       "A specialized ecosystem for manufacturing workflow optimization, integrating IoT monitoring with core resource planning modules.",
     features: ["Supply Chain Sync", "IoT Integration", "Resource Tracking"],
     icon: <Layers size={24} />,
-    color1: "#4a7dc0",
-    color2: "#63b344",
+    color1: "#2776ea",
+    color2: "#76ea27",
     image: "./assets/images/tanluxlogo.png",
     link: "https://tanlux.se/",
   },
@@ -61,8 +61,8 @@ const products: Product[] = [
       "A specialized ecosystem for manufacturing workflow optimization, integrating IoT monitoring with core resource planning modules.",
     features: ["Supply Chain Sync", "IoT Integration", "Resource Tracking"],
     icon: <ChartLine  size={24} />,
-    color1: "#4a7dc0",
-    color2: "#63b344",
+    color1: "#2776ea",
+    color2: "#76ea27",
     image: "./assets/images/fpanalyzer.png",
     link: "https://www.fpanalyzer.se/",
   },
@@ -74,8 +74,8 @@ const products: Product[] = [
       "Cloud-native retail infrastructure providing automated checkout solutions and synchronized inventory management across global storefronts.",
     features: ["AI Checkout", "Inventory Cloud", "Loyalty Systems"],
     icon: <Store size={24} />,
-    color1: "#4a7dc0",
-    color2: "#63b344",
+    color1: "#2776ea",
+    color2: "#76ea27",
     image: "./assets/images/storetech-logo1.png",
     link: "https://store-tech.se/",
   },
@@ -95,13 +95,13 @@ export default function ProductSection() {
       <div className="relative container mx-auto px-6 md:px-12 lg:px-24">
         <div className="mb-20 text-center lg:text-left max-w-4xl animate-card-entry">
           <div className="flex items-center gap-4 mb-6">
-            <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#4a7dc0]">
+            <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#2776ea]">
               Our products
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900 leading-[1.1]">
             Transforming Industry with <br />
-            <span className="bg-linear-to-r from-[#4a7dc0] to-[#63b344] bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-[#2776ea] to-[#76ea27] bg-clip-text text-transparent">
               Proprietary Products
             </span>
           </h2>
@@ -166,7 +166,7 @@ export default function ProductSection() {
                   <Link
                     href={product.link}
                     target="_blank"
-                    className="inline-flex items-center gap-2 rounded-full bg-[#4a7dc0] px-7 py-3.5 text-xs font-black uppercase tracking-widest text-white transition-all hover:bg-[#63b344] hover:shadow-xl active:scale-95 group/btn"
+                    className="inline-flex items-center gap-2 rounded-full bg-[#2776ea] px-7 py-3.5 text-xs font-black uppercase tracking-widest text-white transition-all hover:bg-[#76ea27] hover:shadow-xl active:scale-95 group/btn"
                   >
                     Explore Live Platform
                     <ArrowUpRight
@@ -200,9 +200,9 @@ export default function ProductSection() {
                           {product.link.replace("https://", "")}
                         </span>
                       </div>
-                      <span className="text-[10px] font-black uppercase text-[#4a7dc0] tracking-widest flex items-center gap-1">
+                      <span className="text-[10px] font-black uppercase text-[#2776ea] tracking-widest flex items-center gap-1">
                         Active{" "}
-                        <span className="h-1.5 w-1.5 rounded-full bg-[#63b344]" />
+                        <span className="h-1.5 w-1.5 rounded-full bg-[#76ea27]" />
                       </span>
                     </div>
                   </div>

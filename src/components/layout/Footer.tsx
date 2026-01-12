@@ -97,7 +97,7 @@ export default function Footer() {
           </div>
 
           <div className="space-y-4 md:space-y-6">
-            <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#4a7dc0]">
+            <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#2776ea]">
               Navigation
             </h4>
             <ul className="space-y-3">
@@ -115,7 +115,7 @@ export default function Footer() {
                   >
                     <ArrowRight
                       size={12}
-                      className="mr-2 opacity-0 -translate-x-2 transition-all group-hover:opacity-100 group-hover:translate-x-0 text-[#63b344]"
+                      className="mr-2 opacity-0 -translate-x-2 transition-all group-hover:opacity-100 group-hover:translate-x-0 text-[#76ea27]"
                     />
                     {link.label}
                   </Link>
@@ -125,7 +125,7 @@ export default function Footer() {
           </div>
 
           <div className="space-y-4 md:space-y-6">
-            <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#4a7dc0]">
+            <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#2776ea]">
               Company
             </h4>
             <ul className="space-y-3">
@@ -170,7 +170,7 @@ export default function Footer() {
                     >
                       <item.icon
                         size={13}
-                        className="mr-2 text-slate-600 group-hover:text-[#63b344] transition-colors shrink-0"
+                        className="mr-2 text-slate-600 group-hover:text-[#76ea27] transition-colors shrink-0"
                       />
                       {item.label}
                     </Link>
@@ -181,7 +181,7 @@ export default function Footer() {
                     >
                       <item.icon
                         size={13}
-                        className="mr-2 text-slate-600 group-hover:text-[#63b344] transition-colors shrink-0"
+                        className="mr-2 text-slate-600 group-hover:text-[#76ea27] transition-colors shrink-0"
                       />
                       {item.label}
                     </button>
@@ -192,7 +192,7 @@ export default function Footer() {
           </div>
 
           <div className="space-y-4 md:space-y-6">
-            <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#4a7dc0]">
+            <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#2776ea]">
               Policies
             </h4>
             <ul className="space-y-3">
@@ -204,7 +204,7 @@ export default function Footer() {
                   >
                     <policy.icon
                       size={14}
-                      className="mr-2 text-slate-600 group-hover:text-[#63b344] transition-colors shrink-0"
+                      className="mr-2 text-slate-600 group-hover:text-[#76ea27] transition-colors shrink-0"
                     />
                     {policy.label}
                   </Link>
@@ -214,22 +214,22 @@ export default function Footer() {
           </div>
 
           <div className="space-y-4 md:space-y-6">
-            <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#4a7dc0]">
+            <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#2776ea]">
               Registered Office
             </h4>
             <div className="space-y-4 text-xs md:text-sm text-slate-400">
               <div className="flex gap-3 items-start">
-                <MapPin size={16} className="text-[#4a7dc0] mt-1 shrink-0" />
+                <MapPin size={16} className="text-[#2776ea] mt-1 shrink-0" />
                 <p className="leading-relaxed">
                   New #33, Old #17, 2nd St, Mylapore, Chennai - 600004
                 </p>
               </div>
               <div className="flex gap-3 items-center">
-                <Phone size={16} className="text-[#4a7dc0] shrink-0" />
+                <Phone size={16} className="text-[#2776ea] shrink-0" />
                 <p className="font-bold">+91 72000 88500</p>
               </div>
               <div className="flex gap-3 items-center">
-                <Mail size={16} className="text-[#4a7dc0] shrink-0" />
+                <Mail size={16} className="text-[#2776ea] shrink-0" />
                 <p className="break-all">contact@webronic.com</p>
               </div>
             </div>
@@ -237,7 +237,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-16 pt-12 border-t border-white/5">
-          <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#4a7dc0] mb-8 text-center md:text-left">
+          <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#2776ea] mb-8 text-center md:text-left">
             Regional Hubs
           </h4>
           <div className="grid gap-8 grid-cols-1 md:grid-cols-3">
@@ -271,7 +271,7 @@ export default function Footer() {
                 <p className="text-xs text-slate-300 leading-relaxed">
                   {hub.address}
                 </p>
-                <p className="text-xs mt-1 text-[#4a7dc0] font-bold">
+                <p className="text-xs mt-1 text-[#2776ea] font-bold">
                   {hub.phone}
                 </p>
               </div>
@@ -286,7 +286,7 @@ export default function Footer() {
               <br className="block md:hidden" /> ALL RIGHTS RESERVED.
             </p>
             <div className="flex items-center justify-center md:justify-start gap-2 mt-3 md:mt-2">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#4a7dc0] animate-pulse" />
+              <span className="h-1.5 w-1.5 rounded-full bg-[#2776ea] animate-pulse" />
               <p className="text-[9px] text-slate-600 uppercase tracking-widest font-medium">
                 Global Enterprise Tech Solutions
               </p>

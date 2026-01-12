@@ -40,7 +40,7 @@ const EnquiryModal = ({
         className="relative w-full max-w-lg overflow-hidden rounded-3xl md:rounded-4xl bg-white shadow-2xl ring-1 ring-black/5 animate-modal-pop font-sora"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="bg-[#4a7dc0] p-6 md:p-8 text-white">
+        <div className="bg-[#2776ea] p-6 md:p-8 text-white">
           <div className="flex items-center justify-between">
             <h3 className="text-xl md:text-2xl font-extrabold tracking-tight">
               Start a Project
@@ -54,7 +54,7 @@ const EnquiryModal = ({
           </div>
           <p className="mt-2 text-blue-50 text-xs md:text-sm opacity-90 font-medium">
             Consulting for{" "}
-            <span className="font-bold underline decoration-[#63b344]">
+            <span className="font-bold underline decoration-[#76ea27]">
               {service.title}
             </span>
           </p>
@@ -73,7 +73,7 @@ const EnquiryModal = ({
               <input
                 type="text"
                 placeholder="Your Name"
-                className="w-full rounded-xl border border-slate-200 pl-10 md:pl-12 p-3 md:p-3.5 text-sm md:text-base focus:border-[#4a7dc0] focus:ring-4 focus:ring-blue-50 outline-none transition font-medium text-slate-700"
+                className="w-full rounded-xl border border-slate-200 pl-10 md:pl-12 p-3 md:p-3.5 text-sm md:text-base focus:border-[#2776ea] focus:ring-4 focus:ring-blue-50 outline-none transition font-medium text-slate-700"
                 required
               />
             </div>
@@ -89,7 +89,7 @@ const EnquiryModal = ({
                 <input
                   type="email"
                   placeholder="company@email.com"
-                  className="w-full rounded-xl border border-slate-200 pl-10 md:pl-12 p-3 md:p-3.5 text-sm md:text-base focus:border-[#4a7dc0] focus:ring-4 focus:ring-blue-50 outline-none transition font-medium text-slate-700"
+                  className="w-full rounded-xl border border-slate-200 pl-10 md:pl-12 p-3 md:p-3.5 text-sm md:text-base focus:border-[#2776ea] focus:ring-4 focus:ring-blue-50 outline-none transition font-medium text-slate-700"
                   required
                 />
               </div>
@@ -103,7 +103,7 @@ const EnquiryModal = ({
                 <input
                   type="tel"
                   placeholder="+91..."
-                  className="w-full rounded-xl border border-slate-200 pl-10 md:pl-12 p-3 md:p-3.5 text-sm md:text-base focus:border-[#4a7dc0] focus:ring-4 focus:ring-blue-50 outline-none transition font-medium text-slate-700"
+                  className="w-full rounded-xl border border-slate-200 pl-10 md:pl-12 p-3 md:p-3.5 text-sm md:text-base focus:border-[#2776ea] focus:ring-4 focus:ring-blue-50 outline-none transition font-medium text-slate-700"
                   required
                 />
               </div>
@@ -118,7 +118,7 @@ const EnquiryModal = ({
               <Briefcase className="absolute left-4 top-3.5 h-4 w-4 md:h-5 md:w-5 text-slate-300 pointer-events-none" />
               <select
                 defaultValue={service.id}
-                className="w-full rounded-xl border border-slate-200 pl-10 md:pl-12 p-3 md:p-3.5 text-sm md:text-base focus:border-[#4a7dc0] focus:ring-4 focus:ring-blue-50 outline-none transition font-medium appearance-none bg-white text-slate-700 cursor-pointer"
+                className="w-full rounded-xl border border-slate-200 pl-10 md:pl-12 p-3 md:p-3.5 text-sm md:text-base focus:border-[#2776ea] focus:ring-4 focus:ring-blue-50 outline-none transition font-medium appearance-none bg-white text-slate-700 cursor-pointer"
                 required
               >
                 {services.map((s) => (
@@ -140,7 +140,7 @@ const EnquiryModal = ({
               <textarea
                 rows={2}
                 placeholder="Tell us about your goals..."
-                className="w-full rounded-xl border border-slate-200 pl-10 md:pl-12 p-3 md:p-3.5 text-sm md:text-base focus:border-[#4a7dc0] focus:ring-4 focus:ring-blue-50 outline-none transition resize-none font-medium text-slate-700"
+                className="w-full rounded-xl border border-slate-200 pl-10 md:pl-12 p-3 md:p-3.5 text-sm md:text-base focus:border-[#2776ea] focus:ring-4 focus:ring-blue-50 outline-none transition resize-none font-medium text-slate-700"
                 required
               />
             </div>
@@ -148,7 +148,7 @@ const EnquiryModal = ({
 
           <button
             type="submit"
-            className="group mt-2 flex w-full items-center justify-center gap-3 rounded-xl md:rounded-2xl bg-[#4a7dc0] py-3.5 md:py-4 text-xs md:text-sm font-extrabold uppercase tracking-widest text-white shadow-xl shadow-blue-200 hover:bg-[#3a71c5] transition-all hover:-translate-y-0.5 active:scale-95"
+            className="group mt-2 flex w-full items-center justify-center gap-3 rounded-xl md:rounded-2xl bg-[#2776ea] py-3.5 md:py-4 text-xs md:text-sm font-extrabold uppercase tracking-widest text-white shadow-xl shadow-blue-200 hover:bg-[#3a71c5] transition-all hover:-translate-y-0.5 active:scale-95"
           >
             Send Inquiry
             <Send
@@ -178,20 +178,20 @@ const ServiceCard = ({
   return (
     <div
       style={{ animationDelay: `${(index + 1) * 150}ms` }}
-      className="animate-on-load group relative overflow-hidden rounded-3xl md:rounded-[2.5rem] border border-slate-100 bg-white p-6 md:p-12 shadow-xl shadow-slate-200/50 transition-all duration-700 hover:shadow-2xl hover:shadow-[#4a7dc0]/10 hover:-translate-y-2 opacity-0 font-sora"
+      className="animate-on-load group relative overflow-hidden rounded-3xl md:rounded-[2.5rem] border border-slate-100 bg-white p-6 md:p-12 shadow-xl shadow-slate-200/50 transition-all duration-700 hover:shadow-2xl hover:shadow-[#2776ea]/10 hover:-translate-y-2 opacity-0 font-sora"
     >
       <div className="absolute top-0 right-0 -mr-16 -mt-16 h-64 w-64 rounded-full bg-blue-50/50 blur-3xl transition-opacity group-hover:opacity-100 hidden md:block" />
 
       <div className="grid gap-8 md:gap-12 lg:grid-cols-[1.3fr_0.7fr] items-center">
         <div className="flex flex-col h-full relative z-10">
           <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 md:gap-6 text-center sm:text-left">
-            <div className="flex h-14 w-14 md:h-16 md:w-16 shrink-0 items-center justify-center rounded-xl md:rounded-2xl bg-[#4a7dc0] text-white shadow-lg shadow-blue-100 transition-all duration-500 group-hover:rotate-12 group-hover:scale-110">
+            <div className="flex h-14 w-14 md:h-16 md:w-16 shrink-0 items-center justify-center rounded-xl md:rounded-2xl bg-[#2776ea] text-white shadow-lg shadow-blue-100 transition-all duration-500 group-hover:rotate-12 group-hover:scale-110">
               {service.icon}
             </div>
             <div>
               <div className="flex items-center justify-center sm:justify-start gap-2 mb-1.5 md:mb-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#63b344]" />
-                <p className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-[#63b344]">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#76ea27]" />
+                <p className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-[#76ea27]">
                   {service.tagline}
                 </p>
               </div>
@@ -208,7 +208,7 @@ const ServiceCard = ({
           <div className="mt-6 md:mt-10 grid grid-cols-1 sm:grid-cols-2 gap-y-3 md:gap-y-4 gap-x-8">
             {service.points.map((point, idx) => (
               <div key={idx} className="flex items-center gap-3 group/point">
-                <div className="flex h-5 w-5 md:h-6 md:w-6 items-center justify-center rounded-full bg-blue-50 text-[#4a7dc0] transition-colors group-hover/point:bg-[#63b344] group-hover/point:text-white shrink-0">
+                <div className="flex h-5 w-5 md:h-6 md:w-6 items-center justify-center rounded-full bg-blue-50 text-[#2776ea] transition-colors group-hover/point:bg-[#76ea27] group-hover/point:text-white shrink-0">
                   <CheckCircle2 className="size={10} md:size={14} strokeWidth={4}" />
                 </div>
                 <span className="text-xs md:text-sm font-bold text-slate-700">
@@ -221,12 +221,12 @@ const ServiceCard = ({
           <div className="mt-auto pt-8 md:pt-12">
             <button
               onClick={onToggle}
-              className="flex items-center justify-center cursor-pointer sm:justify-start w-full sm:w-auto gap-2 text-[13px] font-black uppercase tracking-[0.2em] text-slate-400 hover:text-[#4a7dc0] transition-colors"
+              className="flex items-center justify-center cursor-pointer sm:justify-start w-full sm:w-auto gap-2 text-[13px] font-black uppercase tracking-[0.2em] text-slate-400 hover:text-[#2776ea] transition-colors"
             >
               The Stack
               <ChevronDown
                 className={`h-5 w-5 transition-transform duration-500  ${
-                  isOpen ? "rotate-180 text-[#4a7dc0]" : ""
+                  isOpen ? "rotate-180 text-[#2776ea]" : ""
                 }`}
               />
             </button>
@@ -256,7 +256,7 @@ const ServiceCard = ({
             <div className="mt-6 md:mt-10">
               <button
                 onClick={() => onCtaClick(service)}
-                className="group/btn relative w-full cursor-pointer sm:w-auto inline-flex items-center justify-center gap-3 overflow-hidden rounded-xl md:rounded-2xl bg-[#4a7dc0] px-8 md:px-10 py-3.5 md:py-4 text-[10px] md:text-xs font-black uppercase tracking-widest text-white shadow-2xl shadow-blue-200 transition-all hover:bg-[#63b344]"
+                className="group/btn relative w-full cursor-pointer sm:w-auto inline-flex items-center justify-center gap-3 overflow-hidden rounded-xl md:rounded-2xl bg-[#2776ea] px-8 md:px-10 py-3.5 md:py-4 text-[10px] md:text-xs font-black uppercase tracking-widest text-white shadow-2xl shadow-blue-200 transition-all hover:bg-[#76ea27]"
               >
                 <span className="relative z-10">{service.cta}</span>
                 <ArrowRight
@@ -296,14 +296,14 @@ export default function HowWorks() {
         <div className="relative container mx-auto px-6 md:px-12 lg:px-24">
           <div className="mb-12 md:mb-24 text-left max-w-4xl opacity-0 animate-card-entry">
             <div className="flex items-center gap-4 mb-6">
-              <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#4a7dc0]">
+              <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#2776ea]">
                 Solutions & Services
               </span>
             </div>
             
             <h2 className="text-4xl md:text-5xl flex flex-col items-center lg:items-start font-black tracking-tight text-slate-900 leading-[1.1]">
               Architecting the <br />
-              <span className="bg-linear-to-r from-[#4a7dc0] to-[#63b344] bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-[#2776ea] to-[#76ea27] bg-clip-text text-transparent">
                 Digital Future
               </span>
             </h2>

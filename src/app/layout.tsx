@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Webronic | Technical Solutions",
   description: "Intelligent digital solutions designed to scale, automate, and future-proof your business.",
   icons: {
-    icon: "/favicon.png", 
+    icon: "./favicon.png", 
   },
 };
 

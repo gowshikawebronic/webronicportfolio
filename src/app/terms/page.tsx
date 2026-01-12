@@ -49,30 +49,30 @@ export default function TermsAndConditions() {
     <main className="bg-white font-sora pt-24 pb-20">
       <section className="relative overflow-hidden  py-24 ">
         <div className="absolute inset-0 pointer-events-none opacity-40">
-          <div className="absolute top-0 right-0 w-125 h-125 bg-[#4a7dc0]/10 rounded-full blur-[120px]" />
-          <div className="absolute bottom-0 left-0 w-125 h-125 bg-[#63b344]/10 rounded-full blur-[120px]" />
+          <div className="absolute top-0 right-0 w-125 h-125 bg-[#2776ea]/10 rounded-full blur-[120px]" />
+          <div className="absolute bottom-0 left-0 w-125 h-125 bg-[#76ea27]/10 rounded-full blur-[120px]" />
         </div>
 
         <div className="relative mx-auto max-w-5xl px-6">
           <div className="flex items-center  gap-4 mb-6">
-            <FileText size={14} className="text-[#4a7dc0]" />
-            <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#4a7dc0]">
+            <FileText size={14} className="text-[#2776ea]" />
+            <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#2776ea]">
               Corporate Governance
             </span>
           </div>
           <h1 className="text-4xl md:text-7xl font-black text-slate-900 tracking-tighter leading-tight">
             Terms &{" "}
-            <span className="bg-linear-to-r from-[#4a7dc0] to-[#63b344] bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-[#2776ea] to-[#76ea27] bg-clip-text text-transparent">
               Conditions
             </span>
           </h1>
           <div className="mt-8 flex flex-wrap items-center gap-8 text-sm font-bold text-slate-400">
             <div className="flex items-center gap-2">
-              <Clock size={18} className="text-[#4a7dc0]" />{" "}
+              <Clock size={18} className="text-[#2776ea]" />{" "}
               <span>Last Updated: Dec 18, 2025</span>
             </div>
             <div className="flex items-center gap-2">
-              <Scale size={18} className="text-[#63b344]" />{" "}
+              <Scale size={18} className="text-[#76ea27]" />{" "}
               <span>Webronic Industries Pvt Ltd</span>
             </div>
           </div>
@@ -90,7 +90,7 @@ export default function TermsAndConditions() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="w-full flex items-center gap-3 px-4 py-3.5 rounded-2xl text-[11px] font-black uppercase tracking-widest text-slate-500 hover:bg-slate-50 hover:text-[#4a7dc0] transition-all group text-left border border-transparent hover:border-slate-100"
+                  className="w-full flex items-center gap-3 px-4 py-3.5 rounded-2xl text-[11px] font-black uppercase tracking-widest text-slate-500 hover:bg-slate-50 hover:text-[#2776ea] transition-all group text-left border border-transparent hover:border-slate-100"
                 >
                   <item.icon
                     size={16}
@@ -103,9 +103,9 @@ export default function TermsAndConditions() {
           </aside>
 
           <div className="space-y-24">
-            <div className="bg-[#4a7dc0]/5 rounded-3xl p-10 border border-[#4a7dc0]/10">
+            <div className="bg-[#2776ea]/5 rounded-3xl p-10 border border-[#2776ea]/10">
               <h2 className="text-xl font-black text-slate-900 mt-0 mb-4 flex items-center gap-3">
-                <ShieldAlert className="text-[#4a7dc0]" /> Important Notice
+                <ShieldAlert className="text-[#2776ea]" /> Important Notice
               </h2>
               <p className="text-slate-600 font-medium leading-relaxed m-0 italic text-lg">
                 By accessing and using the services provided by Webronic
@@ -116,7 +116,7 @@ export default function TermsAndConditions() {
             </div>
 
             <div id="acceptance" className="scroll-mt-32">
-              <h3 className="text-xl font-black uppercase tracking-widest text-[#4a7dc0] mb-8 flex items-center gap-3">
+              <h3 className="text-xl font-black uppercase tracking-widest text-[#2776ea] mb-8 flex items-center gap-3">
                 <Handshake size={24} /> 1. Acceptance of Terms
               </h3>
               <p className="text-slate-500 font-medium leading-relaxed text-lg">
@@ -128,7 +128,7 @@ export default function TermsAndConditions() {
             </div>
 
             <div id="services" className="scroll-mt-32">
-              <h3 className="text-xl font-black uppercase tracking-widest text-[#4a7dc0] mb-8 flex items-center gap-3">
+              <h3 className="text-xl font-black uppercase tracking-widest text-[#2776ea] mb-8 flex items-center gap-3">
                 <Zap size={24} /> 2. Services Description
               </h3>
               <p className="text-slate-500 font-medium leading-relaxed mb-8">
@@ -147,7 +147,7 @@ export default function TermsAndConditions() {
                     key={i}
                     className="flex items-center gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-100"
                   >
-                    <div className="h-2 w-2 rounded-full bg-[#63b344]" />
+                    <div className="h-2 w-2 rounded-full bg-[#76ea27]" />
                     <span className="text-sm font-bold text-slate-700">
                       {item}
                     </span>
@@ -157,7 +157,7 @@ export default function TermsAndConditions() {
             </div>
 
             <div id="obligations" className="scroll-mt-32">
-              <h3 className="text-xl font-black uppercase tracking-widest text-[#4a7dc0] mb-8 flex items-center gap-3">
+              <h3 className="text-xl font-black uppercase tracking-widest text-[#2776ea] mb-8 flex items-center gap-3">
                 <UserCheck size={24} /> 3. User Obligations
               </h3>
               <div className="space-y-4">
@@ -173,7 +173,7 @@ export default function TermsAndConditions() {
                     className="flex items-start gap-4 p-4 rounded-xl border border-slate-100"
                   >
                     <div className="mt-1 h-5 w-5 rounded bg-blue-50 flex items-center justify-center shrink-0">
-                      <span className="text-[10px] font-black text-[#4a7dc0]">
+                      <span className="text-[10px] font-black text-[#2776ea]">
                         {i + 1}
                       </span>
                     </div>
@@ -184,7 +184,7 @@ export default function TermsAndConditions() {
             </div>
 
             <div id="ip" className="scroll-mt-32">
-              <h3 className="text-xl font-black uppercase tracking-widest text-[#4a7dc0] mb-8 flex items-center gap-3">
+              <h3 className="text-xl font-black uppercase tracking-widest text-[#2776ea] mb-8 flex items-center gap-3">
                 <Lock size={24} /> 4. Intellectual Property Rights
               </h3>
               <div className="p-8 rounded-4xl bg-slate-900 text-white relative overflow-hidden">
@@ -198,7 +198,7 @@ export default function TermsAndConditions() {
                 </p>
                 <div className="relative z-10 grid sm:grid-cols-2 gap-6">
                   <div className="p-4 rounded-xl bg-white/5 border border-white/10">
-                    <p className="text-[10px] font-black text-[#63b344] uppercase mb-2">
+                    <p className="text-[10px] font-black text-[#76ea27] uppercase mb-2">
                       Custom Work
                     </p>
                     <p className="text-xs text-slate-400 font-medium">
@@ -206,7 +206,7 @@ export default function TermsAndConditions() {
                     </p>
                   </div>
                   <div className="p-4 rounded-xl bg-white/5 border border-white/10">
-                    <p className="text-[10px] font-black text-[#63b344] uppercase mb-2">
+                    <p className="text-[10px] font-black text-[#76ea27] uppercase mb-2">
                       Usage
                     </p>
                     <p className="text-xs text-slate-400 font-medium">
@@ -219,21 +219,21 @@ export default function TermsAndConditions() {
             </div>
 
             <div id="payment" className="scroll-mt-32">
-              <h3 className="text-xl font-black uppercase tracking-widest text-[#4a7dc0] mb-8 flex items-center gap-3">
+              <h3 className="text-xl font-black uppercase tracking-widest text-[#2776ea] mb-8 flex items-center gap-3">
                 <CreditCard size={24} /> 5. Payment Terms
               </h3>
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="bg-white border border-slate-100 rounded-3xl p-8 shadow-sm">
-                  <p className="text-[10px] font-black text-[#4a7dc0] uppercase mb-4">
+                  <p className="text-[10px] font-black text-[#2776ea] uppercase mb-4">
                     Standard Terms
                   </p>
                   <ul className="space-y-4">
                     <li className="flex items-center gap-3 text-sm font-bold text-slate-700">
-                      <Clock size={16} className="text-[#63b344]" /> Net 30 Days
+                      <Clock size={16} className="text-[#76ea27]" /> Net 30 Days
                       from Invoice
                     </li>
                     <li className="flex items-center gap-3 text-sm font-bold text-slate-700">
-                      <Scale size={16} className="text-[#63b344]" /> Statutory
+                      <Scale size={16} className="text-[#76ea27]" /> Statutory
                       GST Applied
                     </li>
                   </ul>
@@ -251,7 +251,7 @@ export default function TermsAndConditions() {
               </div>
             </div>
             <div id="confidentiality" className="scroll-mt-32">
-              <h3 className="text-xl font-black uppercase tracking-widest text-[#4a7dc0] mb-6 flex items-center gap-3">
+              <h3 className="text-xl font-black uppercase tracking-widest text-[#2776ea] mb-6 flex items-center gap-3">
                 <ShieldCheck /> 6. Confidentiality
               </h3>
               <p className="text-slate-500 font-medium leading-relaxed">
@@ -262,7 +262,7 @@ export default function TermsAndConditions() {
             </div>
 
             <div id="privacy" className="scroll-mt-32">
-              <h3 className="text-xl font-black uppercase tracking-widest text-[#4a7dc0] mb-6 flex items-center gap-3">
+              <h3 className="text-xl font-black uppercase tracking-widest text-[#2776ea] mb-6 flex items-center gap-3">
                 <Eye /> 7. Data Protection and Privacy
               </h3>
               <p className="text-slate-500 font-medium leading-relaxed">
@@ -272,7 +272,7 @@ export default function TermsAndConditions() {
             </div>
 
             <div id="liability" className="scroll-mt-32">
-              <h3 className="text-xl font-black uppercase tracking-widest text-[#4a7dc0] mb-8 flex items-center gap-3">
+              <h3 className="text-xl font-black uppercase tracking-widest text-[#2776ea] mb-8 flex items-center gap-3">
                 <Scale size={24} /> 8. Limitation of Liability
               </h3>
               <div className="bg-slate-50 border border-slate-200 rounded-[2.5rem] p-10">
@@ -294,7 +294,7 @@ export default function TermsAndConditions() {
               </div>
             </div>
             <div id="warranties" className="scroll-mt-32">
-              <h3 className="text-xl font-black uppercase tracking-widest text-[#4a7dc0] mb-6 flex items-center gap-3">
+              <h3 className="text-xl font-black uppercase tracking-widest text-[#2776ea] mb-6 flex items-center gap-3">
                 <ShieldAlert /> 9. Warranties and Disclaimers
               </h3>
               <p className="text-slate-500 font-medium leading-relaxed uppercase text-xs">
@@ -304,7 +304,7 @@ export default function TermsAndConditions() {
             </div>
 
             <div id="termination" className="scroll-mt-32">
-              <h3 className="text-xl font-black uppercase tracking-widest text-[#4a7dc0] mb-6 flex items-center gap-3">
+              <h3 className="text-xl font-black uppercase tracking-widest text-[#2776ea] mb-6 flex items-center gap-3">
                 <Ban /> 10. Termination
               </h3>
               <p className="text-slate-500 font-medium leading-relaxed">
@@ -315,7 +315,7 @@ export default function TermsAndConditions() {
             </div>
 
             <div id="force-majeure" className="scroll-mt-32">
-              <h3 className="text-xl font-black uppercase tracking-widest text-[#4a7dc0] mb-6 flex items-center gap-3">
+              <h3 className="text-xl font-black uppercase tracking-widest text-[#2776ea] mb-6 flex items-center gap-3">
                 <Clock /> 11. Force Majeure
               </h3>
               <p className="text-slate-500 font-medium leading-relaxed">
@@ -325,7 +325,7 @@ export default function TermsAndConditions() {
             </div>
 
             <div id="indemnity" className="scroll-mt-32">
-              <h3 className="text-xl font-black uppercase tracking-widest text-[#4a7dc0] mb-6 flex items-center gap-3">
+              <h3 className="text-xl font-black uppercase tracking-widest text-[#2776ea] mb-6 flex items-center gap-3">
                 <ShieldCheck /> 12. Indemnification
               </h3>
               <p className="text-slate-500 font-medium leading-relaxed">
@@ -335,7 +335,7 @@ export default function TermsAndConditions() {
             </div>
 
             <div id="law" className="scroll-mt-32">
-              <h3 className="text-xl font-black uppercase tracking-widest text-[#4a7dc0] mb-8 flex items-center gap-3">
+              <h3 className="text-xl font-black uppercase tracking-widest text-[#2776ea] mb-8 flex items-center gap-3">
                 <Gavel size={24} /> 13. Governing Law & Jurisdiction
               </h3>
               <div className="p-10 rounded-3xl bg-slate-900 text-white relative overflow-hidden group">
@@ -356,7 +356,7 @@ export default function TermsAndConditions() {
               </div>
             </div>
             <div id="modifications" className="scroll-mt-32">
-              <h3 className="text-xl font-black uppercase tracking-widest text-[#4a7dc0] mb-6 flex items-center gap-3">
+              <h3 className="text-xl font-black uppercase tracking-widest text-[#2776ea] mb-6 flex items-center gap-3">
                 <FileSignature /> 14. Modifications to Terms
               </h3>
               <p className="text-slate-500 font-medium leading-relaxed">
@@ -395,25 +395,25 @@ export default function TermsAndConditions() {
                   <div className="mt-8 space-y-4">
                     <a
                       href="mailto:contact@webronic.com"
-                      className="flex items-center gap-4 text-[#4a7dc0] font-black text-[11px] uppercase tracking-widest"
+                      className="flex items-center gap-4 text-[#2776ea] font-black text-[11px] uppercase tracking-widest"
                     >
                       <Mail size={18} /> contact@webronic.com
                     </a>
                     <a
                       href="mailto:support@webronic.com"
-                      className="flex items-center gap-4 text-[#4a7dc0] font-black text-[11px] uppercase tracking-widest"
+                      className="flex items-center gap-4 text-[#2776ea] font-black text-[11px] uppercase tracking-widest"
                     >
                       <ArrowRight size={18} /> support@webronic.com
                     </a>
                     <div className="flex items-center gap-4 text-slate-900 font-bold">
-                      <Phone size={18} className="text-[#63b344]" /> +91 72000
+                      <Phone size={18} className="text-[#76ea27]" /> +91 72000
                       88500
                     </div>
                   </div>
                 </div>
-                <div className="bg-[#4a7dc0]/5 p-10 rounded-[2.5rem] border border-[#4a7dc0]/10 flex flex-col justify-between">
+                <div className="bg-[#2776ea]/5 p-10 rounded-[2.5rem] border border-[#2776ea]/10 flex flex-col justify-between">
                   <div>
-                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#4a7dc0] mb-4">
+                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#2776ea] mb-4">
                       Headquarters
                     </p>
                     <p className="text-lg font-bold text-slate-900 leading-tight">
@@ -426,7 +426,7 @@ export default function TermsAndConditions() {
 
                   <button
                     onClick={() => setIsModalOpen(true)}
-                    className="mt-10 flex items-center justify-center gap-3 bg-[#4a7dc0] text-white px-8 py-4 rounded-2xl font-black text-[11px] uppercase tracking-widest hover:bg-[#63b344] transition-all shadow-xl active:scale-95"
+                    className="mt-10 flex items-center justify-center gap-3 bg-[#2776ea] text-white px-8 py-4 rounded-2xl font-black text-[11px] uppercase tracking-widest hover:bg-[#76ea27] transition-all shadow-xl active:scale-95"
                   >
                     Service Inquiries <ArrowRight size={16} />
                   </button>
@@ -447,8 +447,8 @@ export default function TermsAndConditions() {
                         </button>
 
                         <div className="mb-8">
-                          <div className="h-12 w-12 bg-[#4a7dc0]/10 rounded-2xl flex items-center justify-center mb-6">
-                            <Mail className="text-[#4a7dc0]" size={24} />
+                          <div className="h-12 w-12 bg-[#2776ea]/10 rounded-2xl flex items-center justify-center mb-6">
+                            <Mail className="text-[#2776ea]" size={24} />
                           </div>
                           <h3 className="text-2xl font-black text-slate-900 tracking-tight">
                             Service Inquiry
@@ -471,7 +471,7 @@ export default function TermsAndConditions() {
                               </label>
                               <input
                                 type="text"
-                                className="w-full p-3.5 rounded-xl bg-slate-50 border border-slate-100 text-sm outline-none focus:ring-2 focus:ring-[#4a7dc0]/20 focus:border-[#4a7dc0] transition-all"
+                                className="w-full p-3.5 rounded-xl bg-slate-50 border border-slate-100 text-sm outline-none focus:ring-2 focus:ring-[#2776ea]/20 focus:border-[#2776ea] transition-all"
                                 placeholder="Your Name"
                                 required
                               />
@@ -482,7 +482,7 @@ export default function TermsAndConditions() {
                               </label>
                               <input
                                 type="text"
-                                className="w-full p-3.5 rounded-xl bg-slate-50 border border-slate-100 text-sm outline-none focus:ring-2 focus:ring-[#4a7dc0]/20 focus:border-[#4a7dc0] transition-all"
+                                className="w-full p-3.5 rounded-xl bg-slate-50 border border-slate-100 text-sm outline-none focus:ring-2 focus:ring-[#2776ea]/20 focus:border-[#2776ea] transition-all"
                                 placeholder="Enter Company"
                               />
                             </div>
@@ -494,7 +494,7 @@ export default function TermsAndConditions() {
                             </label>
                             <input
                               type="email"
-                              className="w-full p-3.5 rounded-xl bg-slate-50 border border-slate-100 text-sm outline-none focus:ring-2 focus:ring-[#4a7dc0]/20 focus:border-[#4a7dc0] transition-all"
+                              className="w-full p-3.5 rounded-xl bg-slate-50 border border-slate-100 text-sm outline-none focus:ring-2 focus:ring-[#2776ea]/20 focus:border-[#2776ea] transition-all"
                               placeholder="yourcompany@company.com"
                               required
                             />
@@ -506,13 +506,13 @@ export default function TermsAndConditions() {
                             </label>
                             <textarea
                               rows={4}
-                              className="w-full p-3.5 rounded-xl bg-slate-50 border border-slate-100 text-sm outline-none focus:ring-2 focus:ring-[#4a7dc0]/20 focus:border-[#4a7dc0] transition-all resize-none"
+                              className="w-full p-3.5 rounded-xl bg-slate-50 border border-slate-100 text-sm outline-none focus:ring-2 focus:ring-[#2776ea]/20 focus:border-[#2776ea] transition-all resize-none"
                               placeholder="How can we help?"
                               required
                             ></textarea>
                           </div>
 
-                          <button className="w-full bg-[#4a7dc0] text-white py-4 rounded-xl font-black text-[11px] uppercase tracking-[0.2em] shadow-lg shadow-blue-200 hover:bg-slate-900 transition-all active:scale-95">
+                          <button className="w-full bg-[#2776ea] text-white py-4 rounded-xl font-black text-[11px] uppercase tracking-[0.2em] shadow-lg shadow-blue-200 hover:bg-slate-900 transition-all active:scale-95">
                             Send Message
                           </button>
                         </form>

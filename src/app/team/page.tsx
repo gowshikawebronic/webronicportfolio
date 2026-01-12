@@ -24,14 +24,14 @@ export default function TeamPage() {
     <section className="relative overflow-hidden bg-white py-16 md:py-28 font-sora">
       <div className="relative mx-auto max-w-5xl px-6 animate-card-entry">
         <div className="flex items-center gap-4 mb-6">
-          <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#4a7dc0]">
+          <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#2776ea]">
             our Team
           </span>
         </div>
         <div className="mb-16 md:mb-24 text-left border-l-2 border-slate-100 pl-24 ">
           <h2 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900 leading-[1.1]">
             Our <br />
-            <span className="bg-linear-to-r from-[#4a7dc0] to-[#63b344] bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-[#2776ea] to-[#76ea27] bg-clip-text text-transparent">
               Core Team
             </span>
           </h2>
@@ -48,12 +48,12 @@ export default function TeamPage() {
               className="group flex flex-col md:flex-row md:items-center justify-between py-6 md:py-8 transition-all duration-300 hover:px-4"
             >
               <div className="flex items-center gap-8">
-                <span className="hidden md:block text-xs font-bold text-slate-300 group-hover:text-[#63b344] transition-colors tabular-nums">
+                <span className="hidden md:block text-xs font-bold text-slate-300 group-hover:text-[#76ea27] transition-colors tabular-nums">
                   {(index + 1).toString().padStart(2, "0")}
                 </span>
 
                 <div>
-                  <h4 className="text-lg md:text-xl font-bold text-slate-900 group-hover:text-[#4a7dc0] transition-colors">
+                  <h4 className="text-lg md:text-xl font-bold text-slate-900 group-hover:text-[#2776ea] transition-colors">
                     {member.name}
                   </h4>
                   <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mt-0.5">
@@ -66,7 +66,7 @@ export default function TeamPage() {
                 <div className="flex items-center gap-4 opacity-0 -translate-x-2 transition-all group-hover:opacity-100 group-hover:translate-x-0">
                   <a
                     href="#"
-                    className="text-slate-300 hover:text-[#4a7dc0] transition-colors"
+                    className="text-slate-300 hover:text-[#2776ea] transition-colors"
                   >
                     <Linkedin size={16} />
                   </a>
@@ -80,7 +80,7 @@ export default function TeamPage() {
 
                 <button
                   onClick={() => setSelectedMember(member)}
-                  className="flex items-center gap-2 text-[10px] cursor-pointer font-black uppercase tracking-widest text-slate-400 group-hover:text-[#63b344] transition-all"
+                  className="flex items-center gap-2 text-[10px] cursor-pointer font-black uppercase tracking-widest text-slate-400 group-hover:text-[#76ea27] transition-all"
                 >
                   Briefing
                   <ArrowRight
@@ -113,7 +113,7 @@ export default function TeamPage() {
             </button>
 
             <div className="text-center">
-              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-slate-900 text-[#63b344]">
+              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-slate-900 text-[#76ea27]">
                 <Briefcase size={20} />
               </div>
 
@@ -121,7 +121,7 @@ export default function TeamPage() {
                 <h3 className="text-2xl font-extrabold text-slate-900 tracking-tight">
                   {selectedMember.name}
                 </h3>
-                <p className="text-xs font-bold uppercase tracking-widest text-[#4a7dc0] mt-1">
+                <p className="text-xs font-bold uppercase tracking-widest text-[#2776ea] mt-1">
                   {selectedMember.role}
                 </p>
               </div>
@@ -136,7 +136,7 @@ export default function TeamPage() {
               <div className="mt-8 flex justify-center gap-6 border-t border-slate-50 pt-8">
                 <a
                   href="#"
-                  className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-[#4a7dc0] transition-colors"
+                  className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-[#2776ea] transition-colors"
                 >
                   <Linkedin size={16} /> LinkedIn
                 </a>

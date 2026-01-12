@@ -82,29 +82,29 @@ export default function Contact() {
       id="contact"
       className="relative overflow-hidden bg-white py-20 lg:py-32 font-sora"
     >
-      <div className="absolute top-0 left-0 w-150 h-150 bg-[#63b344]/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-0 left-0 w-150 h-150 bg-[#76ea27]/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-[1.3fr_1fr]">
           <div className="flex flex-col">
             <div className="flex items-center gap-4 mb-6">
-              <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#4a7dc0]">
+              <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#2776ea]">
                 Connect with us
               </span>
             </div>
 
             <h2 className="text-4xl md:text-5xl mb-5 font-black tracking-tight text-slate-900 leading-[1.1]">
               Let’s Architect <br />
-              <span className="bg-linear-to-r from-[#4a7dc0] to-[#63b344] bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-[#2776ea] to-[#76ea27] bg-clip-text text-transparent">
                 The Future Together
               </span>
             </h2>
 
-            <div className="mb-12 p-8 rounded-[2.5rem] bg-slate-50 border-l-4 border-[#63b344] relative overflow-hidden group">
+            <div className="mb-12 p-8 rounded-[2.5rem] bg-slate-50 border-l-4 border-[#76ea27] relative overflow-hidden group">
               <div className="absolute right-0 top-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
                 <Building2 size={80} />
               </div>
-              <p className="text-[10px] font-black uppercase tracking-widest text-[#63b344] mb-2">
+              <p className="text-[10px] font-black uppercase tracking-widest text-[#76ea27] mb-2">
                 Registered Office
               </p>
               <h4 className="text-xl font-black text-slate-900 mb-4">
@@ -115,10 +115,10 @@ export default function Contact() {
               </p>
               <div className="flex flex-wrap gap-6">
                 <div className="flex items-center gap-2 text-sm font-bold text-slate-900">
-                  <Phone size={16} className="text-[#4a7dc0]" /> +91 72000 88500
+                  <Phone size={16} className="text-[#2776ea]" /> +91 72000 88500
                 </div>
                 <div className="flex items-center gap-2 text-sm font-bold text-slate-900">
-                  <Mail size={16} className="text-[#4a7dc0]" />{" "}
+                  <Mail size={16} className="text-[#2776ea]" />{" "}
                   contact@webronic.com
                 </div>
               </div>
@@ -127,7 +127,7 @@ export default function Contact() {
             <div className="grid sm:grid-cols-3 gap-8 mb-12">
               {hubs.map((hub, i) => (
                 <div key={i} className="flex flex-col">
-                  <div className="h-8 w-8 rounded-lg bg-[#63b344]/10 flex items-center justify-center text-[#63b344] mb-4">
+                  <div className="h-8 w-8 rounded-lg bg-[#76ea27]/10 flex items-center justify-center text-[#76ea27] mb-4">
                     <MapPin size={16} />
                   </div>
                   <h5 className="text-sm font-black text-slate-900 mb-2">
@@ -136,7 +136,7 @@ export default function Contact() {
                   <p className="text-xs font-medium text-slate-500 leading-relaxed mb-3">
                     {hub.address}
                   </p>
-                  <p className="text-[11px] font-bold text-[#4a7dc0]">
+                  <p className="text-[11px] font-bold text-[#2776ea]">
                     {hub.phone}
                   </p>
                 </div>
@@ -166,13 +166,13 @@ export default function Contact() {
 
           <div className="lg:pl-10">
             <div className="bg-white rounded-[3rem] p-10 md:p-14 border border-slate-100 shadow-[0_30px_80px_-15px_rgba(0,0,0,0.08)] relative overflow-hidden">
-              <div className="absolute top-0 right-0 p-10 text-[#63b344]/5 rotate-12">
+              <div className="absolute top-0 right-0 p-10 text-[#76ea27]/5 rotate-12">
                 <Navigation size={120} />
               </div>
 
               <div className="relative z-10">
-                <div className="h-16 w-16 bg-[#4a7dc0]/10 rounded-2xl flex items-center justify-center mb-8">
-                  <MessageSquare size={28} className="text-[#4a7dc0]" />
+                <div className="h-16 w-16 bg-[#2776ea]/10 rounded-2xl flex items-center justify-center mb-8">
+                  <MessageSquare size={28} className="text-[#2776ea]" />
                 </div>
                 <h3 className="text-3xl font-black text-slate-900 mb-6 tracking-tight">
                   Project Enquiry
@@ -184,7 +184,7 @@ export default function Contact() {
 
                 <button
                   onClick={() => setIsModalOpen(true)}
-                  className="w-full flex items-center cursor-pointer justify-center gap-3 bg-[#4a7dc0] text-white py-6 rounded-2xl font-black uppercase tracking-[0.2em] text-xs hover:bg-[#63b344] transition-all shadow-xl shadow-blue-500/10 active:scale-95"
+                  className="w-full flex items-center cursor-pointer justify-center gap-3 bg-[#2776ea] text-white py-6 rounded-2xl font-black uppercase tracking-[0.2em] text-xs hover:bg-[#76ea27] transition-all shadow-xl shadow-blue-500/10 active:scale-95"
                 >
                   Start Conversation <ArrowRight size={18} />
                 </button>
@@ -202,7 +202,7 @@ export default function Contact() {
                     style={{ height: "auto" }}
                   />
                   <div className="h-6 w-px bg-slate-200" />
-                  <span className="text-[9px] font-black uppercase tracking-widest text-slate-400 group-hover:text-[#4a7dc0] transition-colors">
+                  <span className="text-[9px] font-black uppercase tracking-widest text-slate-400 group-hover:text-[#2776ea] transition-colors">
                     Global Partner
                   </span>
                 </Link>
@@ -229,14 +229,14 @@ export default function Contact() {
               </button>
 
               <div className="flex items-center gap-4 mb-8">
-                <div className="h-12 w-12 bg-[#63b344]/10 rounded-xl flex items-center justify-center text-[#63b344]">
+                <div className="h-12 w-12 bg-[#76ea27]/10 rounded-xl flex items-center justify-center text-[#76ea27]">
                   <Send size={24} />
                 </div>
                 <div>
                   <h3 className="text-2xl font-black text-slate-900">
                     Get in Touch
                   </h3>
-                  <p className="text-xs font-bold text-[#4a7dc0] uppercase tracking-widest mt-1">
+                  <p className="text-xs font-bold text-[#2776ea] uppercase tracking-widest mt-1">
                     We typically reply within 2 hours
                   </p>
                 </div>
@@ -251,7 +251,7 @@ export default function Contact() {
                     <input
                       type="text"
                       placeholder="Your Name"
-                      className="w-full rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm focus:ring-2 focus:ring-[#4a7dc0] focus:bg-white outline-none transition font-bold"
+                      className="w-full rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm focus:ring-2 focus:ring-[#2776ea] focus:bg-white outline-none transition font-bold"
                       required
                     />
                   </div>
@@ -262,7 +262,7 @@ export default function Contact() {
                     <input
                       type="email"
                       placeholder="email@company.com"
-                      className="w-full rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm focus:ring-2 focus:ring-[#4a7dc0] focus:bg-white outline-none transition font-bold"
+                      className="w-full rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm focus:ring-2 focus:ring-[#2776ea] focus:bg-white outline-none transition font-bold"
                       required
                     />
                   </div>
@@ -272,7 +272,7 @@ export default function Contact() {
                   <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">
                     Interested Service
                   </label>
-                  <select className="w-full rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm focus:ring-2 focus:ring-[#4a7dc0] focus:bg-white outline-none transition font-bold appearance-none cursor-pointer">
+                  <select className="w-full rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm focus:ring-2 focus:ring-[#2776ea] focus:bg-white outline-none transition font-bold appearance-none cursor-pointer">
                     <option>Web Development</option>
                     <option>App Development</option>
                     <option>Digital Marketing</option>
@@ -289,14 +289,14 @@ export default function Contact() {
                   <textarea
                     rows={4}
                     placeholder="How can we help you?"
-                    className="w-full rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm focus:ring-2 focus:ring-[#4a7dc0] focus:bg-white outline-none transition resize-none font-bold"
+                    className="w-full rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm focus:ring-2 focus:ring-[#2776ea] focus:bg-white outline-none transition resize-none font-bold"
                     required
                   />
                 </div>
 
                 <button
                   disabled={isSubmitting}
-                  className="w-full bg-slate-900 text-white py-5 rounded-2xl font-black uppercase tracking-[0.2em] text-[10px] hover:bg-[#63b344] transition-all shadow-lg active:scale-95"
+                  className="w-full bg-slate-900 text-white py-5 rounded-2xl font-black uppercase tracking-[0.2em] text-[10px] hover:bg-[#76ea27] transition-all shadow-lg active:scale-95"
                 >
                   {isSubmitting ? "Sending..." : "Submit Message"}
                 </button>

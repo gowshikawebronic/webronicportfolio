@@ -179,21 +179,21 @@ export default function Projects() {
       className="relative overflow-hidden mx-auto container bg-white py-20 lg:py-32  font-sora"
     >
       <div className="absolute inset-0 pointer-events-none opacity-40">
-        <div className="absolute top-1/4 -left-20 w-80 h-80 bg-[#4a7dc0]/10 rounded-full blur-[120px]" />
-        <div className="absolute bottom-1/4 -right-20 w-80 h-80 bg-[#63b344]/10 rounded-full blur-[120px]" />
+        <div className="absolute top-1/4 -left-20 w-80 h-80 bg-[#2776ea]/10 rounded-full blur-[120px]" />
+        <div className="absolute bottom-1/4 -right-20 w-80 h-80 bg-[#76ea27]/10 rounded-full blur-[120px]" />
       </div>
 
       <div className="relative mx-auto px-6 md:px-12 lg:px-40  ">
         <div className="mb-16 text-center lg:text-left max-w-4xl animate-card-entry">
           <div className="flex items-center gap-4 mb-6">
-            <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#4a7dc0]">
+            <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#2776ea]">
               projects
             </span>
           </div>
 
           <h2 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900 leading-[1.1]">
             Our Technical & <br />
-            <span className="bg-linear-to-r from-[#4a7dc0] to-[#63b344] bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-[#2776ea] to-[#76ea27] bg-clip-text text-transparent">
               Creative Impact
             </span>
           </h2>
@@ -214,14 +214,14 @@ export default function Projects() {
                 onClick={() => setActiveTab(category.id)}
                 className={`flex shrink-0 items-center cursor-pointer justify-center gap-4 rounded-full border px-6 py-4 transition-all duration-500 md:flex-col md:items-start md:rounded-[2.5rem] md:p-10 lg:min-w-0 ${
                   activeTab === category.id
-                    ? "bg-white border-[#63b344]  scale-[1]"
-                    : "bg-slate-100 border-slate-100  hover:border-[#4a7dc0]/30"
+                    ? "bg-white border-[#76ea27]  scale-[1]"
+                    : "bg-slate-100 border-slate-100  hover:border-[#2776ea]/30"
                 }`}
               >
                 <div
                   className={`flex h-10 w-10 items-center justify-center rounded-2xl transition-all duration-500 shadow-sm ${
                     activeTab === category.id
-                      ? "bg-[#4a7dc0] text-white rotate-6"
+                      ? "bg-[#2776ea] text-white rotate-6"
                       : "bg-white text-slate-400"
                   }`}
                 >
@@ -244,7 +244,7 @@ export default function Projects() {
               </button>
             ))}
           </div>
-          <div className="flex items-center gap-2 -mt-3.75 text-[10px] font-black text-[#4a7dc0] md:hidden justify-end pr-2 uppercase italic tracking-widest">
+          <div className="flex items-center gap-2 -mt-3.75 text-[10px] font-black text-[#2776ea] md:hidden justify-end pr-2 uppercase italic tracking-widest">
             Slide <ChevronRight size={12} strokeWidth={3} />
           </div>
         </div>
@@ -263,11 +263,11 @@ export default function Projects() {
 
               <div
                 className="flex items-center gap-3 px-5 py-2.5 rounded-full  text-[11px] font-black uppercase tracking-[0.2em]"
-                style={{ color: "#63b344" }}
+                style={{ color: "#76ea27" }}
               >
                 <span className="relative flex h-2.5 w-2.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#63b344] opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#63b344]"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#76ea27] opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#76ea27]"></span>
                 </span>
                 Live Implementations
               </div>
@@ -292,12 +292,12 @@ export default function Projects() {
                   </div>
 
                   <div className="absolute bottom-4 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0 flex items-center gap-1.5">
-                    <span className="text-[9px] font-black uppercase tracking-widest text-[#4a7dc0]">
+                    <span className="text-[9px] font-black uppercase tracking-widest text-[#2776ea]">
                       View Project
                     </span>
                     <ExternalLink
                       size={10}
-                      className="text-[#4a7dc0]"
+                      className="text-[#2776ea]"
                       strokeWidth={3}
                     />
                   </div>

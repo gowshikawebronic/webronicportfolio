@@ -13,7 +13,7 @@ import {
 export default function CareerPage() {
   return (
     <main className="bg-[#fafbfc] min-h-screen pt-24 pb-20 font-sora relative overflow-hidden">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-100 bg-linear-to-b from-[#4a7dc0]/5 to-transparent pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-100 bg-linear-to-b from-[#2776ea]/5 to-transparent pointer-events-none" />
 
       <div className="container mx-auto px-6 mt-5 lg:mt-10  max-w-5xl relative z-10">
         <Link
@@ -31,15 +31,15 @@ export default function CareerPage() {
 
         <div className="mb-16">
           <div className="flex items-center gap-4 mb-6">
-            <Sparkles size={12} className="text-[#63b344]" />
-            <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#4a7dc0]">
+            <Sparkles size={12} className="text-[#76ea27]" />
+            <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#2776ea]">
               Join the Collective
             </span>
           </div>
 
           <h2 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900 leading-[1.1] ">
             Help us build the <br />
-            <span className="bg-linear-to-r from-[#4a7dc0] to-[#63b344] bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-[#2776ea] to-[#76ea27] bg-clip-text text-transparent">
               Next Generation
             </span>
           </h2>
@@ -54,16 +54,16 @@ export default function CareerPage() {
             href="https://forms.gle/XcoACD7EHUAvjc8Z8"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative p-8 md:p-10 rounded-[2.5rem] border border-slate-100 bg-white hover:bg-slate-50/50 hover:border-[#63b344]/20 transition-all duration-300 shadow-sm"
+            className="group relative p-8 md:p-10 rounded-[2.5rem] border border-slate-100 bg-white hover:bg-slate-50/50 hover:border-[#76ea27]/20 transition-all duration-300 shadow-sm"
           >
             <div className="flex flex-col h-full justify-between">
               <div>
-                <div className="h-14 w-14 rounded-2xl bg-[#63b344]/10 flex items-center justify-center text-[#63b344] mb-8 group-hover:scale-110 transition-transform duration-500">
+                <div className="h-14 w-14 rounded-2xl bg-[#76ea27]/10 flex items-center justify-center text-[#76ea27] mb-8 group-hover:scale-110 transition-transform duration-500">
                   <GraduationCap size={28} />
                 </div>
                 <h3 className="text-2xl md:text-3xl font-black text-slate-800 mb-4 tracking-tight">
                   Apply for <br />
-                  <span className="text-[#63b344]">Internship</span>
+                  <span className="text-[#76ea27]">Internship</span>
                 </h3>
                 <p className="text-slate-500 text-sm font-medium leading-relaxed mb-8 opacity-80">
                   Perfect for students and recent graduates looking to gain
@@ -72,10 +72,10 @@ export default function CareerPage() {
               </div>
 
               <div className="flex items-center gap-3">
-                <span className="text-[10px] font-black uppercase tracking-widest text-[#63b344]">
+                <span className="text-[10px] font-black uppercase tracking-widest text-[#76ea27]">
                   Start Application
                 </span>
-                <div className="h-10 w-10 rounded-xl bg-slate-50 text-slate-300 flex items-center justify-center group-hover:bg-[#63b344] group-hover:text-white group-hover:shadow-lg group-hover:shadow-green-500/20 transition-all duration-300">
+                <div className="h-10 w-10 rounded-xl bg-slate-50 text-slate-300 flex items-center justify-center group-hover:bg-[#76ea27] group-hover:text-white group-hover:shadow-lg group-hover:shadow-green-500/20 transition-all duration-300">
                   <ArrowRight
                     size={18}
                     className="group-hover:-rotate-45 transition-transform"
@@ -89,16 +89,16 @@ export default function CareerPage() {
             href="https://forms.gle/NK1STfVt5GDLKGgz8"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative p-8 md:p-10 rounded-[2.5rem] border border-slate-100 bg-white hover:bg-slate-50/50 hover:border-[#4a7dc0]/20 transition-all duration-300 shadow-sm"
+            className="group relative p-8 md:p-10 rounded-[2.5rem] border border-slate-100 bg-white hover:bg-slate-50/50 hover:border-[#2776ea]/20 transition-all duration-300 shadow-sm"
           >
             <div className="flex flex-col h-full justify-between">
               <div>
-                <div className="h-14 w-14 rounded-2xl bg-[#4a7dc0]/10 flex items-center justify-center text-[#4a7dc0] mb-8 group-hover:scale-110 transition-transform duration-500">
+                <div className="h-14 w-14 rounded-2xl bg-[#2776ea]/10 flex items-center justify-center text-[#2776ea] mb-8 group-hover:scale-110 transition-transform duration-500">
                   <Briefcase size={28} />
                 </div>
                 <h3 className="text-2xl md:text-3xl font-black text-slate-800 mb-4 tracking-tight">
                   Experienced <br />
-                  <span className="text-[#4a7dc0]">Recruitment</span>
+                  <span className="text-[#2776ea]">Recruitment</span>
                 </h3>
                 <p className="text-slate-500 text-sm font-medium leading-relaxed mb-8 opacity-80">
                   For industry professionals looking for specialized roles in
@@ -107,10 +107,10 @@ export default function CareerPage() {
               </div>
 
               <div className="flex items-center gap-3">
-                <span className="text-[10px] font-black uppercase tracking-widest text-[#4a7dc0]">
+                <span className="text-[10px] font-black uppercase tracking-widest text-[#2776ea]">
                   View Opportunities
                 </span>
-                <div className="h-10 w-10 rounded-xl bg-slate-50 text-slate-300 flex items-center justify-center group-hover:bg-[#4a7dc0] group-hover:text-white group-hover:shadow-lg group-hover:shadow-blue-500/20 transition-all duration-300">
+                <div className="h-10 w-10 rounded-xl bg-slate-50 text-slate-300 flex items-center justify-center group-hover:bg-[#2776ea] group-hover:text-white group-hover:shadow-lg group-hover:shadow-blue-500/20 transition-all duration-300">
                   <ArrowRight
                     size={18}
                     className="group-hover:-rotate-45 transition-transform"

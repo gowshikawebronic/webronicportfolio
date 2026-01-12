@@ -70,30 +70,30 @@ export default function ShippingAndExchange() {
     <main className="bg-white font-sora w-full overflow-x-hidden pt-4">
       <section className="relative overflow-hidden bg-slate-50 py-12 md:py-24 border-b border-slate-100">
         <div className="absolute inset-0 pointer-events-none opacity-40">
-          <div className="absolute -top-10 -right-10 w-40 h-40 md:w-125 md:h-125 bg-[#4a7dc0]/10 rounded-full blur-[60px] md:blur-[120px]" />
-          <div className="absolute -bottom-10 -left-10 w-40 h-40 md:w-125 md:h-125 bg-[#63b344]/10 rounded-full blur-[60px] md:blur-[120px]" />
+          <div className="absolute -top-10 -right-10 w-40 h-40 md:w-125 md:h-125 bg-[#2776ea]/10 rounded-full blur-[60px] md:blur-[120px]" />
+          <div className="absolute -bottom-10 -left-10 w-40 h-40 md:w-125 md:h-125 bg-[#76ea27]/10 rounded-full blur-[60px] md:blur-[120px]" />
         </div>
 
         <div className="relative mx-auto max-w-7xl px-4 md:px-6">
           <div className="flex items-center  gap-4 mb-6">
-            <Truck size={14} className="text-[#4a7dc0]" />
-            <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#4a7dc0]">
+            <Truck size={14} className="text-[#2776ea]" />
+            <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#2776ea]">
               Global Operations
             </span>
           </div>
           <h1 className="text-3xl sm:text-5xl md:text-7xl font-black text-slate-900 tracking-tighter leading-[1.1]">
             Shipping &{" "}
-            <span className="bg-linear-to-r from-[#4a7dc0] to-[#63b344] bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-[#2776ea] to-[#76ea27] bg-clip-text text-transparent">
               Exchange
             </span>
           </h1>
           <div className="mt-8 flex flex-wrap items-center gap-6 md:gap-8 text-xs md:text-sm font-bold text-slate-400">
             <div className="flex items-center gap-2">
-              <Clock size={18} className="text-[#4a7dc0]" />{" "}
+              <Clock size={18} className="text-[#2776ea]" />{" "}
               <span>Updated: Dec 18, 2025</span>
             </div>
             <div className="flex items-center gap-2">
-              <Truck size={18} className="text-[#63b344]" />{" "}
+              <Truck size={18} className="text-[#76ea27]" />{" "}
               <span>Webronic Industries Pvt Ltd</span>
             </div>
           </div>
@@ -105,7 +105,7 @@ export default function ShippingAndExchange() {
           <button
             key={item.id}
             onClick={() => scrollToSection(item.id)}
-            className="whitespace-nowrap flex items-center gap-2 px-4 py-2 bg-slate-50 border border-slate-100 rounded-full text-[10px] font-black uppercase text-slate-500 active:bg-[#4a7dc0] active:text-white transition-colors"
+            className="whitespace-nowrap flex items-center gap-2 px-4 py-2 bg-slate-50 border border-slate-100 rounded-full text-[10px] font-black uppercase text-slate-500 active:bg-[#2776ea] active:text-white transition-colors"
           >
             <item.icon size={12} /> {item.title.split(". ")[1]}
           </button>
@@ -123,9 +123,9 @@ export default function ShippingAndExchange() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="w-full flex items-center gap-3 px-4 py-3.5 rounded-2xl text-[11px] font-black uppercase tracking-widest text-slate-500 hover:bg-slate-50 hover:text-[#4a7dc0] transition-all group text-left border border-transparent"
+                  className="w-full flex items-center gap-3 px-4 py-3.5 rounded-2xl text-[11px] font-black uppercase tracking-widest text-slate-500 hover:bg-slate-50 hover:text-[#2776ea] transition-all group text-left border border-transparent"
                 >
-                  <item.icon size={16} className="group-hover:text-[#4a7dc0]" />
+                  <item.icon size={16} className="group-hover:text-[#2776ea]" />
                   {item.title}
                 </button>
               ))}
@@ -134,9 +134,9 @@ export default function ShippingAndExchange() {
 
           <div className="flex-1 space-y-20 md:space-y-32">
             <div id="overview" className="scroll-mt-24">
-              <div className="bg-[#4a7dc0]/5 rounded-4xl p-7 md:p-10 border border-[#4a7dc0]/10">
+              <div className="bg-[#2776ea]/5 rounded-4xl p-7 md:p-10 border border-[#2776ea]/10">
                 <h2 className="text-xl md:text-2xl font-black text-slate-900 mb-4 flex items-center gap-3">
-                  <Zap className="text-[#4a7dc0]" /> 1. Policy Overview
+                  <Zap className="text-[#2776ea]" /> 1. Policy Overview
                 </h2>
                 <p className="text-slate-600 font-medium leading-relaxed text-sm md:text-base">
                   Webronic primarily provides digital technology services and
@@ -148,7 +148,7 @@ export default function ShippingAndExchange() {
             </div>
 
             <div id="digital" className="scroll-mt-24">
-              <h3 className="text-lg md:text-xl font-black uppercase tracking-widest text-[#4a7dc0] mb-8 flex items-center gap-3">
+              <h3 className="text-lg md:text-xl font-black uppercase tracking-widest text-[#2776ea] mb-8 flex items-center gap-3">
                 <FileCode size={24} /> 2. Digital Deliverables
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -174,7 +174,7 @@ export default function ShippingAndExchange() {
                     key={i}
                     className="p-6 rounded-2xl bg-slate-50 border border-slate-100"
                   >
-                    <p className="text-[10px] font-black text-[#63b344] uppercase mb-2 tracking-widest">
+                    <p className="text-[10px] font-black text-[#76ea27] uppercase mb-2 tracking-widest">
                       {item.label}
                     </p>
                     <p className="text-sm font-bold text-slate-700">
@@ -186,7 +186,7 @@ export default function ShippingAndExchange() {
             </div>
 
             <div id="physical" className="scroll-mt-24">
-              <h3 className="text-lg md:text-xl font-black uppercase tracking-widest text-[#4a7dc0] mb-8 flex items-center gap-3">
+              <h3 className="text-lg md:text-xl font-black uppercase tracking-widest text-[#2776ea] mb-8 flex items-center gap-3">
                 <Package size={24} /> 3. Physical Deliveries
               </h3>
               <div className="overflow-x-auto rounded-4xl border border-slate-100 shadow-sm">
@@ -212,7 +212,7 @@ export default function ShippingAndExchange() {
                       <td className="px-6 py-4 text-slate-500">
                         Courier / Speed Post
                       </td>
-                      <td className="px-6 py-4 text-[#4a7dc0]">
+                      <td className="px-6 py-4 text-[#2776ea]">
                         3-5 Business Days
                       </td>
                     </tr>
@@ -223,7 +223,7 @@ export default function ShippingAndExchange() {
                       <td className="px-6 py-4 text-slate-500">
                         Courier with Tracking
                       </td>
-                      <td className="px-6 py-4 text-[#4a7dc0]">
+                      <td className="px-6 py-4 text-[#2776ea]">
                         5-7 Business Days
                       </td>
                     </tr>
@@ -234,7 +234,7 @@ export default function ShippingAndExchange() {
                       <td className="px-6 py-4 text-slate-500">
                         Standard Post
                       </td>
-                      <td className="px-6 py-4 text-[#4a7dc0]">
+                      <td className="px-6 py-4 text-[#2776ea]">
                         5-7 Business Days
                       </td>
                     </tr>
@@ -244,7 +244,7 @@ export default function ShippingAndExchange() {
             </div>
 
             <div id="timeline" className="scroll-mt-24">
-              <h3 className="text-lg md:text-xl font-black uppercase tracking-widest text-[#4a7dc0] mb-8 flex items-center gap-3">
+              <h3 className="text-lg md:text-xl font-black uppercase tracking-widest text-[#2776ea] mb-8 flex items-center gap-3">
                 <Clock size={24} /> 4. Delivery Timeline & Tracking
               </h3>
               <div className="overflow-x-auto rounded-4xl border border-slate-100 shadow-sm">
@@ -262,25 +262,25 @@ export default function ShippingAndExchange() {
                   <tbody className="divide-y divide-slate-100 font-medium text-sm text-slate-700">
                     <tr>
                       <td className="px-6 py-4">Metro Cities (India)</td>
-                      <td className="px-6 py-4 text-[#4a7dc0]">
+                      <td className="px-6 py-4 text-[#2776ea]">
                         3-5 Business Days
                       </td>
                     </tr>
                     <tr>
                       <td className="px-6 py-4">Tier 2/3 Cities</td>
-                      <td className="px-6 py-4 text-[#4a7dc0]">
+                      <td className="px-6 py-4 text-[#2776ea]">
                         5-7 Business Days
                       </td>
                     </tr>
                     <tr>
                       <td className="px-6 py-4">Remote Areas</td>
-                      <td className="px-6 py-4 text-[#4a7dc0]">
+                      <td className="px-6 py-4 text-[#2776ea]">
                         7-10 Business Days
                       </td>
                     </tr>
                     <tr>
                       <td className="px-6 py-4">International</td>
-                      <td className="px-6 py-4 text-[#63b344]">
+                      <td className="px-6 py-4 text-[#76ea27]">
                         10-20 Business Days
                       </td>
                     </tr>
@@ -290,7 +290,7 @@ export default function ShippingAndExchange() {
             </div>
 
             <div id="failed" className="scroll-mt-24">
-              <h3 className="text-lg md:text-xl font-black uppercase tracking-widest text-[#4a7dc0] mb-8 flex items-center gap-3">
+              <h3 className="text-lg md:text-xl font-black uppercase tracking-widest text-[#2776ea] mb-8 flex items-center gap-3">
                 <Ban size={24} /> 5. Failed Delivery & Non-Delivery
               </h3>
               <div className="space-y-4 text-sm text-slate-500 font-medium leading-relaxed">
@@ -307,7 +307,7 @@ export default function ShippingAndExchange() {
             </div>
 
             <div id="damage" className="scroll-mt-24">
-              <h3 className="text-lg md:text-xl font-black uppercase tracking-widest text-[#4a7dc0] mb-8 flex items-center gap-3">
+              <h3 className="text-lg md:text-xl font-black uppercase tracking-widest text-[#2776ea] mb-8 flex items-center gap-3">
                 <ShieldAlert size={24} /> 6. Damaged or Lost Shipments
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -318,12 +318,12 @@ export default function ShippingAndExchange() {
                   <p className="text-xs text-slate-500 mb-4 leading-relaxed">
                     Document damage with photos and contact us within 24 hours.
                   </p>
-                  <p className="text-xs font-bold text-[#4a7dc0] break-all">
+                  <p className="text-xs font-bold text-[#2776ea] break-all">
                     support@webronic.com
                   </p>
                 </div>
                 <div className="p-8 rounded-4xl bg-slate-900 text-white">
-                  <h4 className="text-xs font-black text-[#63b344] uppercase mb-4 tracking-widest">
+                  <h4 className="text-xs font-black text-[#76ea27] uppercase mb-4 tracking-widest">
                     Lost in Transit
                   </h4>
                   <p className="text-xs opacity-70 mb-4 leading-relaxed">
@@ -335,7 +335,7 @@ export default function ShippingAndExchange() {
             </div>
 
             <div id="exchange" className="scroll-mt-24">
-              <h3 className="text-lg md:text-xl font-black uppercase tracking-widest text-[#4a7dc0] mb-8 flex items-center gap-3">
+              <h3 className="text-lg md:text-xl font-black uppercase tracking-widest text-[#2776ea] mb-8 flex items-center gap-3">
                 <RefreshCcw size={24} /> 7. Exchange Policy
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -355,13 +355,13 @@ export default function ShippingAndExchange() {
                       >
                         <CheckCircle2
                           size={16}
-                          className="text-[#63b344] shrink-0"
+                          className="text-[#76ea27] shrink-0"
                         />{" "}
                         {li}
                       </li>
                     ))}
                   </ul>
-                  <p className="mt-6 text-[10px] font-black text-[#4a7dc0] uppercase tracking-widest">
+                  <p className="mt-6 text-[10px] font-black text-[#2776ea] uppercase tracking-widest">
                     Window: 7 Days from Delivery
                   </p>
                 </div>
@@ -372,7 +372,7 @@ export default function ShippingAndExchange() {
                   </p>
                   <button
                     onClick={() => setIsModalOpen(true)}
-                    className="mt-6 flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-[#63b344]"
+                    className="mt-6 flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-[#76ea27]"
                   >
                     Initiate Request <ArrowRight size={14} />
                   </button>
@@ -381,7 +381,7 @@ export default function ShippingAndExchange() {
             </div>
 
             <div id="service-mod" className="scroll-mt-24">
-              <h3 className="text-lg md:text-xl font-black uppercase tracking-widest text-[#4a7dc0] mb-8 flex items-center gap-3">
+              <h3 className="text-lg md:text-xl font-black uppercase tracking-widest text-[#2776ea] mb-8 flex items-center gap-3">
                 <Settings2 size={24} /> 8. Service Exchange & Modifications
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -402,7 +402,7 @@ export default function ShippingAndExchange() {
                       >
                         <CheckCircle2
                           size={16}
-                          className="text-[#63b344] shrink-0"
+                          className="text-[#76ea27] shrink-0"
                         />{" "}
                         {li}
                       </li>
@@ -410,7 +410,7 @@ export default function ShippingAndExchange() {
                   </ul>
                 </div>
                 <div className="p-8 rounded-4xl bg-slate-900 text-white">
-                  <h4 className="text-xs font-black text-[#63b344] uppercase mb-4 tracking-widest">
+                  <h4 className="text-xs font-black text-[#76ea27] uppercase mb-4 tracking-widest">
                     8.2 Modification Process
                   </h4>
                   <p className="text-xs opacity-70 leading-relaxed">
@@ -423,7 +423,7 @@ export default function ShippingAndExchange() {
             </div>
 
             <div id="international" className="scroll-mt-24">
-              <h3 className="text-lg md:text-xl font-black uppercase tracking-widest text-[#4a7dc0] mb-8 flex items-center gap-3">
+              <h3 className="text-lg md:text-xl font-black uppercase tracking-widest text-[#2776ea] mb-8 flex items-center gap-3">
                 <Globe size={24} /> 9. International Shipments
               </h3>
               <div className="p-8 rounded-[2.5rem] bg-slate-50 border border-slate-100">
@@ -439,7 +439,7 @@ export default function ShippingAndExchange() {
             </div>
 
             <div id="special" className="scroll-mt-24">
-              <h3 className="text-lg md:text-xl font-black uppercase tracking-widest text-[#4a7dc0] mb-8 flex items-center gap-3">
+              <h3 className="text-lg md:text-xl font-black uppercase tracking-widest text-[#2776ea] mb-8 flex items-center gap-3">
                 <Award size={24} /> 10. Special Handling Requests
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -465,7 +465,7 @@ export default function ShippingAndExchange() {
             </div>
 
             <div id="unclaimed" className="scroll-mt-24">
-              <h3 className="text-lg md:text-xl font-black uppercase tracking-widest text-[#4a7dc0] mb-8 flex items-center gap-3">
+              <h3 className="text-lg md:text-xl font-black uppercase tracking-widest text-[#2776ea] mb-8 flex items-center gap-3">
                 <Inbox size={24} /> 11. Unclaimed Shipments
               </h3>
               <div className="bg-white border border-slate-100 rounded-[2.5rem] p-7 md:p-8 shadow-sm">
@@ -482,7 +482,7 @@ export default function ShippingAndExchange() {
             </div>
 
             <div id="force-majeure" className="scroll-mt-24">
-              <h3 className="text-lg md:text-xl font-black uppercase tracking-widest text-[#4a7dc0] mb-8 flex items-center gap-3">
+              <h3 className="text-lg md:text-xl font-black uppercase tracking-widest text-[#2776ea] mb-8 flex items-center gap-3">
                 <AlertCircle size={24} /> 12. Force Majeure
               </h3>
               <div className="bg-slate-900 text-white rounded-[2.5rem] p-8 md:p-10 relative overflow-hidden">
@@ -500,7 +500,7 @@ export default function ShippingAndExchange() {
             </div>
 
             <div id="updates" className="scroll-mt-24">
-              <h3 className="text-lg md:text-xl font-black uppercase tracking-widest text-[#4a7dc0] mb-8 flex items-center gap-3">
+              <h3 className="text-lg md:text-xl font-black uppercase tracking-widest text-[#2776ea] mb-8 flex items-center gap-3">
                 <RefreshCcw size={24} /> 13. Policy Updates
               </h3>
               <p className="text-sm text-slate-500 font-medium leading-relaxed">
@@ -520,24 +520,24 @@ export default function ShippingAndExchange() {
                   reach our support team.
                 </p>
                 <div className="mt-8 space-y-4">
-                  <div className="flex items-center gap-4 text-sm font-bold text-[#4a7dc0] break-all">
-                    <Mail size={18} className="text-[#63b344] shrink-0" />{" "}
+                  <div className="flex items-center gap-4 text-sm font-bold text-[#2776ea] break-all">
+                    <Mail size={18} className="text-[#76ea27] shrink-0" />{" "}
                     support@webronic.com
                   </div>
                   <div className="flex items-center gap-4 text-sm font-bold text-slate-900">
-                    <Phone size={18} className="text-[#4a7dc0] shrink-0" /> +91
+                    <Phone size={18} className="text-[#2776ea] shrink-0" /> +91
                     72000 88500
                   </div>
                 </div>
               </div>
 
-              <div className="bg-[#4a7dc0]/5 p-8 md:p-10 rounded-[2.5rem] border border-[#4a7dc0]/10 flex flex-col justify-between">
+              <div className="bg-[#2776ea]/5 p-8 md:p-10 rounded-[2.5rem] border border-[#2776ea]/10 flex flex-col justify-between">
                 <p className="text-[10px] font-bold text-slate-600 uppercase tracking-widest mb-6 text-center md:text-left">
                   Include order reference in all communications.
                 </p>
                 <button
                   onClick={() => setIsModalOpen(true)}
-                  className="w-full flex items-center justify-center gap-3 bg-[#4a7dc0] text-white py-4 rounded-2xl font-black text-[10px] uppercase tracking-widest hover:bg-[#63b344] transition-all shadow-xl active:scale-95"
+                  className="w-full flex items-center justify-center gap-3 bg-[#2776ea] text-white py-4 rounded-2xl font-black text-[10px] uppercase tracking-widest hover:bg-[#76ea27] transition-all shadow-xl active:scale-95"
                 >
                   Open Support Case <ArrowRight size={16} />
                 </button>
@@ -571,29 +571,29 @@ export default function ShippingAndExchange() {
                 <input
                   type="text"
                   placeholder="Full Name"
-                  className="w-full p-4 rounded-xl bg-slate-50 border border-slate-100 text-sm outline-none focus:border-[#4a7dc0] transition-all"
+                  className="w-full p-4 rounded-xl bg-slate-50 border border-slate-100 text-sm outline-none focus:border-[#2776ea] transition-all"
                   required
                 />
                 <input
                   type="email"
                   placeholder="Email Address"
-                  className="w-full p-4 rounded-xl bg-slate-50 border border-slate-100 text-sm outline-none focus:border-[#4a7dc0] transition-all"
+                  className="w-full p-4 rounded-xl bg-slate-50 border border-slate-100 text-sm outline-none focus:border-[#2776ea] transition-all"
                   required
                 />
                 <textarea
                   placeholder="Query / Order Reference"
                   rows={4}
-                  className="w-full p-4 rounded-xl bg-slate-50 border border-slate-100 text-sm outline-none focus:border-[#4a7dc0] resize-none transition-all"
+                  className="w-full p-4 rounded-xl bg-slate-50 border border-slate-100 text-sm outline-none focus:border-[#2776ea] resize-none transition-all"
                   required
                 />
-                <button className="w-full bg-[#4a7dc0] text-white py-4 rounded-xl font-black text-[10px] uppercase tracking-[0.2em] shadow-lg hover:bg-[#63b344] transition-all active:scale-95">
+                <button className="w-full bg-[#2776ea] text-white py-4 rounded-xl font-black text-[10px] uppercase tracking-[0.2em] shadow-lg hover:bg-[#76ea27] transition-all active:scale-95">
                   Send Query
                 </button>
               </form>
             ) : (
               <div className="py-12 text-center">
                 <CheckCircle2
-                  className="mx-auto text-[#63b344] mb-4"
+                  className="mx-auto text-[#76ea27] mb-4"
                   size={48}
                 />
                 <h4 className="text-xl font-black text-slate-900">
